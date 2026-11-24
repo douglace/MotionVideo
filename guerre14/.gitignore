@@ -1,2 +1,2 @@
-build/preview_*.png
-build/*.png
+build/*
+!build/guerre14.mp4

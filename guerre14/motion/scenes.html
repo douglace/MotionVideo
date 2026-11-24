@@ -1,0 +1,416 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Play;src:url(../fonts/Playfair-ExtraBold.ttf);font-weight:800}
+@font-face{font-family:PlayS;src:url(../fonts/Playfair-SemiBold.ttf);font-weight:600}
+@font-face{font-family:Inter;src:url(../fonts/Inter-ExtraBold.ttf);font-weight:800}
+@font-face{font-family:InterS;src:url(../fonts/Inter-SemiBold.ttf);font-weight:600}
+html,body{margin:0;padding:0;background:#000}
+#stage{width:1080px;height:1920px;overflow:hidden}
+svg text{font-variant-numeric:lining-nums}
+</style></head>
+<body><div id="stage"></div>
+<script>
+// Scènes motion design SVG — rendu image par image : render(nom, τ) où τ = secondes depuis le début du plan.
+const W = 1080, H = 1920;
+const GOLD = '#e8b84a', GOLD2 = '#b8862e', RED = '#c4302b', RED2 = '#8e1f1b', BLUE = '#3d6fb4', BLUE2 = '#1f3f72',
+      CREAM = '#f3ead8', INK = '#15110d', NAVY = '#0d1626';
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, x) => a + (b - a) * x;
+const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const eout = x => { x = clamp(x); return 1 - Math.pow(1 - x, 3); };
+const eback = x => { x = clamp(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const prog = (t, a, d) => clamp((t - a) / d);
+function rnd(i) { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+
+// ---------- décor commun : fond chaud, grille fine, poussière en suspension
+function bg(t, top = '#221a12', bottom = '#0e0b08', dust = true) {
+  let s = `<defs>
+    <linearGradient id="bgg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${top}"/><stop offset="1" stop-color="${bottom}"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6"><stop offset="0" stop-color="#ffd99a" stop-opacity="0.10"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#e8b84a" stroke-opacity="0.05" stroke-width="1.5"/></pattern>
+    <pattern id="hatch" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="18" height="18" fill="${RED2}"/><rect width="7" height="18" fill="${RED}"/></pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bgg)"/>
+  <rect width="${W}" height="${H}" fill="url(#grid)" transform="translate(${(t * 12) % 60} ${(t * 6) % 60})"/>
+  <rect width="${W}" height="${H}" fill="url(#glow)"/>`;
+  if (dust) for (let i = 0; i < 46; i++) {
+    const x = (rnd(i) * W + t * (8 + rnd(i + 9) * 22)) % W, y = (rnd(i + 3) * H - t * (10 + rnd(i + 5) * 30) + H) % H;
+    s += `<circle cx="${x}" cy="${y}" r="${1 + rnd(i + 7) * 2.6}" fill="${GOLD}" opacity="${0.08 + rnd(i + 1) * 0.22}"/>`;
+  }
+  return s;
+}
+const txt = (x, y, s, size, fill, font = 'Play', anchor = 'middle', extra = '') =>
+  `<text x="${x}" y="${y}" font-family="${font}" font-size="${size}" fill="${fill}" text-anchor="${anchor}" ${extra}>${s}</text>`;
+
+// ======================================================= 1. DOMINOS (60.6 s → 66.5 s)
+function dominos(t) {
+  const names = [['AUTRICHE-HONGRIE', '28 JUIL.', RED], ['SERBIE', '28 JUIL.', BLUE], ['RUSSIE', '30 JUIL.', BLUE],
+                 ['ALLEMAGNE', '1er AOÛT', RED], ['FRANCE', '3 AOÛT', BLUE], ['BELGIQUE', '4 AOÛT', GOLD], ['ROYAUME-UNI', '4 AOÛT', BLUE]];
+  const dw = 150, dh = 520, gap = 205, base = 1300;
+  // la caméra glisse le long de la rangée puis revient sur le premier domino
+  const cam = lerp(-60, 420, ease(prog(t, 0, 3.2))) - 420 * ease(prog(t, 3.2, 0.7));
+  const zoom = lerp(0.92, 1.0, ease(prog(t, 0, 4)));
+  // instants de chute (seuls les deux premiers tombent dans ce plan)
+  const fallStart = [3.9, 5.35, 99, 99, 99, 99, 99];
+  const rest = Math.asin((gap - dw * 0.15) / dh) * 180 / Math.PI;
+  const ang = names.map((_, i) => {
+    const p = prog(t, fallStart[i], 0.5);
+    return p * p * rest;
+  });
+  // le domino suivant reçoit le choc : légère oscillation
+  let s = bg(t);
+  s += `<g transform="translate(${W / 2} ${base}) scale(${zoom}) translate(${-W / 2 - cam} ${-base})">`;
+  // sol
+  names.forEach(([n, d, c], i) => {
+    const x = 90 + i * gap;
+    const appear = eback(prog(t, 0.15 + i * 0.16, 0.5));
+    const wob = (i === 1 && t > 4.25 && t < 5.35) ? Math.sin((t - 4.25) * 30) * 3 * (1 - prog(t, 4.25, 1)) : 0;
+    const a = ang[i] + wob;
+    s += `<g transform="translate(${x + dw} ${base}) rotate(${a}) translate(${-dw} ${-dh * appear})" opacity="${clamp(appear * 1.5)}" filter="url(#shadow)">
+      <rect x="0" y="0" width="${dw}" height="${dh}" rx="12" fill="${CREAM}"/>
+      <rect x="0" y="0" width="${dw}" height="34" rx="12" fill="${c}"/><rect x="0" y="20" width="${dw}" height="14" fill="${c}"/>
+      <line x1="14" y1="92" x2="${dw - 14}" y2="92" stroke="${INK}" stroke-opacity="0.25" stroke-width="3"/>
+      <text transform="translate(${dw / 2 + 15} ${dh / 2 + 52}) rotate(-90)" font-family="Play" font-size="${n.length > 10 ? 34 : 54}" fill="${INK}" text-anchor="middle">${n}</text>
+      <text x="${dw / 2}" y="72" font-family="InterS" font-size="23" fill="${c === GOLD ? GOLD2 : c}" text-anchor="middle">${d}</text>
+    </g>`;
+  });
+  s += `<rect x="-400" y="${base}" width="2400" height="600" fill="#0b0907"/>`;
+  s += `<line x1="-400" y1="${base}" x2="2400" y2="${base}" stroke="${GOLD}" stroke-opacity="0.35" stroke-width="3"/>`;
+  // frise de dates (5 semaines)
+  const tl = ease(prog(t, 1.4, 1.6));
+  s += `<g opacity="${tl}"><line x1="110" y1="${base + 120}" x2="${110 + 1400 * tl}" y2="${base + 120}" stroke="${RED}" stroke-width="6"/>`;
+  s += txt(110, base + 175, '28 JUILLET', 34, CREAM, 'InterS', 'start', 'letter-spacing="3"');
+  s += txt(1510, base + 175, '4 AOÛT 1914', 34, RED, 'InterS', 'end', 'letter-spacing="3"') + '</g>';
+  // impact : éclat rouge quand le premier domino frappe le second
+  const hit = prog(t, 4.3, 0.5);
+  if (hit > 0 && hit < 1) s += `<circle cx="${90 + gap + 10}" cy="${base - dh + 60}" r="${20 + 120 * hit}" fill="none" stroke="${GOLD}" stroke-width="${8 * (1 - hit)}" opacity="${1 - hit}"/>`;
+  s += '</g>';
+  return s;
+}
+
+// ======================================================= 2. INVASION DE LA BELGIQUE (74.25 s → 77.25 s)
+function belgique(t) {
+  const P = {
+    uk: '60,380 230,350 270,470 170,570 60,530',
+    nl: '420,600 450,470 560,400 680,420 700,520 640,600 560,560',
+    be: '330,700 420,600 560,560 640,600 700,680 700,800 560,720 470,760',
+    fr: '120,760 330,700 470,760 560,720 700,800 760,930 720,1100 760,1250 640,1380 420,1400 240,1330 180,1180 80,1050 150,920',
+    de: '680,420 800,380 1000,400 1060,600 1050,900 960,1100 760,1250 720,1100 760,930 700,800 700,680 640,600 700,520',
+  };
+  const tilt = lerp(1.08, 1.0, ease(prog(t, 0, 3)));
+  const inv = ease(prog(t, 0.9, 0.6));
+  let s = bg(t, '#16202c', '#0a0e14');
+  s += `<g transform="translate(540 900) scale(${tilt}) translate(-540 -900) translate(0 40)">`;
+  s += `<rect x="0" y="300" width="${W}" height="1200" fill="#1a2a3c" opacity="0.5"/>`; // mer
+  for (const [k, c, o] of [['uk', '#3a4656', 1], ['nl', '#4a4438', 1], ['fr', '#2c3f63', 1], ['de', '#5a2a24', 1]])
+    s += `<polygon points="${P[k]}" fill="${c}" stroke="${GOLD}" stroke-opacity="0.45" stroke-width="3" opacity="${o}"/>`;
+  // Belgique : or (neutre) qui se fait envahir (hachures rouges)
+  s += `<polygon points="${P.be}" fill="${GOLD2}" stroke="${GOLD}" stroke-width="5"/>`;
+  s += `<polygon points="${P.be}" fill="url(#hatch)" opacity="${inv * 0.9}"/>`;
+  s += txt(870, 500, 'ALLEMAGNE', 40, CREAM, 'Inter', 'middle', `opacity="0.85" letter-spacing="4"`);
+  s += txt(300, 1250, 'FRANCE', 40, CREAM, 'Inter', 'middle', `opacity="0.85" letter-spacing="4"`);
+  s += txt(150, 470, 'R.-U.', 28, CREAM, 'Inter', 'middle', `opacity="0.6" letter-spacing="3"`);
+  // pastille « NEUTRE » qui se fend
+  const crack = prog(t, 1.1, 0.4);
+  s += `<g transform="translate(520 665) rotate(${-8 - crack * 6})">
+    <rect x="-125" y="-34" width="250" height="68" rx="8" fill="${INK}" stroke="${GOLD}" stroke-width="4"/>
+    ${txt(0, 15, 'NEUTRE', 40, GOLD, 'Inter', 'middle', 'letter-spacing="6"')}
+    <path d="M-20 -34 L5 -8 L-12 6 L14 34" stroke="${RED}" stroke-width="7" fill="none" stroke-dasharray="120" stroke-dashoffset="${120 * (1 - crack)}"/>
+  </g>`;
+  // flèches d'invasion (plan Schlieffen) — tracées progressivement
+  const arrows = [['M920 600 C780 610 640 640 560 760 S430 960 400 1060', 0.2],
+                  ['M960 760 C820 740 700 760 640 860 S560 1040 540 1120', 0.45],
+                  ['M940 940 C860 960 760 1000 700 1080 S640 1180 620 1230', 0.7]];
+  arrows.forEach(([d, st], i) => {
+    const p = ease(prog(t, st, 1.4));
+    s += `<path d="${d}" fill="none" stroke="#000" stroke-opacity="0.45" stroke-width="40" stroke-linecap="round" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="${1000 * (1 - p)}" filter="url(#soft)"/>`;
+    s += `<path d="${d}" fill="none" stroke="${RED}" stroke-width="30" stroke-linecap="round" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="${1000 * (1 - p)}"/>`;
+  });
+  // têtes de flèche à l'arrivée
+  [[400, 1060, 100, 0.2], [540, 1120, 105, 0.45], [620, 1230, 115, 0.7]].forEach(([x, y, r, st]) => {
+    const p = prog(t, st + 1.3, 0.25);
+    if (p > 0) s += `<polygon points="0,-34 54,0 0,34" fill="${RED}" transform="translate(${x} ${y}) rotate(${r}) scale(${eback(p)})"/>`;
+  });
+  s += '</g>';
+  return s;
+}
+
+// ======================================================= 3. LONDRES, MINUIT (77.25 s → 79.5 s)
+function londres(t) {
+  let s = bg(t, '#0f1d33', '#05080e', false);
+  // étoiles
+  for (let i = 0; i < 60; i++) s += `<circle cx="${rnd(i) * W}" cy="${rnd(i + 40) * 900}" r="${1 + rnd(i + 80) * 1.8}" fill="${CREAM}" opacity="${0.2 + 0.5 * Math.abs(Math.sin(t * 2 + i))}"/>`;
+  s += `<circle cx="830" cy="420" r="70" fill="${CREAM}" opacity="0.9"/><circle cx="855" cy="405" r="64" fill="#0f1d33" opacity="0.85"/>`;
+  // projecteurs qui balaient le ciel
+  [[220, -18, 0.9], [760, 14, 1.3]].forEach(([x, a0, sp], i) => {
+    const a = a0 + Math.sin(t * sp + i) * 18;
+    s += `<polygon points="${x - 10},1300 ${x + 10},1300 ${x + 140},200 ${x - 140},200" fill="#cfe0ff" opacity="0.07" transform="rotate(${a} ${x} 1300)"/>`;
+  });
+  const rise = eout(prog(t, 0, 0.9));
+  s += `<g transform="translate(0 ${(1 - rise) * 120})">`;
+  // Parlement : silhouette
+  let roof = 'M0 1180 ';
+  for (let x = 0; x <= W; x += 60) roof += `L${x} ${1180 - (x % 120 === 0 ? 40 : 0)} L${x + 20} ${1150 - (x % 180 === 0 ? 50 : 0)} L${x + 40} ${1180 - (x % 120 === 0 ? 40 : 0)} `;
+  s += `<path d="${roof} L${W} 1500 L0 1500Z" fill="#070a10"/>`;
+  // Big Ben
+  const bx = 540;
+  s += `<g fill="#090d15" stroke="${GOLD}" stroke-opacity="0.25" stroke-width="2">
+    <rect x="${bx - 80}" y="700" width="160" height="560"/>
+    <rect x="${bx - 95}" y="540" width="190" height="170"/>
+    <polygon points="${bx - 95},540 ${bx},360 ${bx + 95},540"/>
+    <rect x="${bx - 6}" y="300" width="12" height="70"/>
+  </g>`;
+  for (let k = 0; k < 6; k++) s += `<rect x="${bx - 60 + k * 22}" y="760" width="10" height="460" fill="${GOLD}" opacity="0.06"/>`;
+  // cadran lumineux
+  const cy = 625;
+  s += `<circle cx="${bx}" cy="${cy}" r="92" fill="${GOLD}" opacity="0.25" filter="url(#blur20)"/>`;
+  s += `<circle cx="${bx}" cy="${cy}" r="66" fill="#f6e2a8" stroke="${GOLD2}" stroke-width="6"/>`;
+  for (let k = 0; k < 12; k++) s += `<line x1="${bx}" y1="${cy - 58}" x2="${bx}" y2="${cy - 48}" stroke="${INK}" stroke-width="4" transform="rotate(${k * 30} ${bx} ${cy})"/>`;
+  // l'aiguille des minutes rejoint 12 h (fin de l'ultimatum britannique)
+  const mp = ease(prog(t, 0.2, 1.2));
+  s += `<line x1="${bx}" y1="${cy}" x2="${bx}" y2="${cy - 52}" stroke="${INK}" stroke-width="5" stroke-linecap="round" transform="rotate(${lerp(-60, 0, mp)} ${bx} ${cy})"/>`;
+  s += `<line x1="${bx}" y1="${cy}" x2="${bx}" y2="${cy - 34}" stroke="${INK}" stroke-width="7" stroke-linecap="round" transform="rotate(${lerp(-5, 0, mp)} ${bx} ${cy})"/>`;
+  const ring = prog(t, 1.4, 0.8);
+  if (ring > 0 && ring < 1) for (let k = 0; k < 2; k++) {
+    const r = prog(t, 1.4 + k * 0.25, 0.8);
+    s += `<circle cx="${bx}" cy="${cy}" r="${80 + r * 420}" fill="none" stroke="${GOLD}" stroke-width="${6 * (1 - r)}" opacity="${1 - r}"/>`;
+  }
+  s += '</g>';
+  // Tamise et navires
+  s += `<rect x="0" y="1300" width="${W}" height="620" fill="#060a12"/>`;
+  for (let k = 0; k < 10; k++) s += `<rect x="${(k * 137 + t * 40) % W}" y="${1330 + k * 18}" width="${80 + rnd(k) * 120}" height="3" fill="${GOLD}" opacity="0.18"/>`;
+  const sx = lerp(-260, 120, ease(prog(t, 0, 2.4)));
+  s += `<path transform="translate(${sx} 1255)" d="M0 40 L320 40 L290 75 L30 75Z M60 40 L60 10 L120 10 L120 -20 L150 -20 L150 10 L210 10 L210 40 M170 -20 L170 -60 L180 -60 L180 -20" fill="#03050a"/>`;
+  return s;
+}
+
+// ======================================================= 4. « CHACUN SE DÉFEND » (79.5 s → 84 s)
+function shield(x, y, col, col2, label, sub, flip) {
+  return `<g transform="translate(${x} ${y}) scale(${flip ? -1 : 1} 1)" filter="url(#shadow)">
+    <path d="M-150 -190 L150 -190 L150 10 C150 140 50 210 0 240 C-50 210 -150 140 -150 10Z" fill="${col2}" stroke="${GOLD}" stroke-width="10"/>
+    <path d="M-110 -150 L110 -150 L110 10 C110 110 40 165 0 190 C-40 165 -110 110 -110 10Z" fill="${col}"/>
+    <path d="M0 -150 L0 190 M-110 -40 L110 -40" stroke="${GOLD}" stroke-width="10" opacity="0.6"/>
+  </g>
+  ${txt(x, y + 340, label, 54, CREAM, 'Play')}
+`;
+}
+function defense(t) {
+  let s = bg(t);
+  const inL = eout(prog(t, 0.0, 0.8)), inR = eout(prog(t, 0.25, 0.8));
+  // ils avancent l'un vers l'autre, se heurtent à 2.7 s, reculent puis se figent
+  const push = ease(prog(t, 1.9, 0.8)) - 0.35 * ease(prog(t, 2.7, 0.5));
+  const lx = lerp(-300, 270, inL) + push * 70, rx = lerp(W + 300, 810, inR) - push * 70;
+  const shake = t > 2.7 && t < 3.2 ? Math.sin(t * 80) * 10 * (1 - prog(t, 2.7, 0.5)) : 0;
+  s += `<g transform="translate(${shake} 0)">`;
+  s += shield(lx, 800, RED, RED2, 'Triple-Alliance', 'BERLIN · VIENNE · ROME', false);
+  s += shield(rx, 800, BLUE, BLUE2, 'Triple-Entente', 'PARIS · ST-PÉTERSBOURG · LONDRES', true);
+  // bannières « DÉFENSE »
+  [[lx, RED, 1.0], [rx, BLUE, 1.3]].forEach(([x, c, st]) => {
+    const p = eback(prog(t, st, 0.4));
+    s += `<g transform="translate(${x} 560) scale(${p}) rotate(${c === RED ? -6 : 6})" opacity="${clamp(p)}">
+      <rect x="-140" y="-42" width="280" height="84" rx="6" fill="${CREAM}" stroke="${c}" stroke-width="6"/>
+      ${txt(0, 16, 'DÉFENSE', 46, c, 'Inter', 'middle', 'letter-spacing="5"')}</g>`;
+  });
+  // étincelles au contact
+  const sp = prog(t, 2.65, 0.7);
+  if (sp > 0 && sp < 1) for (let i = 0; i < 18; i++) {
+    const a = rnd(i) * Math.PI * 2, r = 40 + sp * (180 + rnd(i + 2) * 160);
+    s += `<line x1="540" y1="820" x2="${540 + Math.cos(a) * r}" y2="${820 + Math.sin(a) * r}" stroke="${i % 3 ? GOLD : '#fff3c4'}" stroke-width="${6 * (1 - sp)}" stroke-linecap="round" stroke-dasharray="${30} 400" stroke-dashoffset="${-r + 30}"/>`;
+  }
+  if (sp > 0 && sp < 1) s += `<circle cx="540" cy="820" r="${60 + 200 * sp}" fill="${GOLD}" opacity="${0.5 * (1 - sp)}" filter="url(#blur20)"/>`;
+  s += '</g>';
+  return s;
+}
+
+// ======================================================= 5. NOËL (84 s → 86.5 s)
+function noel(t) {
+  let s = bg(t, '#1b2330', '#0a0d12', false);
+  for (let i = 0; i < 90; i++) {
+    const x = (rnd(i) * W + Math.sin(t * 1.3 + i) * 30), y = (rnd(i + 11) * H + t * (90 + rnd(i + 4) * 120)) % H;
+    s += `<circle cx="${x}" cy="${y}" r="${2 + rnd(i + 6) * 5}" fill="#fff" opacity="${0.25 + rnd(i + 2) * 0.5}"/>`;
+  }
+  const pop = eback(prog(t, 0, 0.5));
+  // calendrier, puis les années défilent (1915 → 1918)
+  const years = ['1914', '1915', '1916', '1917', '1918'];
+  const flip = prog(t, 1.15, 1.25) * 4;
+  const idx = Math.min(4, Math.floor(flip));
+  const fp = flip - Math.floor(flip);
+  s += `<g transform="translate(540 820) scale(${0.85 + 0.15 * pop})" opacity="${clamp(pop * 1.4)}">`;
+  s += `<rect x="-300" y="-330" width="600" height="700" rx="22" fill="#000" opacity="0.5" filter="url(#blur20)" transform="translate(0 30)"/>`;
+  const page = (yr, extra) => `<g ${extra}>
+     <rect x="-290" y="-320" width="580" height="660" rx="20" fill="${CREAM}"/>
+     <rect x="-290" y="-320" width="580" height="150" rx="20" fill="${RED}"/><rect x="-290" y="-200" width="580" height="30" fill="${RED}"/>
+     ${txt(0, -225, 'DÉCEMBRE ' + yr, 58, CREAM, 'Play')}
+     ${txt(0, 80, '25', 260, INK, 'Play')}
+     ${txt(0, 200, 'NOËL', 80, RED, 'Play')}
+     ${txt(0, 262, '« on sera rentrés »', 34, '#6b5a44', 'PlayS')}
+     <circle cx="-200" cy="-340" r="18" fill="#555"/><circle cx="200" cy="-340" r="18" fill="#555"/></g>`;
+  s += page(years[Math.min(4, idx + (fp > 0 && idx < 4 ? 1 : 0))], '');
+  if (idx < 4 && flip > 0) s += page(years[idx], `transform="translate(0 -320) scale(1 ${Math.cos(fp * Math.PI / 2)}) translate(0 320)" opacity="${1 - fp * 0.6}"`);
+  // grande croix rouge tracée sur « Noël 1914 »
+  const xp = ease(prog(t, 0.5, 0.45)), xp2 = ease(prog(t, 0.75, 0.45));
+  s += `<path d="M-230 -140 L230 300" stroke="${RED}" stroke-width="34" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="${100 * (1 - xp)}" opacity="0.92"/>`;
+  s += `<path d="M230 -140 L-230 300" stroke="${RED}" stroke-width="34" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="${100 * (1 - xp2)}" opacity="0.92"/>`;
+  s += '</g>';
+  return s;
+}
+
+// ======================================================= 6. COURSE AUX ARMEMENTS → GUERRE TOTALE (86.5 s → 90.25 s)
+function shell(x, base, h, col) {
+  return `<g transform="translate(${x} ${base})">
+    <rect x="-34" y="${-h}" width="68" height="${h}" fill="${col}"/>
+    <rect x="-34" y="${-h}" width="68" height="${Math.min(h, 22)}" fill="#000" opacity="0.18"/>
+    <path d="M-34 ${-h} C-34 ${-h - 70} -8 ${-h - 110} 0 ${-h - 118} C8 ${-h - 110} 34 ${-h - 70} 34 ${-h}Z" fill="${GOLD}"/>
+    <rect x="-38" y="-26" width="76" height="26" fill="${GOLD2}"/>
+    <rect x="-34" y="${-h}" width="14" height="${h}" fill="#fff" opacity="0.12"/></g>`;
+}
+function totale(t) {
+  let s = bg(t);
+  // usines à l'horizon
+  s += `<path d="M0 1080 L0 980 L80 980 L80 860 L110 860 L110 980 L200 940 L200 980 L290 940 L290 980 L380 980 L380 820 L410 820 L410 980 L520 980 L520 900 L620 940 L620 900 L720 940 L720 980 L820 980 L820 840 L850 840 L850 980 L960 980 L960 920 L1080 920 L1080 1080Z" fill="#0b0806"/>`;
+  [[95, 860], [395, 820], [835, 840]].forEach(([x, y], k) => {
+    for (let i = 0; i < 6; i++) {
+      const p = ((t * 0.5 + i / 6 + k * 0.13) % 1);
+      s += `<circle cx="${x + p * 120 + Math.sin(p * 6 + k) * 20}" cy="${y - p * 380}" r="${20 + p * 60}" fill="#3a2e24" opacity="${0.55 * (1 - p)}"/>`;
+    }
+  });
+  // l'incendie : une « crise locale » qui grandit jusqu'à tout engloutir
+  const g = ease(prog(t, 1.2, 2.3));
+  const r = lerp(28, 1500, g * g);
+  s += `<circle cx="640" cy="760" r="${r * 1.15}" fill="${RED}" opacity="${0.25 + 0.2 * g}" filter="url(#blur20)"/>`;
+  s += `<circle cx="640" cy="760" r="${r}" fill="${RED2}" opacity="${0.55 + 0.3 * g}"/>`;
+  for (let k = 0; k < 3; k++) {
+    const rp = ((t * 0.9 + k / 3) % 1);
+    s += `<circle cx="640" cy="760" r="${r + rp * 160}" fill="none" stroke="${GOLD}" stroke-width="${5 * (1 - rp)}" opacity="${(1 - rp) * 0.8}"/>`;
+  }
+  const lab = 1 - prog(t, 1.4, 0.6);
+  s += `<g opacity="${clamp(lab) * eout(prog(t, 0, 0.4))}"><circle cx="640" cy="760" r="14" fill="${GOLD}"/>
+    <line x1="640" y1="760" x2="760" y2="660" stroke="${GOLD}" stroke-width="3"/>
+    ${txt(770, 655, 'CRISE LOCALE', 34, CREAM, 'Inter', 'start', 'letter-spacing="4"')}
+    ${txt(770, 695, 'Balkans', 30, GOLD, 'PlayS', 'start')}</g>`;
+  // obus : la course aux armements, rangée de barres qui montent
+  const n = 9;
+  for (let i = 0; i < n; i++) {
+    const p = eout(prog(t, 0.1 + i * 0.12, 0.9));
+    const h = (60 + i * i * 6.5) * p;
+    s += shell(110 + i * 107, 1390, h, i < 3 ? GOLD2 : i < 6 ? '#b0582a' : RED);
+  }
+  s += `<line x1="60" y1="1392" x2="1020" y2="1392" stroke="${GOLD}" stroke-width="4" opacity="0.6"/>`;
+  s += txt(70, 1435, '1900', 28, CREAM, 'InterS', 'start', 'opacity="0.7"') + txt(1010, 1435, '1914', 28, RED, 'InterS', 'end');
+  return s;
+}
+
+// ======================================================= 7. CIMETIÈRE (90.25 s → 93.5 s)
+function cimetiere(t) {
+  let s = `<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b1220"/><stop offset="0.45" stop-color="#5a2a22"/><stop offset="0.62" stop-color="#d0803a"/><stop offset="0.66" stop-color="#f2c06a"/></linearGradient></defs>`;
+  s += `<rect width="${W}" height="${H}" fill="url(#sky)"/>`;
+  s += `<circle cx="540" cy="1250" r="${170}" fill="#ffd48a" opacity="0.9"/><circle cx="540" cy="1250" r="330" fill="#ffb060" opacity="0.25" filter="url(#blur20)"/>`;
+  const hor = 1250;
+  s += `<rect x="0" y="${hor}" width="${W}" height="${H - hor}" fill="#120c09"/>`;
+  // rangées de croix en perspective, de l'avant vers l'horizon
+  const rows = 11;
+  for (let r = rows - 1; r >= 0; r--) {
+    const z = r / (rows - 1);                         // 0 = devant, 1 = horizon
+    const y = lerp(1860, hor + 6, Math.pow(z, 0.55));
+    const sc = lerp(1.0, 0.07, Math.pow(z, 0.55));
+    const appear = eout(prog(t, 0.1 + (rows - 1 - r) * 0.12, 0.5));
+    const cols = Math.round(lerp(5, 30, z));
+    const spread = lerp(1500, 1300, z);
+    for (let c = 0; c < cols; c++) {
+      const x = 540 + (c - (cols - 1) / 2) * spread / cols * (1 + z * 0.2);
+      const h = 230 * sc * appear;
+      if (h < 1) continue;
+      s += `<g transform="translate(${x} ${y}) scale(${sc})" opacity="${appear}">
+        <rect x="-9" y="-230" width="18" height="230" fill="${r < 3 ? '#efe6d4' : '#d9cdb6'}"/>
+        <rect x="-60" y="-190" width="120" height="18" fill="${r < 3 ? '#efe6d4' : '#d9cdb6'}"/></g>`;
+      if ((c + r) % 3 === 0) {
+        const pp = eback(prog(t, 0.6 + (rows - r) * 0.1 + rnd(c + r * 31) * 0.4, 0.35));
+        s += `<g transform="translate(${x + 70 * sc} ${y - 8 * sc}) scale(${sc * pp})"><circle r="20" fill="${RED}"/><circle r="7" fill="#1a0b08"/></g>`;
+      }
+    }
+  }
+  // casque Adrian sur la première croix
+  const hp = eout(prog(t, 1.2, 0.6));
+  s += `<g transform="translate(540 ${1860 - 230 + (1 - hp) * -60})" opacity="${hp}">
+    <path d="M-95 -20 C-90 -110 90 -110 95 -20 L120 -10 L-120 -10Z" fill="#4a5560" stroke="#222" stroke-width="5"/>
+    <path d="M-10 -100 L0 -125 L10 -100" fill="#4a5560" stroke="#222" stroke-width="4"/></g>`;
+  return s;
+}
+
+// ======================================================= 8. QUATRE COURONNES (93.5 s → fin)
+function crownShape(kind) {
+  // couronnes stylisées : base commune + sommet propre à chaque empire
+  const base = `<rect x="-120" y="40" width="240" height="56" rx="8" fill="${GOLD}"/>
+    <rect x="-120" y="52" width="240" height="10" fill="${GOLD2}"/>
+    ${[-80, -27, 27, 80].map((x, i) => `<circle cx="${x}" cy="70" r="11" fill="${i % 2 ? BLUE : RED}"/>`).join('')}`;
+  if (kind === 0) // Allemagne : arceaux + croix
+    return base + `<path d="M-115 40 C-110 -60 -40 -100 0 -105 C40 -100 110 -60 115 40" fill="${GOLD}" opacity="0.9"/>
+      <path d="M-60 40 C-55 -40 -20 -90 0 -100 M60 40 C55 -40 20 -90 0 -100" stroke="${GOLD2}" stroke-width="10" fill="none"/>
+      <circle cx="0" cy="-118" r="18" fill="${BLUE}"/><path d="M0 -136 L0 -186 M-20 -166 L20 -166" stroke="${GOLD}" stroke-width="14"/>`;
+  if (kind === 1) // Autriche-Hongrie : mitre fendue
+    return base + `<path d="M-115 40 L-115 -30 C-80 -80 -40 -90 -14 -95 L-14 40Z M115 40 L115 -30 C80 -80 40 -90 14 -95 L14 40Z" fill="${GOLD}"/>
+      <path d="M-14 -95 C-10 -130 10 -130 14 -95" stroke="${GOLD}" stroke-width="16" fill="none"/>
+      <path d="M0 -130 L0 -175 M-18 -158 L18 -158" stroke="${GOLD}" stroke-width="13"/>
+      <path d="M-100 30 L-100 -20 M100 30 L100 -20" stroke="${RED}" stroke-width="16"/>`;
+  if (kind === 2) // Russie : deux demi-sphères
+    return base + `<path d="M-115 40 C-120 -70 -30 -95 -8 -60 L-8 40Z M115 40 C120 -70 30 -95 8 -60 L8 40Z" fill="${GOLD}"/>
+      <path d="M-115 0 C-80 -30 -40 -40 -8 -30 M115 0 C80 -30 40 -40 8 -30" stroke="${GOLD2}" stroke-width="7" fill="none"/>
+      <rect x="-8" y="-90" width="16" height="130" fill="${GOLD2}"/>
+      <circle cx="0" cy="-112" r="24" fill="${RED}"/><path d="M0 -136 L0 -180 M-18 -162 L18 -162" stroke="${GOLD}" stroke-width="13"/>`;
+  // Empire ottoman : turban + aigrette + croissant
+  return `<ellipse cx="0" cy="10" rx="130" ry="95" fill="${CREAM}"/>
+    ${[-60, -20, 20, 60].map(y => `<path d="M-125 ${y * 0.6 + 10} C-40 ${y * 0.6 - 20} 40 ${y * 0.6 + 40} 125 ${y * 0.6}" stroke="#c9b894" stroke-width="7" fill="none"/>`).join('')}
+    <rect x="-120" y="60" width="240" height="40" rx="8" fill="${RED}"/>
+    <circle cx="0" cy="-40" r="26" fill="${RED}" stroke="${GOLD}" stroke-width="7"/>
+    <path d="M0 -66 C-30 -120 -10 -170 20 -200 C5 -160 10 -110 0 -66Z" fill="${GOLD}"/>
+    <path d="M38 -150 a28 28 0 1 0 0 40 a22 22 0 1 1 0 -40Z" fill="${GOLD}"/>`;
+}
+function couronnes(t) {
+  let s = bg(t, '#1d1610', '#080605');
+  const names = ['ALLEMAGNE', 'AUTRICHE-HONGRIE', 'RUSSIE', 'EMPIRE OTTOMAN'];
+  const years = ['1918', '1918', '1917', '1922'];
+  const pos = [[290, 640], [790, 640], [290, 1010], [790, 1010]];
+  const dim = 1 - 0.55 * ease(prog(t, 2.6, 1.2));   // tout s'assombrit avant les phrases finales
+  // sol boueux
+  s += `<rect x="0" y="1300" width="${W}" height="620" fill="#0a0806" opacity="0.7"/>`;
+  pos.forEach(([x, y], i) => {
+    const ap = eback(prog(t, 0.05 + i * 0.12, 0.5));
+    const fall = prog(t, 0.55 + i * 0.32, 0.6);
+    const f = fall * fall;
+    const rot = f * (i % 2 ? 24 : -24), dy = f * 120;
+    const crack = ease(prog(t, 0.45 + i * 0.32, 0.25));
+    const tarnish = clamp(fall);
+    s += `<g opacity="${clamp(ap * 1.3) * dim}">`;
+    // ombre au sol
+    s += `<ellipse cx="${x}" cy="${y + 170}" rx="${140 - 30 * f}" ry="22" fill="#000" opacity="0.5"/>`;
+    s += `<g transform="translate(${x} ${y + dy}) rotate(${rot}) scale(${1.05 * ap})" filter="url(#shadow)">`;
+    s += crownShape(i);
+    // la couronne se ternit et se fend
+    s += `<g opacity="${0.6 * tarnish}" style="mix-blend-mode:multiply">` + crownShape(i).replace(/fill="[^"]+"/g, 'fill="#3a2c1c"') + '</g>';
+    s += `<path d="M-6 -100 L12 -40 L-10 10 L14 60 L0 100" stroke="${INK}" stroke-width="9" fill="none" pathLength="100" stroke-dasharray="100" stroke-dashoffset="${100 * (1 - crack)}"/>`;
+    s += '</g>';
+    // poussière à l'impact
+    const dp = prog(t, 0.55 + i * 0.32 + 0.6, 0.7);
+    if (dp > 0 && dp < 1) for (let k = 0; k < 10; k++) {
+      const a = Math.PI + rnd(k + i * 10) * Math.PI;
+      s += `<circle cx="${x + Math.cos(a) * dp * 160}" cy="${y + 170 + Math.sin(a) * dp * 70}" r="${10 + dp * 18}" fill="#6a5a46" opacity="${0.5 * (1 - dp)}"/>`;
+    }
+    s += txt(x, y + 225, names[i], 34, CREAM, 'Inter', 'middle', 'letter-spacing="3"');
+    s += txt(x, y + 268, '† ' + years[i], 34, RED, 'PlayS');
+    s += '</g>';
+  });
+  return s;
+}
+
+const SCENES = { i14: dominos, i17: belgique, i18: londres, i19: defense, i20: noel, i21: totale, i22: cimetiere, i23: couronnes };
+function render(name, t) {
+  document.getElementById('stage').innerHTML =
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${SCENES[name](t)}</svg>`;
+}
+window.render = render;
+</script></body></html>

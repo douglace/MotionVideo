@@ -187,8 +187,8 @@ def make_vignette():
 
 VIGN = make_vignette()
 rng = np.random.default_rng(7)
-GRAIN = [rng.normal(0, 7, (H // 2, W // 2)).astype(np.float32) for _ in range(6)]
-GRAIN = [np.kron(g, np.ones((2, 2), np.float32))[..., None] for g in GRAIN]
+GRAIN = [rng.normal(0, 3.2, (H // 3, W // 3)).astype(np.float32) for _ in range(6)]
+GRAIN = [np.kron(g, np.ones((3, 3), np.float32))[..., None] for g in GRAIN]
 
 # ---------------------------------------------------------------- textes
 def text_w(f, s):
@@ -341,6 +341,13 @@ def render_shot(k, t):
         d = ImageDraw.Draw(out)
         d.rectangle((W // 2 - 4, 0, W // 2 + 4, H), fill=GOLD)
         return out
+    mdir = os.path.join(HERE, "build", "motion", name)
+    if not os.path.exists(os.path.join(HERE, "img", name + ".png")) and os.path.isdir(mdir):
+        # scène motion design SVG pré-rendue par motion/render.js (image k <=> τ = k/30 - 0.5)
+        idx = int(round((t - t0 + 0.5) * FPS))
+        files = sorted(os.listdir(mdir))
+        fr = Image.open(os.path.join(mdir, files[min(max(idx, 0), len(files) - 1)])).convert("RGB")
+        return kenburns(fr, p, 1.0, 1.03, 0, 0, 0, 0, sh)
     return kenburns(src(name), p, z0, z1, px0, px1, py0, py1, sh)
 
 def shot_index(t):
@@ -459,7 +466,7 @@ def main():
     n = int(round(DUR * FPS))
     cmd = ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
            "-i", "-", "-i", os.path.join(HERE, "narration.m4a"), "-map", "0:v", "-map", "1:a",
-           "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
+           "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-maxrate", "9M", "-bufsize", "18M", "-pix_fmt", "yuv420p",
            "-c:a", "copy", "-shortest", "-movflags", "+faststart", out]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     for i in range(n):
