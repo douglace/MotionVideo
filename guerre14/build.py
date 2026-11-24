@@ -74,6 +74,10 @@ SHOTS = [
     ("i23", 93.50, 1.14, 1.00, 0.0, 0.0, 0.0, 0.0),
 ]
 
+# remplacements tant qu'une illustration n'a pas pu être générée ("g" = sépia)
+FALLBACK = {"i14": "i10", "i17": "i16", "i18": "i09", "i19": "i15", "i20": "i03",
+            "i21": "i02", "i22": "i11g", "i23": "i01g"}
+
 # titres de section (début, fin, texte, couleur du filet)
 HEADERS = [
     (0.3, 11.4, "28 JUIN 1914 · SARAJEVO", RED),
@@ -287,9 +291,16 @@ IMGS = {}
 def src(name):
     if name not in IMGS:
         path = os.path.join(HERE, "img", name + ".png")
-        if not os.path.exists(path):  # aperçu avant que toutes les images existent
-            path = os.path.join(HERE, "img", "i01.png")
-        IMGS[name] = load_cover(path, 1.0)
+        mono = False
+        if not os.path.exists(path):  # illustration manquante -> image de remplacement
+            alt = FALLBACK.get(name, "i01")
+            mono = alt.endswith("g")
+            path = os.path.join(HERE, "img", alt.rstrip("g") + ".png")
+        im = load_cover(path, 1.0)
+        if mono:  # version sépia désaturée
+            g = np.asarray(im.convert("L"), dtype=np.float32)[..., None]
+            im = Image.fromarray(np.clip(g * np.array([1.05, 0.93, 0.78]), 0, 255).astype(np.uint8))
+        IMGS[name] = im
     return IMGS[name]
 
 def shake_at(t):
