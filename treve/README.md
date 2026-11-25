@@ -4,7 +4,7 @@ Refonte du montage « 1914 · Reconstitutions illustrées » (69,5 s, 1080×1920
 [`LottieFiles/motion-design-skill`](https://github.com/LottieFiles/motion-design-skill).
 
 ```bash
-node render.mjs                        # -> build/treve-motion.mp4
+node render.mjs                        # -> build/treve-motion.mp4 (CRF 18, ~150 Mo, non versionné ; build/treve-motion-web.mp4 = version CRF 25)
 node render.mjs --stills 3,12.5,45     # images de contrôle
 # aperçu temps réel : servir le dossier puis ouvrir index.html?play
 ```
