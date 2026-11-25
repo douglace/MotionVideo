@@ -40,6 +40,10 @@ canvas{position:absolute;inset:0}
 #final .or{position:absolute;top:1000px;width:1080px;text-align:center;font-family:Cormorant,serif;font-style:italic;font-weight:700;font-size:80px;color:var(--gold);line-height:1}
 #final .so{position:absolute;top:1590px;width:1080px;text-align:center;font-family:Cormorant,serif;font-style:italic;font-weight:600;font-size:62px;color:var(--cream)}
 #cta{top:1720px;opacity:0}
+#annot{top:196px;left:44px;width:992px;display:none}
+#annot .hd{font-family:Plex,monospace;font-size:19px;letter-spacing:.18em;color:#9fd1ff;margin-bottom:10px}
+#annot .r{display:inline-block;margin:0 8px 8px 0;padding:7px 14px;border-radius:8px;background:rgba(10,20,40,.72);border:1px solid rgba(159,209,255,.5);
+  font-family:Plex,monospace;font-size:19px;color:#e8f3ff;letter-spacing:.02em}
 .chip{display:inline-flex;align-items:center;gap:16px;padding:16px 30px;border:1.5px solid rgba(242,196,107,.75);border-radius:40px;background:rgba(10,8,6,.55);
   font-family:Plex,monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:26px;color:var(--cream)}
 .chip .dot{width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
@@ -61,6 +65,7 @@ canvas{position:absolute;inset:0}
   </div>
   <div id="cta" class="layer center"><div class="chip"><span class="dot"></span>A ou B ? Réponds en commentaire</div></div>
   <div id="caps" class="layer"></div>
+  <div id="annot" class="layer"><div class="hd"></div><div class="rs"></div></div>
 </div>
 <script>
 /* =====================================================================
@@ -71,11 +76,18 @@ function bezier(x1,y1,x2,y2){const cx=3*x1,bx=3*(x2-x1)-cx,ax=1-cx-bx,cy=3*y1,by
   return x=>{if(x<=0)return 0;if(x>=1)return 1;let t=x;for(let i=0;i<8;i++){const e=sx(t)-x;if(Math.abs(e)<1e-6)break;const d=dx(t);if(Math.abs(d)<1e-6)break;t-=e/d;}return sy(t);};}
 const E={premium:bezier(.4,0,.2,1),enter:bezier(.05,.7,.1,1),exit:bezier(.3,0,1,1),sine:x=>-(Math.cos(Math.PI*x)-1)/2,expo:x=>x>=1?1:1-Math.pow(2,-10*x),lin:x=>x,
   back:x=>{const c1=1.2,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2);}};
+/* Identité de mouvement — skill › motion-personality › « Brand Motion Identity » (Premium)
+   signature (.4,0,.2,1) · palette 350/500/800 ms · entrée = montée 15-25px + fondu · sorties = 65-75 % de l'entrée */
+const M={quick:.35,std:.5,slow:.8,rise:20,exitRatio:.7};
+const REDUCED=new URLSearchParams(location.search).has('reduced'); // skill › context-adaptation › prefers-reduced-motion
 const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)), lerp=(a,b,k)=>a+(b-a)*k;
 const P=(t,t0,d,e=E.premium)=>e(clamp((t-t0)/d));
 const rnd=i=>{const s=Math.sin(i*127.1+311.7)*43758.5453;return s-Math.floor(s);};
 function noise1(x){const i=Math.floor(x),f=x-i,u=f*f*(3-2*f);return lerp(rnd(i),rnd(i+1),u);}
 const $=s=>document.querySelector(s);
+function camKF(t,keys,ease=E.premium){if(REDUCED)return {...keys[0][1]};const v=kf(t,keys,ease);
+  for(let i=0;i<keys.length-1;i++){const [a,va]=keys[i],[b,vb]=keys[i+1];if(t>=a&&t<b){const dx=vb.x-va.x,dy=vb.y-va.y,L=Math.hypot(dx,dy);
+    if(L>20){const k=Math.sin(Math.PI*ease(clamp((t-a)/(b-a))));v.x+=-dy/L*15/v.z*k;v.y+=dx/L*15/v.z*k;}break;}}return v;}
 const css=(el,o)=>{for(const k in o)el.style[k]=o[k];};
 const tf=(x=0,y=0,s=1,r=0)=>`translate(${x}px,${y}px) scale(${s}) rotate(${r}deg)`;
 /** keyframes: [[t,{...}],...] with numeric props */
@@ -112,6 +124,10 @@ const POSE={
   offer: {ba:.12,bb:.25,fa:1.3,fb:.15, rifle:0},
 };
 function mixPose(a,b,k){const o={};for(const p in a)o[p]=lerp(a[p],b[p]??a[p],k);return o;}
+/* Follow-through / overlapping action (disney-principles §5) : le bras arrière suit le bras avant avec 100 ms de retard */
+function poseT(a,b,t,t0,d,e=E.premium){const kf_=P(t,t0,d,e),kb=P(t,t0+.1,d,e);const o=mixPose(a,b,kf_);o.ba=lerp(a.ba,b.ba,kb);o.bb=lerp(a.bb,b.bb,kb);o.rifle=kf_<.5?a.rifle:b.rifle;o.book=kf_<.5?a.book:b.book;return o;}
+/* Anticipation (disney §2) : petit recul (10-20 %) 150 ms avant la marche, légère inclinaison pendant, retour posé à l'arrêt */
+function lean(t,w0,w1){if(t<w0-.15||t>w1+.35)return 0;if(t<w0)return -.06*Math.sin(Math.PI*clamp((t-w0+.15)/.15));if(t<w1)return .035*P(t,w0,.25);return .035*(1-P(t,w1,.35));}
 function limb(c,x,y,a,b,L1,L2,w,col){const ex=x+Math.sin(a)*L1,ey=y+Math.cos(a)*L1,a2=a+b,hx=ex+Math.sin(a2)*L2,hy=ey+Math.cos(a2)*L2;
   c.strokeStyle=col;c.lineWidth=w;c.lineCap='round';c.lineJoin='round';c.beginPath();c.moveTo(x,y);c.lineTo(ex,ey);c.lineTo(hx,hy);c.stroke();return {ex,ey,hx,hy};}
 function drawArm(c,sx,sy,a,b,col,colD){const r=limb(c,sx,sy,a,b,58,52,25,col);
@@ -168,7 +184,11 @@ function soldier(c,o){
   const brit=o.side==='brit',coat=brit?C.khaki:C.grey,coatD=brit?C.khakiD:C.greyD,coatL=brit?C.khakiL:C.greyL;
   const p=o.pose||POSE.idle,t=o.t||0,ph=o.walk||0,wa=o.walkAmp||0,seed=o.seed||0;
   c.save();c.translate(o.x,o.y);c.scale((o.s||1)*(o.f||1)*(o.squash||1),o.s||1);c.globalAlpha=o.alpha??1;
-  const breath=Math.sin(t*2.2+seed)*1.6,bob=-Math.abs(Math.cos(ph))*7*wa;
+  const breath=Math.sin(t*1.8+seed)*1.6,bob=-Math.abs(Math.cos(ph))*7*wa;  // respiration ≈3,5 s (ambient-continuous › breathing)
+  // ombre au sol : quand le corps se soulève, l'ombre s'étale et pâlit (choreography › counter-motion « Lifts »)
+  if(o.shadow!==false){const lift=-bob;c.fillStyle=`rgba(0,0,0,${.32-lift*.012})`;c.beginPath();c.ellipse(4,3,48*(1+lift*.025),9,0,0,7);c.fill();}
+  c.rotate(o.lean||0);
+  const hs=Math.sin(ph-.9)*wa*6;   // pan de capote : suit les jambes avec retard (follow-through)
   // jambes
   const la=Math.sin(ph)*.48*wa,kn=(.12+.5*Math.max(0,-Math.cos(ph)))*wa,kn2=(.12+.5*Math.max(0,Math.cos(ph)))*wa;
   drawLeg(c,-6,-118+bob,-la,kn2,brit,coatD);
@@ -177,11 +197,11 @@ function soldier(c,o){
   const swing=Math.sin(ph)*.38*wa;
   const ba=drawArm(c,-2,-222+breath,p.ba-swing,p.bb,coatD,'#00000033');
   // fusil dans le dos
-  if(!p.rifle&&o.rifleBack!==false){c.save();c.translate(-22,-130);c.rotate(-.42);c.strokeStyle=C.wood;c.lineWidth=13;c.lineCap='round';c.beginPath();c.moveTo(0,40);c.lineTo(0,-60);c.stroke();
+  if(!p.rifle&&o.rifleBack!==false){c.save();c.translate(-22,-130);c.rotate(-.42+Math.sin(ph*2-1.2)*.06*wa);c.strokeStyle=C.wood;c.lineWidth=13;c.lineCap='round';c.beginPath();c.moveTo(0,40);c.lineTo(0,-60);c.stroke();
     c.strokeStyle='#2d2d2f';c.lineWidth=6;c.beginPath();c.moveTo(0,-40);c.lineTo(0,-150);c.stroke();c.restore();}
   drawLeg(c,6,-118,la,kn,brit,coat);
   // torse (capote)
-  c.fillStyle=coat;c.beginPath();c.moveTo(-34,-232+breath);c.quadraticCurveTo(2,-246+breath,38,-232+breath);c.lineTo(50,-94);c.quadraticCurveTo(2,-84,-46,-94);c.closePath();c.fill();
+  c.fillStyle=coat;c.beginPath();c.moveTo(-34,-232+breath);c.quadraticCurveTo(2,-246+breath,38,-232+breath);c.lineTo(50+hs,-94);c.quadraticCurveTo(2+hs,-84,-46+hs,-94);c.closePath();c.fill();
   c.fillStyle=coatD;c.globalAlpha*=.55;c.beginPath();c.moveTo(-34,-232+breath);c.lineTo(-46,-94);c.quadraticCurveTo(-30,-90,-18,-90);c.lineTo(-14,-228+breath);c.closePath();c.fill();c.globalAlpha=o.alpha??1;
   c.fillStyle=coatL;c.globalAlpha*=.35;c.fillRect(30,-226+breath,6,128);c.globalAlpha=o.alpha??1;
   c.fillStyle=brit?'#7A6A40':C.black;c.fillRect(-42,-156,92,12);
@@ -190,7 +210,7 @@ function soldier(c,o){
   if(brit){c.strokeStyle='#76663E';c.lineWidth=7;c.beginPath();c.moveTo(-26,-228+breath);c.lineTo(34,-150);c.stroke();}
   else{c.fillStyle='#B4423A';c.fillRect(14,-238+breath,16,7);}
   // tête
-  c.save();c.translate(4,-236+breath);c.rotate((o.tilt||0)+(o.bow||0));
+  c.save();c.translate(4,-236+breath);c.rotate((o.tilt||0)+(o.bow||0)+Math.sin(ph*2-1.0)*.03*wa); // tête : overlapping action
   drawHead(c,{blink:((t+seed*1.7)%3.9)<.12,mouth:o.mouth,look:o.look,smile:o.smile,worry:o.worry,eyesClosed:o.eyesClosed,hat:o.hat},brit);c.restore();
   // fusil en main + bras avant
   let muzzle=null;
@@ -213,15 +233,20 @@ const STARS=[...Array(170)].map((_,i)=>({x:-700+rnd(i)*3400,y:-2200+rnd(i+500)*3
 function surfaceY(x){return G+Math.sin(x*.011)*4+Math.sin(x*.031+1)*3;}
 function drawSky(c,o){
   const g=c.createLinearGradient(0,-2200,0,G);g.addColorStop(0,o.top||C.nightT);g.addColorStop(1,o.bot||C.nightB);c.fillStyle=g;c.fillRect(-1500,-2600,5000,G+2600);
-  for(const s of STARS){if(s.y>G-120)continue;c.globalAlpha=(.35+.65*noise1(o.t*1.3+s.p))*(o.stars??1);c.fillStyle='#fff';c.beginPath();c.arc(s.x,s.y,s.r,0,7);c.fill();}
+  c.save();c.translate((CURV.x-1000)*.8,(CURV.y-850)*.8); // arrière-plan à 0,2x
+  STARS.forEach((s,i)=>{if(s.y>G-120)return;let a=.5;if(i%14===0){const k=((o.t+s.p*2)%2.6)/1.0;a=k<1?.3+.7*Math.sin(k*Math.PI):.3;}
+    c.globalAlpha=a*(o.stars??1);c.fillStyle='#fff';c.beginPath();c.arc(s.x,s.y,s.r,0,7);c.fill();});
   c.globalAlpha=1;
   // lune
   const mx=o.moonX??1720,my=o.moonY??260;const mg=c.createRadialGradient(mx,my,40,mx,my,260);mg.addColorStop(0,'rgba(230,236,255,.28)');mg.addColorStop(1,'rgba(230,236,255,0)');
   c.fillStyle=mg;c.fillRect(mx-260,my-260,520,520);c.fillStyle='#EEF1F7';c.beginPath();c.arc(mx,my,58,0,7);c.fill();
   c.fillStyle='#D3D9E6';for(const [dx,dy,r] of [[-18,-12,11],[16,10,8],[6,-26,6],[-8,22,7]]){c.beginPath();c.arc(mx+dx,my+dy,r,0,7);c.fill();}
+  c.restore();
+  c.save();c.translate((CURV.x-1000)*.5,0); // plan intermédiaire à 0,5x
   // collines lointaines
   c.fillStyle='#121A30';c.beginPath();c.moveTo(-1500,G);for(let x=-1500;x<=3500;x+=60)c.lineTo(x,G-70-Math.sin(x*.004)*40-Math.sin(x*.013)*18);c.lineTo(3500,G);c.closePath();c.fill();
   c.fillStyle='#18223B';c.beginPath();c.moveTo(-1500,G);for(let x=-1500;x<=3500;x+=50)c.lineTo(x,G-30-Math.sin(x*.007+2)*18);c.lineTo(3500,G);c.closePath();c.fill();
+  c.restore();
 }
 function deadTree(c,x,y,s){c.save();c.translate(x,y);c.scale(s,s);c.strokeStyle='#0F1424';c.lineCap='round';c.lineWidth=16;
   c.beginPath();c.moveTo(0,0);c.lineTo(4,-170);c.stroke();c.lineWidth=8;c.beginPath();c.moveTo(2,-90);c.lineTo(-40,-140);c.moveTo(4,-130);c.lineTo(38,-170);c.moveTo(4,-160);c.lineTo(-14,-205);c.stroke();c.restore();}
@@ -277,9 +302,10 @@ function lantern(c,x,yTop,yBot,k,t,seed){if(k<=0)return;c.globalAlpha=k;c.stroke
   const fl=.8+.2*noise1(t*8+seed);glow(c,x+40,yTop+40,130,'rgba(255,190,90,A)',.5*fl*k);
   c.fillStyle='#2b2b2b';c.fillRect(x+26,yTop+8,28,6);c.fillStyle='#FFD98A';c.fillRect(x+28,yTop+14,24,32);c.fillStyle='#2b2b2b';c.fillRect(x+26,yTop+46,28,6);c.globalAlpha=1;}
 function label(c,x,y,text,o={}){c.save();c.globalAlpha=o.a??1;c.font=`500 ${o.size||30}px Plex`;const w=c.measureText(text).width*1.0+((o.size||30)*.22*text.length);
-  c.translate(x,y+(1-(o.a??1))*14);c.fillStyle=o.bg||'rgba(8,10,18,.6)';c.strokeStyle=o.col||C.gold;c.lineWidth=2;c.beginPath();c.roundRect(-w/2-26,-30,w+52,60,30);c.fill();c.stroke();
+  c.translate(x,y+(1-(o.a??1))*M.rise);c.fillStyle=o.bg||'rgba(8,10,18,.6)';c.strokeStyle=o.col||C.gold;c.lineWidth=2;c.beginPath();c.roundRect(-w/2-26,-30,w+52,60,30);c.fill();c.stroke();
   c.fillStyle=o.tc||C.cream;c.textAlign='center';c.textBaseline='middle';c.letterSpacing=`${(o.size||30)*.22}px`;c.fillText(text,0,2);c.restore();}
-function cam(c,v){c.translate(540,960);c.scale(v.z,v.z);c.translate(-v.x,-v.y);}
+let CURV={x:1000,y:850,z:1};
+function cam(c,v){CURV=v;c.translate(540,960);c.scale(v.z,v.z);c.translate(-v.x,-v.y);}
 function note(c,x,y,s,a){c.save();c.translate(x,y);c.scale(s,s);c.globalAlpha=a;c.fillStyle=C.gold;c.strokeStyle=C.gold;c.lineWidth=5;
   c.beginPath();c.ellipse(0,0,13,9,-.4,0,7);c.fill();c.beginPath();c.moveTo(11,-3);c.lineTo(11,-50);c.quadraticCurveTo(26,-40,30,-24);c.stroke();c.restore();}
 function burst(c,x,y,k,s=1){if(k<=0||k>=1)return;const r=lerp(10,120,E.expo(k))*s;c.globalAlpha=1-k;
@@ -335,13 +361,13 @@ function cigs(c,x,y,s,r=0){c.save();c.translate(x,y);c.rotate(r);c.scale(s,s);
 /* =====================================================================
    6. Ambiance écran : neige, grain, vignette
    ===================================================================== */
-const SNOW=[...Array(150)].map((_,i)=>({x:rnd(i+3)*1080,y:rnd(i+11)*1920,z:.25+rnd(i+19)*.75,ph:i*1.7}));
+const SNOW=[...Array(20)].map((_,i)=>({x:rnd(i+3)*1080,y:rnd(i+11)*1920,z:rnd(i+19),ph:i*1.7}));
 let GRAIN=[];
 function makeGrain(){for(let k=0;k<6;k++){const cv=document.createElement('canvas');cv.width=540;cv.height=960;const x=cv.getContext('2d');const d=x.createImageData(540,960);
   let s=k*9973+1;for(let i=0;i<d.data.length;i+=4){s=(s*16807)%2147483647;const v=s%255;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=255;}x.putImageData(d,0,0);GRAIN.push(cv);}}
 function snowFX(c,t,amt,speed=1){if(amt<=0)return;c.fillStyle='#fff';
-  for(const p of SNOW){const y=((p.y+t*(40+p.z*110)*speed)%1920+1920)%1920,x=((p.x+t*(-10-p.z*16)*speed+Math.sin(t*.8+p.ph)*14*p.z)%1080+1080)%1080;
-    c.globalAlpha=.75*p.z*amt;c.beginPath();c.arc(x,y,1.2+p.z*3.6,0,7);c.fill();}c.globalAlpha=1;}
+  for(const p of SNOW){const y=((p.y+t*(20+p.z*40)*speed)%1920+1920)%1920,x=p.x+Math.sin(t*.6+p.ph)*15;
+    c.globalAlpha=(.3+.4*p.z)*amt;c.beginPath();c.arc(x,y,1.5+p.z*2.5,0,7);c.fill();}c.globalAlpha=1;}
 function finishFX(c,t,o){
   const v=c.createRadialGradient(540,900,380,540,960,1250);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,`rgba(0,0,0,${.5+(o.beat||0)})`);c.fillStyle=v;c.fillRect(0,0,1080,1920);
   const top=c.createLinearGradient(0,0,0,300);top.addColorStop(0,'rgba(0,0,0,.45)');top.addColorStop(1,'rgba(0,0,0,0)');c.fillStyle=top;c.fillRect(0,0,1080,300);
@@ -362,7 +388,7 @@ function buildScenes(){
   const S=st;
   /* A — accroche : ils se visent… puis se serrent la main */
   scene(0,S(2),'cut',(c,t)=>{
-    const v=kf(t,[[0,{x:1000,y:850,z:1.3}],[S(1),{x:1000,y:855,z:1.27}],[S(2),{x:1000,y:860,z:1.42}]],E.sine);
+    const v=camKF(t,[[0,{x:1000,y:850,z:1.3}],[S(1),{x:1000,y:855,z:1.27}],[S(2),{x:1000,y:860,z:1.42}]],E.sine);
     c.save();cam(c,v);drawFrontBG(c,{t,trenches:false,wire:0,stars:1});
     const a=S(1)+.1, lw=P(t,a,.55);             // baisser les armes (anticipation : léger soulèvement)
     const walk0=a+.45, walk1=wt('main')-.25;
@@ -371,12 +397,12 @@ function buildScenes(){
     const walking=t>walk0&&t<walk1, ph=(t-walk0)*7.5;
     const sk=P(t,walk1-.05,.35);
     const shakeOsc=t>wt('main')?Math.sin((t-wt('main'))*16)*.07*(1-P(t,wt('main')+.4,.5)):0;
-    const pose=t<a?POSE.aim:(t<walk1?mixPose(POSE.aim,POSE.idle,lw):mixPose(POSE.idle,POSE.shake,sk));
+    const pose=t<walk1?poseT(POSE.aim,POSE.idle,t,a,.55):poseT(POSE.idle,POSE.shake,t,walk1-.05,.35);const ln=lean(t,walk0,walk1);
     const lift=t>a&&t<a+.15?-.12*Math.sin((t-a)/.15*Math.PI):0;
     const p2={...pose,fa:pose.fa+lift};
     const wa=walking?Math.min(1,(t-walk0)*3,(walk1-t)*3):0;
-    const b=soldier(c,brit(bx,{y:G,s:1.15,t,pose:p2,walk:ph,walkAmp:wa,worry:t<a?1:0,smile:t>wt('main')?1:0,shakeOsc}));
-    const g=soldier(c,ger(gx,{y:G,s:1.15,t,pose:p2,walk:ph+.4,walkAmp:wa,worry:t<a?1:0,smile:t>wt('main')?1:0,seed:2,shakeOsc}));
+    const b=soldier(c,brit(bx,{y:G,s:1.15,t,pose:p2,lean:ln,walk:ph,walkAmp:wa,worry:t<a?1:0,smile:t>wt('main')?1:0,shakeOsc}));
+    const g=soldier(c,ger(gx,{y:G,s:1.15,t,pose:p2,lean:ln,walk:ph+.4,walkAmp:wa,worry:t<a?1:0,smile:t>wt('main')?1:0,seed:2,shakeOsc}));
     // ligne de mire rouge entre les canons
     const sl=P(t,.2,.6)*(1-P(t,a,.3));
     if(sl>0&&b.muzzle&&g.muzzle){c.strokeStyle=C.red;c.lineWidth=3;c.setLineDash([14,12]);c.globalAlpha=sl;c.beginPath();c.moveTo(b.muzzle.x,b.muzzle.y);c.lineTo(lerp(b.muzzle.x,g.muzzle.x,sl),lerp(b.muzzle.y,g.muzzle.y,sl));c.stroke();c.setLineDash([]);c.globalAlpha=1;}
@@ -391,7 +417,7 @@ function buildScenes(){
   /* B — décembre 1914, le front de l'Ouest, face à face dans les tranchées */
   scene(S(2),S(3),'dip',(c,t)=>{
     const tb=wt('front')-.2;
-    const v=kf(t,[[S(2),{x:1000,y:-350,z:.7}],[tb,{x:1000,y:-300,z:.7}],[tb+2,{x:1000,y:767,z:.6}],[S(3),{x:1000,y:800,z:.68}]]);
+    const v=camKF(t,[[S(2),{x:1000,y:-350,z:.7}],[tb,{x:1000,y:-300,z:.7}],[tb+.9,{x:1000,y:260,z:.64}],[tb+2,{x:1000,y:767,z:.6}],[S(3),{x:1000,y:800,z:.68}]]);
     c.save();cam(c,v);drawFrontBG(c,{t});
     const look=Math.sin(t*1.3);
     for(const [x,sd] of [[300,0],[400,1]])soldier(c,brit(x,{t,seed:sd,tilt:.05*Math.sin(t+sd)}));
@@ -410,7 +436,7 @@ function buildScenes(){
   });
   /* C — la nuit de Noël, des lumières côté allemand */
   scene(S(3),S(4),'fade',(c,t)=>{
-    const v=kf(t,[[S(3),{x:1000,y:800,z:.68}],[wt('lumières')+.2,{x:1450,y:810,z:.9}],[S(4),{x:1640,y:819,z:1.05}]]);
+    const v=camKF(t,[[S(3),{x:1000,y:800,z:.68}],[wt('lumières')+.2,{x:1450,y:810,z:.9}],[S(4),{x:1640,y:819,z:1.05}]]);
     c.save();cam(c,v);drawFrontBG(c,{t,top:'#03060F',bot:'#121C36'});
     const l0=wt('lumières');
     const lights=[[1440,'tree'],[1590,'lan'],[1700,'lan'],[1840,'tree'],[1950,'tree']];
@@ -422,53 +448,56 @@ function buildScenes(){
   /* D — des chants traversent les lignes */
   scene(S(4),S(5),'fade',(c,t)=>{
     const tp=wt('traversent');
-    const v=kf(t,[[S(4),{x:1660,y:854,z:1.3}],[tp+.1,{x:1620,y:854,z:1.3}],[S(5)-.2,{x:360,y:854,z:1.3}]]);
+    const v=camKF(t,[[S(4),{x:1660,y:854,z:1.3}],[tp+.1,{x:1620,y:854,z:1.3}],[tp+.6,{x:1300,y:850,z:1.18}],[tp+1.0,{x:1000,y:846,z:1.1}],[tp+1.4,{x:690,y:850,z:1.18}],[S(5)-.2,{x:360,y:854,z:1.3}]]);
     c.save();cam(c,v);drawFrontBG(c,{t,top:'#03060F',bot:'#121C36'});
     [[1440,'tree'],[1590,'lan'],[1840,'tree']].forEach(([x,k],i)=>k==='tree'?xmasTree(c,x,surfaceY(x)-4,1,1,t,i):lantern(c,x,880,FLOOR,1,t,i));
     for(const [x,sd] of [[1610,2],[1720,3]]){const m=.5+.5*Math.sin(t*6+sd);soldier(c,ger(x,{t,seed:sd,pose:POSE.sing,mouth:m,tilt:-.1+.06*Math.sin(t*2+sd),eyesClosed:sd===3}));}
     const arrive=P(t,S(5)-.9,.6);
     for(const [x,sd] of [[300,0],[400,1]])soldier(c,brit(x,{t,seed:sd,tilt:-.18*arrive,smile:arrive}));
-    for(let i=0;i<9;i++){const t0=S(4)+.15+i*.22, k=(t-t0)/1.9;if(k<0||k>1)continue;
+    for(let i=0;i<8;i++){const t0=(i<4?S(4)+.15:wt('traversent')+.1)+(i%4)*.1, k=(t-t0)/2.0;if(k<0||k>1)continue; // 2 phrases × 4 notes, stagger 100 ms (<400 ms)
       const x=lerp(1600,330,E.sine(k)), y=850-Math.sin(k*Math.PI)*140+Math.sin(k*12+i)*24;note(c,x,y,.9+.3*rnd(i),Math.sin(k*Math.PI));}
     c.restore();return {snow:.6};
   });
   /* E — des hommes sortent, sans savoir si l'autre camp va tirer */
   scene(S(5),S(6),'fade',(c,t)=>{
-    const v=kf(t,[[S(5),{x:1250,y:776,z:.85}],[S(6),{x:1150,y:800,z:.95}]],E.sine);
+    const v=camKF(t,[[S(5),{x:1250,y:776,z:.85}],[S(6),{x:1150,y:800,z:.95}]],E.sine);
     c.save();cam(c,v);drawFrontBG(c,{t});
     xmasTree(c,1840,surfaceY(1840)-4,1,1,t,0);lantern(c,1700,880,FLOOR,1,t,1);
     const c0=wt('sortent')-.4, c1=c0+1.1;
     const ck=P(t,c0,c1-c0);
-    const gy=lerp(FLOOR,G,ck), gx0=lerp(1600,1500,ck);
+    const crouch=t>c0-.18&&t<c0?Math.sin(Math.PI*(t-c0+.18)/.18)*12:0;const gy=lerp(FLOOR,G,ck)+crouch, gx0=lerp(1600,1500,ck);
     const wk=P(t,c1+.2,S(6)-c1,E.sine), gx=lerp(gx0,1290,wk);
     const walking=t>c1+.2;
-    const gp=t<c0?POSE.idle:(t<c1?mixPose(POSE.idle,POSE.climb,P(t,c0,.3)):mixPose(POSE.climb,POSE.up,P(t,c1,.4)));
+    const gp=t<c1?poseT(POSE.idle,POSE.climb,t,c0,.3):poseT(POSE.climb,POSE.up,t,c1,.4);
     soldier(c,ger(1720,{t,seed:3}));
     soldier(c,ger(gx,{y:gy,t,seed:2,pose:gp,walk:(t-c1)*5,walkAmp:walking?.6:0,worry:1}));
     // britannique : vise, hésite
     const aim=P(t,wt('savoir')-.3,.5);const low=P(t,wt('tirer',2)+.2,.8);
-    soldier(c,brit(400,{t,seed:1,pose:mixPose(mixPose(POSE.idle,POSE.aim,aim),POSE.lower,low),worry:1}));
+    soldier(c,brit(400,{t,seed:1,pose:mixPose(poseT(POSE.idle,POSE.aim,t,wt('savoir')-.3,.5),POSE.lower,low),worry:1}));
     soldier(c,brit(300,{t,seed:0,worry:1}));
     c.restore();
     // battement de cœur (vignette)
     const ph=((t-S(5))*1.15)%1;const beat=(Math.exp(-ph*9)+.6*(ph>.22?Math.exp(-(ph-.22)*9):0))*.22;
-    return {snow:.6,beat};
+    // staging (disney §3) : un seul héros par temps fort — d'abord l'Allemand qui sort, puis le Britannique qui vise
+    const hb=P(t,wt('savoir')-.3,M.std);const hx=lerp(gx,400,hb),hy=lerp(gy-150,FLOOR-170,hb);
+    return {snow:.6,beat:REDUCED?0:beat,spot:{x:(hx-v.x)*v.z+540,y:(hy-v.y)*v.z+960,r:330}};
   });
   /* F — ils se rencontrent entre les tranchées */
   scene(S(6),S(7),'fade',(c,t)=>{
-    const v=kf(t,[[S(6),{x:1000,y:762,z:.8}],[S(7),{x:1000,y:810,z:1.0}]],E.sine);
+    const v=camKF(t,[[S(6),{x:1000,y:762,z:.8}],[S(7),{x:1000,y:810,z:1.0}]],E.sine);
     c.save();cam(c,v);drawFrontBG(c,{t});xmasTree(c,1840,surfaceY(1840)-4,1,1,t,0);
     const meet=wt('rencontrent')+.2;
-    const wk=P(t,S(6),meet-S(6),E.sine), w2=P(t,S(6)+.5,meet-S(6)+.3,E.sine);
+    const wk=P(t,S(6),meet-S(6),E.sine), w2=P(t,meet,S(7)-meet,E.sine); // un groupe actif à la fois
     const walking=t<meet, ph=t*6.5;
     const sk=P(t,meet,.35), so=t>wt('entre')?Math.sin((t-wt('entre'))*15)*.07*(1-P(t,wt('entre')+.5,.6)):0;
-    const pose=mixPose(POSE.idle,POSE.shake,sk);
-    soldier(c,brit(lerp(380,700,w2),{y:G,t,seed:0,walk:ph+1,walkAmp:t<meet+.3?.8:0,smile:1}));
-    soldier(c,ger(lerp(1640,1300,w2),{y:G,t,seed:3,walk:ph+2,walkAmp:t<meet+.3?.8:0,smile:1}));
-    const b=soldier(c,brit(lerp(560,895,wk),{y:G,t,seed:1,pose,walk:ph,walkAmp:walking?.9:0,smile:1,shakeOsc:so}));
-    const g=soldier(c,ger(lerp(1450,1105,wk),{y:G,t,seed:2,pose,walk:ph+.5,walkAmp:walking?.9:0,smile:1,shakeOsc:so}));
+    const pose=poseT(POSE.idle,POSE.shake,t,meet,.35);
+    const w2a=t>meet&&t<S(7)?.6:0;
+    soldier(c,brit(lerp(380,700,w2),{y:G,t,seed:0,walk:ph+1,walkAmp:w2a,lean:lean(t,meet,S(7)),smile:1}));
+    soldier(c,ger(lerp(1640,1300,w2),{y:G,t,seed:3,walk:ph+2,walkAmp:w2a,lean:lean(t,meet,S(7)),smile:1}));
+    const b=soldier(c,brit(lerp(560,895,wk),{y:G,t,seed:1,pose,lean:lean(t,S(6)+.15,meet),walk:ph,walkAmp:walking?.9:0,smile:1,shakeOsc:so}));
+    const g=soldier(c,ger(lerp(1450,1105,wk),{y:G,t,seed:2,pose,lean:lean(t,S(6)+.15,meet),walk:ph+.5,walkAmp:walking?.9:0,smile:1,shakeOsc:so}));
     const hk=P(t,wt('entre'),.9,E.enter);if(hk>0&&hk<1){const hx=(b.hand.x+g.hand.x)/2,hy=(b.hand.y+g.hand.y)/2;glow(c,hx,hy,lerp(40,300,hk),'rgba(255,200,110,A)',.55*(1-hk));}
-    c.restore();return {snow:.7};
+    c.restore();const sp=P(t,meet-.2,M.std);return {snow:.7,spot:{x:(1000-v.x)*v.z+540,y:(G-200-v.y)*v.z+960,r:lerp(900,420,sp)}};
   });
   /* G — ils échangent nourriture et tabac (gros plan mains) */
   scene(S(7),S(8),'fade',(c,t)=>{
@@ -476,29 +505,30 @@ function buildScenes(){
     for(let i=0;i<14;i++){const x=rnd(i)*1080,y=300+rnd(i+5)*1100,r=30+rnd(i+9)*70;glow(c,x+Math.sin(t*.4+i)*20,y,r,'rgba(255,190,110,A)',.12);}
     const tn=wt('nourriture'),tt=wt('tabac');
     const inK=P(t,S(7),.6,E.enter);
-    const bx=lerp(-120,290,inK),gx=lerp(1200,790,inK);
+    const bx=lerp(-40,290,inK),gx=lerp(1120,790,inK);
     sleeveHand(c,{x:bx,y:930,dir:1,side:'brit',open:true,rot:-.05});
     sleeveHand(c,{x:gx,y:960,dir:-1,side:'ger',open:true,rot:.05});
     // boîte de ration : main GB → main DE (arc)
     const k1=P(t,tn,.7);const tx=lerp(bx+60,gx-60,k1),ty=lerp(850,880,k1)-Math.sin(k1*Math.PI)*160;tin(c,tx,ty,1,Math.sin(k1*Math.PI)*.3);
     const k2=P(t,tt,.7);const cx=lerp(gx-60,bx+60,k2),cy=lerp(870,850,k2)-Math.sin(k2*Math.PI)*190;cigs(c,cx,cy,1,-Math.sin(k2*Math.PI)*.3);
-    label(c,540,540,'NOURRITURE',{a:P(t,tn,.45,E.enter)*(1-P(t,S(8)-.3,.3)),size:30});
-    label(c,540,640,'TABAC',{a:P(t,tt,.45,E.enter)*(1-P(t,S(8)-.3,.3)),size:30});
+    label(c,540,540,'NOURRITURE',{a:P(t,tn,M.std,E.enter)*(1-P(t,S(8)-.3,.3)),size:30});
+    label(c,540,640,'TABAC',{a:P(t,tt,M.std,E.enter)*(1-P(t,S(8)-.3,.3)),size:30});
     return {snow:.25};
   });
   /* H — enterrer leurs morts (tons froids, lent) */
   scene(S(8),S(9),'dip',(c,t)=>{
-    const v=kf(t,[[S(8),{x:1000,y:848,z:1.25}],[S(9),{x:1000,y:858,z:1.38}]],E.sine);
+    const v=camKF(t,[[S(8),{x:1000,y:848,z:1.25}],[S(9),{x:1000,y:858,z:1.38}]],E.sine);
     c.save();cam(c,v);drawFrontBG(c,{t,trenches:false,top:'#0A0E18',bot:'#2A3348',stars:.5});
     const e0=wt('enterrer');
     [[900,0],[1000,1],[1100,2]].forEach(([x,i])=>{const k=P(t,e0-.6+i*.2,.8);c.fillStyle='#2A1F18';c.beginPath();c.ellipse(x,surfaceY(x)+4,46,16,0,Math.PI,0);c.fill();
       if(k>0){c.save();c.translate(x,surfaceY(x)-4);c.scale(1,k);c.fillStyle='#7A6A55';c.fillRect(-7,-120,14,120);c.fillRect(-36,-96,72,13);c.fillStyle=C.snow;c.fillRect(-36,-100,72,4);c.fillRect(-7,-124,14,4);c.restore();}});
     for(const [x,sd] of [[740,0],[810,1]])soldier(c,brit(x,{y:G,t,seed:sd,pose:POSE.bow,bow:.42*P(t,S(8)+.2,1),eyesClosed:true}));
     for(const [x,sd] of [[1190,2],[1260,3]])soldier(c,ger(x,{y:G,t,seed:sd,pose:POSE.bow,bow:.42*P(t,S(8)+.4,1),eyesClosed:true}));
+    const spot={x:(1000-v.x)*v.z+540,y:(G-80-v.y)*v.z+960,r:520};
     c.restore();
     c.globalCompositeOperation='saturation';c.fillStyle='rgba(128,128,128,.65)';c.fillRect(0,0,1080,1920);c.globalCompositeOperation='source-over';
     c.fillStyle='rgba(40,60,100,.18)';c.fillRect(0,0,1080,1920);
-    return {snow:.7,snowSpeed:.45};
+    return {snow:.7,snowSpeed:.45,spot};
   });
   /* I — pas une légende : lettres et photographies */
   scene(S(9),S(10),'fade',(c,t)=>{
@@ -540,7 +570,7 @@ function buildScenes(){
   /* J — carte : pas toute la guerre ; trêves locales ; ailleurs on combat */
   const FRONT=[[470,300],[520,380],[560,470],[548,560],[600,650],[640,730],[700,800],[760,880],[790,980],[830,1080],[880,1160],[930,1250],[980,1330],[1010,1420]];
   scene(S(10),S(13),'fade',(c,t)=>{
-    const v=kf(t,[[S(10),{x:740,y:900,z:.95}],[S(11),{x:700,y:820,z:1.0}],[S(12),{x:560,y:560,z:1.35}],[S(12)+.4,{x:740,y:880,z:.95}],[S(13),{x:740,y:900,z:.9}]]);
+    const v=camKF(t,[[S(10),{x:740,y:900,z:.95}],[S(11),{x:700,y:820,z:1.0}],[S(12),{x:560,y:560,z:1.35}],[S(12)+.4,{x:740,y:880,z:.95}],[S(13),{x:740,y:900,z:.9}]]);
     c.fillStyle='#0D1220';c.fillRect(0,0,1080,1920);
     c.save();cam(c,v);
     // mer
@@ -561,43 +591,45 @@ function buildScenes(){
     label(c,740,230,'FRONT DE L’OUEST',{a:P(t,S(10)+.3,.5,E.enter),size:26,col:C.red});
     // trêves locales (points dorés, ondes)
     const pts=[[540,430],[556,520],[575,600],[700,800]];
-    pts.forEach(([x,y],i)=>{const k=P(t,wt('trêves')+i*.12,.45,E.enter);if(k<=0)return;
-      const r=((t-wt('trêves')-i*.12)*.9)%1;c.strokeStyle=`rgba(242,196,107,${(1-r)*k})`;c.lineWidth=3;c.beginPath();c.arc(x,y,12+r*46,0,7);c.stroke();
-      c.fillStyle=C.gold;c.beginPath();c.arc(x,y,12*k,0,7);c.fill();});
-    if(t>S(11)){label(c,300,560,'TRÊVES LOCALES',{a:P(t,wt('locales'),.45,E.enter),size:26});
-      label(c,300,650,'NON OFFICIELLES',{a:P(t,wt('officielles'),.45,E.enter),size:24,col:C.red,tc:'#ffb3a7'});}
+    pts.forEach(([x,y],i)=>{const k=P(t,wt('trêves')+i*.12,M.std,E.enter);if(k<=0)return;
+      const r=((t-wt('trêves')-i*.12)*.9)%1;c.strokeStyle=`rgba(242,196,107,${(1-r)*k})`;c.lineWidth=3;c.beginPath();c.arc(x,y,18+r*46,0,7);c.stroke();
+      c.fillStyle=C.gold;c.beginPath();c.arc(x,y,18*k,0,7);c.fill();});
+    if(t>S(11)){label(c,300,560,'TRÊVES LOCALES',{a:P(t,wt('locales'),M.std,E.enter),size:26});
+      label(c,300,650,'NON OFFICIELLES',{a:P(t,wt('officielles'),M.std,E.enter),size:24,col:C.red,tc:'#ffb3a7'});}
     // ailleurs on continue à combattre : explosions le long du reste du front
     if(t>S(12)){for(let i=0;i<22;i++){const seg=4+Math.floor(rnd(i)*(L-4)),f=rnd(i+30),x=lerp(FRONT[seg][0],FRONT[seg+1]?.[0]??FRONT[seg][0],f),y=lerp(FRONT[seg][1],FRONT[seg+1]?.[1]??FRONT[seg][1],f);
-      const t0=S(12)+.3+rnd(i+60)*2.0;burst(c,x+(rnd(i+7)-.5)*40,y,(t-t0)/.7,.55);}}
+      if(i>=15)continue;const t0=S(12)+.3+Math.floor(i/5)*.8+(i%5)*.08;burst(c,x+(rnd(i+7)-.5)*40,y,(t-t0)/.7,.55);}}
     c.restore();return {snow:0};
   });
   /* L — le retournement : chacun retourne dans son camp */
   scene(S(13),S(14),'dip',(c,t)=>{
-    const v=kf(t,[[S(13),{x:1000,y:848,z:1.25}],[wt('après'),{x:1000,y:845,z:1.2}],[S(14),{x:1000,y:720,z:.68}]]);
+    const v=camKF(t,[[S(13),{x:1000,y:848,z:1.25}],[wt('après'),{x:1000,y:845,z:1.2}],[S(14),{x:1000,y:720,z:.68}]]);
     c.save();cam(c,v);
     const cold=P(t,wt('après'),2.5);
     drawFrontBG(c,{t,wire:P(t,wt('ennemies')-.2,1.2),top:'#04060C',bot:cold>.5?'#1A1E2E':'#1C2948'});
     const rel=wt('retournement')+.3, turn=wt('après')-.2, w0=turn+.35;
     const sep=P(t,rel,.4);
-    const f=t<turn?1:(t<turn+.18?lerp(1,-1,P(t,turn,.18,E.lin)):-1);
-    const wk=P(t,w0,S(14)-w0-.4,E.sine);
-    const walking=t>w0&&t<S(14)-.4;
+    const wEnd=S(14)-.4, wm=w0+(wEnd-w0)*.42;              // pause à mi-chemin : regard en arrière
+    const flip=(a)=>lerp(1,-1,P(t,a,.3));const back=t>wm+.1&&t<wm+.75?1-P(t,wm+.1,.3)+P(t,wm+.45,.3)-1:0;
+    let f=t<turn?1:flip(turn); if(t>wm+.1&&t<wm+.9) f=lerp(-1,1,P(t,wm+.1,.3))*(1-P(t,wm+.55,.3))+(-1)*P(t,wm+.55,.3);
+    const wk=t<wm?.42*P(t,w0,wm-w0,E.sine):(t<wm+.9?.42:.42+.58*P(t,wm+.9,wEnd-wm-.9,E.sine));
+    const walking=(t>w0&&t<wm)||(t>wm+.9&&t<wEnd);
     const bx=lerp(lerp(895,860,sep),360,wk),gx=lerp(lerp(1105,1140,sep),1650,wk);
     const pose=mixPose(POSE.shake,POSE.idle,sep);
     const goDown=P(t,S(14)-.9,.6);
-    soldier(c,brit(bx,{y:lerp(G,FLOOR,goDown),t,f,pose,walk:(t-w0)*6,walkAmp:walking?.8:0,worry:cold}));
-    soldier(c,ger(gx,{y:lerp(G,FLOOR,goDown),t,f:-f,pose,walk:(t-w0)*6+1,walkAmp:walking?.8:0,worry:cold,seed:2}));
+    soldier(c,brit(bx,{y:lerp(G,FLOOR,goDown),t,f,pose,lean:lean(t,w0,wm),walk:(t-w0)*6,walkAmp:walking?.8:0,worry:cold}));
+    soldier(c,ger(gx,{y:lerp(G,FLOOR,goDown),t,f:-f,pose,lean:lean(t,w0,wm),walk:(t-w0)*6+1,walkAmp:walking?.8:0,worry:cold,seed:2}));
     // ligne rouge « ennemis »
-    const lk=P(t,wt('ennemies')-.15,.7);if(lk>0){c.strokeStyle=C.red;c.lineWidth=6;c.setLineDash([22,16]);c.beginPath();c.moveTo(1000,300);c.lineTo(1000,lerp(300,1300,lk));c.stroke();c.setLineDash([]);
-      label(c,1000,250,'ENNEMIS',{a:lk,size:32,col:C.red,tc:'#ffb3a7'});}
+    const lk=P(t,wt('ennemies')-.15,.7);if(lk>0){c.globalAlpha=1-.4*P(t,wt('ennemies')+.6,M.std);c.strokeStyle=C.red;c.lineWidth=6;c.setLineDash([22,16]);c.beginPath();c.moveTo(1000,300);c.lineTo(1000,lerp(300,1300,lk));c.stroke();c.setLineDash([]);
+      label(c,1000,250,'ENNEMIS',{a:lk,size:32,col:C.red,tc:'#ffb3a7'});c.globalAlpha=1;}
     c.restore();
     c.fillStyle=`rgba(30,60,120,${.18*cold})`;c.fillRect(0,0,1080,1920);
     return {snow:.6};
   });
   /* M — les combats reprennent (calendrier en DOM) */
   scene(S(14),S(15),'cut',(c,t)=>{
-    const v=kf(t,[[S(14),{x:1000,y:720,z:.68}],[S(15),{x:1000,y:740,z:.72}]],E.sine);
-    const shake=(t>S(14)+.5)?{x:(noise1(t*30)-.5)*6,y:(noise1(t*30+9)-.5)*6}:{x:0,y:0};
+    const v=camKF(t,[[S(14),{x:1000,y:720,z:.68}],[S(15),{x:1000,y:740,z:.72}]],E.sine);
+    const shake=(!REDUCED&&t>S(14)+.5)?{x:(noise1(t*30)-.5)*6,y:(noise1(t*30+9)-.5)*6}:{x:0,y:0};
     c.save();c.translate(shake.x,shake.y);cam(c,v);drawFrontBG(c,{t,top:'#05060B',bot:'#2A1A1A'});
     // fusées éclairantes
     for(const [t0,x0] of [[S(14)+.4,700],[S(14)+2.2,1350],[S(14)+3.6,900]]){const k=(t-t0)/2.6;if(k<0||k>1)continue;const x=x0+k*120,y=200+Math.pow(k,1.2)*500;
@@ -626,7 +658,9 @@ function buildScenes(){
     let n=typed;lines.forEach((l,i)=>{const s=l.slice(0,Math.max(0,n));n-=l.length;c.fillText(s,-280,-190+i*72);});
     c.fillStyle='#B9AE96';for(let i=0;i<4;i++)c.fillRect(-280,130+i*46,lerp(200,560,rnd(i+4)),12);
     // tampon « CONDAMNÉE » (motif Impact)
-    const sk=P(t,sT,.18,E.expo);if(t>sT){c.save();c.translate(40,250);c.rotate(-.18);c.scale(lerp(2,1,sk),lerp(2,1,sk));c.globalAlpha=lerp(0,.92,sk);
+    const ant=P(t,sT-.2,.2,E.exit);if(t>sT-.2&&t<sT){c.save();c.translate(40,250);c.rotate(-.18);c.scale(lerp(2,2.25,ant),lerp(2,2.25,ant));c.globalAlpha=.18*ant;c.fillStyle='#B8322A';c.fillRect(-250,-62,500,124);c.restore();}
+    const ink=P(t,sT+.06,.5,E.enter);if(t>sT+.06&&ink<1){c.save();c.translate(40,250);c.strokeStyle=`rgba(184,50,42,${.5*(1-ink)})`;c.lineWidth=6;c.beginPath();c.ellipse(0,0,260+ink*120,70+ink*50,-.18,0,7);c.stroke();c.restore();}
+    const sk=P(t,sT,.18,E.expo);if(t>sT){c.save();c.translate(40,250);c.rotate(-.18);c.scale(lerp(2,1,sk),lerp(2,1,sk));c.globalAlpha=lerp(0,.92,sk)*(1-.15*P(t,sT+.4,M.std));
       c.strokeStyle='#B8322A';c.lineWidth=9;c.strokeRect(-250,-62,500,124);c.fillStyle='#B8322A';c.font='800 74px Inter';c.textAlign='center';c.letterSpacing='8px';c.fillText('CONDAMNÉE',0,26);c.restore();}
     c.restore();
     return {snow:0};
@@ -648,12 +682,12 @@ function buildScenes(){
   scene(S(17),DUR+1,'fade',(c,t)=>{
     c.fillStyle='#0C0A09';c.fillRect(0,0,1080,1920);
     const a=P(t,wt('désobéissance')-.2,.6,E.enter),b=P(t,wt('geste')-.15,.6,E.enter);
-    c.save();c.translate(-(1-a)*1080,0);
+    c.save();c.globalAlpha=a;c.translate(0,M.rise*(1-a));
     const ga=c.createLinearGradient(0,380,0,920);ga.addColorStop(0,'#3B1512');ga.addColorStop(1,'#1E0B09');c.fillStyle=ga;c.beginPath();c.roundRect(60,400,960,520,34);c.fill();
     c.strokeStyle=`rgba(224,83,63,${t>wt('désobéissance')-.2&&t<wt('geste')-.15?.95:.35})`;c.lineWidth=3;c.stroke();
     c.save();c.beginPath();c.roundRect(60,400,960,520,34);c.clip();c.globalAlpha=.18;
     soldier(c,ger(860,{y:930,s:1.1,t,pose:POSE.lower,worry:1}));soldier(c,brit(220,{y:930,s:1.1,t,pose:POSE.lower,worry:1}));c.restore();c.restore();
-    c.save();c.translate((1-b)*1080,0);
+    c.save();c.globalAlpha=b;c.translate(0,M.rise*(1-b));
     const gb=c.createLinearGradient(0,1100,0,1620);gb.addColorStop(0,'#3B2C14');gb.addColorStop(1,'#1D150A');c.fillStyle=gb;c.beginPath();c.roundRect(60,1100,960,520,34);c.fill();
     c.strokeStyle=`rgba(242,196,107,${t>wt('geste')-.15?.95:.35})`;c.lineWidth=3;c.stroke();
     c.save();c.beginPath();c.roundRect(60,1100,960,520,34);c.clip();glow(c,540,1360,420,'rgba(242,196,107,A)',.18);c.globalAlpha=.3;handshake(c,540,1540,.55,0,0);c.restore();c.restore();
@@ -664,22 +698,46 @@ function buildScenes(){
 /* =====================================================================
    8. Sous-titres karaoké + modules DOM
    ===================================================================== */
+/* Mode annoté (?annot) : affiche les règles du skill appliquées dans chaque scène */
+const NOTES=[
+ ['A · Accroche','Émotion : tension → tendresse','Anticipation : fusil levé 150 ms','Follow-through : bras arrière +100 ms','Direction : convergence au centre'],
+ ['B · Décembre 1914','Révélation 600-1200 ms','Règle du 1/3 : caméra en 2 segments','Parallaxe : ciel 0,2x · collines 0,5x'],
+ ['C · Les lumières','Cascade 90 ms × 5 = 360 ms (< 400)','Secondaire : têtes qui se tournent','Ambiance : flammes qui vacillent'],
+ ['D · Les chants','2 phrases × 4 notes (cascade 100 ms)','Règle du 1/3 : panoramique en 5 segments','Arcs : +15 px au milieu des segments'],
+ ['E · Sortir de la tranchée','Staging : projecteur sur le héros','Anticipation : accroupi 180 ms','Ambiance : battement de cœur'],
+ ['F · La rencontre','Règle du 1/3 : un duo actif à la fois','Anticipation : recul avant la marche','Contre-mouvement : ombre qui s’étale'],
+ ['G · L’échange','Arcs (disney §7)','Entrée < 1/3 d’écran','Durée 700 ms · ease-in-out'],
+ ['H · Enterrer les morts','Tristesse = lent (600-1200 ms)','Cascade des croix 200 ms','Neige ralentie à 45 %'],
+ ['I · Pas une légende','Primaire : lettre ↑ puis photo','Secondaire : écriture qui se trace','Sceau : expo, 0 % de dépassement'],
+ ['J · La carte du front','Points de trêve ≥ 36 px (> 40 px avec l’onde)','Explosions : 3 vagues × 5 (80 ms)','Rouge : apparaît puis s’apaise'],
+ ['L · Le retournement','Règle du 1/3 : pause regard en arrière','Demi-tour 300 ms (premium)','Couleur : le ciel se refroidit'],
+ ['M · Reprise des combats','Coupe sèche (choc voulu)','≤ 1 explosion à l’écran à la fois','Secondaire : calendrier qui défile'],
+ ['N · L’ordre','Motif Impact (seul emprunt hors Premium)','Anticipation : le tampon se lève 200 ms','Secondaire : onde d’encre +60 ms'],
+ ['O · La poignée de main rompue','Tristesse : séparation sur 1,1 s','Surprise : fissure en expo','Ambiance : lueurs lointaines'],
+ ['P · La question','Même origine : montée de 20 px','Sortie = 70 % de l’entrée','Appel à l’action : respiration 2,5 s ±3 %'],
+];
+const ANNOT=new URLSearchParams(location.search).has('annot');
+function renderAnnot(t){if(!ANNOT)return;const el=$('#annot');el.style.display='block';
+  let i=SCENES.findIndex(s=>t>=s.t0&&t<s.t1);if(i<0)i=SCENES.length-1;const sc=SCENES[i],n=NOTES[i];
+  if(el.dataset.i!=String(i)){el.dataset.i=i;el.querySelector('.hd').textContent='SKILL motion-design · '+n[0];el.querySelector('.rs').innerHTML=n.slice(1).map(x=>`<span class="r">${x}</span>`).join('');}
+  const k=P(t,sc.t0,M.std,E.enter)*(1-P(t,sc.t1-M.quick,M.quick,E.exit));el.style.opacity=k;el.style.transform=tf(0,M.rise*(1-k));
+  [...el.querySelectorAll('.r')].forEach((r,j)=>{const kk=P(t,sc.t0+.15+j*.08,M.std,E.enter);r.style.opacity=kk;r.style.transform=tf(0,M.rise*(1-kk));});}
 let CH=[];
 function buildCaps(){const box=$('#caps');TIMING.chunks.forEach((c,ci)=>{const d=document.createElement('div');d.className='chunk';const ws=TIMING.words.filter(w=>w.chunk===ci);
   d.innerHTML=ws.map(w=>`<span class="w">${w.w}</span>`).join('');box.appendChild(d);CH.push({el:d,c,ws,sp:[...d.querySelectorAll('.w')]});});}
 let NOCAP;
 function renderCaps(t){const hid=NOCAP.some(([a,b])=>t>=a&&t<b);
   for(const {el,c,ws,sp} of CH){const a=c.t,b=c.end;if(hid||t<a-.05||t>=b){el.style.opacity=0;continue;}
-    const o=P(t,b-.12,.12,E.exit);el.style.opacity=1-o;el.style.transform=tf(0,-12*o);
-    ws.forEach((w,i)=>{const k=P(t,w.t,.28,E.enter);const act=t>=w.t&&(i===ws.length-1||t<ws[i+1].t);const pop=act?1+.06*(1-P(t,w.t,.22)):1;
-      css(sp[i],{opacity:k,transform:tf(0,26*(1-k),lerp(.92,1,k)*pop),color:act?'#F2C46B':'#FFFFFF'});});}}
+    const o=P(t,b-.25,.25,E.exit);el.style.opacity=1-o;el.style.transform=tf(0,-M.rise*.6*o);
+    ws.forEach((w,i)=>{const k=P(t,w.t,M.quick,E.enter);const act=t>=w.t&&(i===ws.length-1||t<ws[i+1].t);const pop=act?1+.03*(1-P(t,w.t,M.quick)):1;
+      css(sp[i],{opacity:k,transform:tf(0,M.rise*(1-k),lerp(.98,1,k)*pop),color:act?'#F2C46B':'#FFFFFF'});});}}
 function renderDOM(t){
   const hk=P(t,.2,.6)*(1-P(t,st(17)-.4,.4));$('#header').style.opacity=hk;$('#progress').style.opacity=hk*.9;$('#progress i').style.transform=`scaleX(${clamp(t/DUR)})`;
   // titre « Décembre 1914 »
-  const a=st(2)+.15,b=wt('front')-.1,ti=$('#title');const ki=P(t,a,.7,E.enter),ko=P(t,b-.35,.35,E.exit);ti.style.opacity=t>a&&t<b?ki*(1-ko):0;
+  const a=st(2)+.15,b=wt('front')-.1,ti=$('#title');const ki=P(t,a,M.std,E.enter),ko=P(t,b-M.quick,M.quick,E.exit);ti.style.opacity=t>a&&t<b?ki*(1-ko):0;
   const tr=P(t,a,1.1);css(ti.querySelector('.y'),{letterSpacing:lerp(.35,.02,tr)+'em'});ti.querySelector('.r').style.transform=`scaleX(${P(t,a+.5,.7)})`;ti.style.transform=tf(0,-60*ko);
   // calendrier
-  const cal=$('#cal'),ca=st(14)+.3,cb=st(15)-.1;const ck=P(t,ca,.5,E.enter)*(1-P(t,cb-.3,.3,E.exit));cal.style.opacity=t>ca&&t<cb?ck:0;
+  const cal=$('#cal'),ca=st(14)+.3,cb=st(15)-.1;const ck=P(t,ca,M.std,E.enter)*(1-P(t,cb-M.quick,M.quick,E.exit));cal.style.opacity=t>ca&&t<cb?ck:0;
   const win=cal.querySelector('.win');if(!win.children.length)['25 déc.','26 déc.','27 déc.','28 déc.','29 déc.','30 déc.','31 déc.','1er janv.'].forEach(d=>{const x=document.createElement('div');x.className='day';x.textContent=d;win.appendChild(x);});
   const t26=wt('lendemain'),tp=wt('plusieurs');let pos=0;[t26,tp,tp+.22,tp+.4,tp+.56,tp+.7,tp+.82].forEach((ft,i)=>pos+=P(t,ft,i?.2:.45));
   [...win.children].forEach((d,i)=>{d.style.transform=tf(0,(i-pos)*150);d.style.opacity=clamp(1-Math.abs(i-pos));});
@@ -687,10 +745,10 @@ function renderDOM(t){
   const fi=$('#final'),fa=st(17)-.05;fi.style.opacity=t>fa?P(t,fa,.6)*(1-P(t,DUR-.6,.6)):0;
   const q=P(t,fa,.6,E.enter);css(fi.querySelector('.q'),{opacity:q,transform:tf(0,24*(1-q))});
   const A=P(t,wt('désobéissance')-.1,.6,E.enter),B=P(t,wt('geste')-.05,.6,E.enter),O=P(t,wt('ou',2),.4,E.enter),So=P(t,wt('soldats')-.1,.5,E.enter);
-  for(const s of ['.ka','.va'])css(fi.querySelector(s),{opacity:A,transform:tf(-80*(1-A),0)});
-  for(const s of ['.kb','.vb'])css(fi.querySelector(s),{opacity:B,transform:tf(80*(1-B),0)});
+  for(const s of ['.ka','.va'])css(fi.querySelector(s),{opacity:A,transform:tf(0,M.rise*(1-A))});
+  for(const s of ['.kb','.vb'])css(fi.querySelector(s),{opacity:B,transform:tf(0,M.rise*(1-B))});
   css(fi.querySelector('.or'),{opacity:O,transform:tf(0,0,lerp(.6,1,O))});css(fi.querySelector('.so'),{opacity:So,transform:tf(0,20*(1-So))});
-  const cta=$('#cta'),c0=wt('soldats')+.5,cc=P(t,c0,.5,E.enter);cta.style.opacity=t>c0?cc*(1-P(t,DUR-.4,.4)):0;cta.style.transform=tf(0,30*(1-cc),1+.025*Math.sin((t-c0)*5)*cc);
+  const cta=$('#cta'),c0=wt('soldats')+.5,cc=P(t,c0,.5,E.enter);cta.style.opacity=t>c0?cc*(1-P(t,DUR-.4,.4)):0;cta.style.transform=tf(0,M.rise*(1-cc),1+.03*Math.sin((t-c0)*2*Math.PI/2.5)*cc);
 }
 
 /* =====================================================================
@@ -698,20 +756,22 @@ function renderDOM(t){
    ===================================================================== */
 let cv,ctx,bufA,bufB;
 function drawScene(sc,t,target){const c=target.getContext('2d');c.save();c.setTransform(1,0,0,1,0,0);c.fillStyle='#000';c.fillRect(0,0,1080,1920);const o=sc.draw(c,t)||{};c.restore();
-  c.save();snowFX(c,t,o.snow||0,o.snowSpeed||1);c.restore();return o;}
+  c.save();snowFX(c,t,o.snow||0,o.snowSpeed||1);c.restore();
+  if(o.spot){const g=c.createRadialGradient(o.spot.x,o.spot.y,o.spot.r*.45,o.spot.x,o.spot.y,o.spot.r*1.6);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,.45)');c.fillStyle=g;c.fillRect(0,0,1080,1920);}
+  return o;}
 const XF=.5;
 function renderAt(t){
   let i=SCENES.findIndex(s=>t>=s.t0&&t<s.t1);if(i<0)i=SCENES.length-1;const cur=SCENES[i],prev=SCENES[i-1],next=SCENES[i+1];
   ctx.setTransform(1,0,0,1,0,0);
   let o=drawScene(cur,t,bufA);
   const dt=t-cur.t0;
-  if(prev&&cur.tr==='fade'&&dt<XF){drawScene(prev,t,bufB);ctx.drawImage(bufB,0,0);ctx.globalAlpha=P(t,cur.t0,XF);ctx.drawImage(bufA,0,0);ctx.globalAlpha=1;}
+  if(prev&&cur.tr==='fade'&&dt<XF){drawScene(prev,t,bufB);ctx.drawImage(bufB,0,0);const k=P(t,cur.t0,XF);ctx.globalAlpha=k;const z=lerp(1.03,1,k);ctx.drawImage(bufA,540-540*z,960-960*z,1080*z,1920*z);ctx.globalAlpha=1;}
   else if(cur.tr==='dip'&&dt<.4){ctx.fillStyle='#000';ctx.fillRect(0,0,1080,1920);ctx.globalAlpha=P(t,cur.t0,.4);ctx.drawImage(bufA,0,0);ctx.globalAlpha=1;}
   else ctx.drawImage(bufA,0,0);
   if(next&&next.tr==='dip'&&next.t0-t<.3){ctx.fillStyle=`rgba(0,0,0,${P(t,next.t0-.3,.3,E.exit)})`;ctx.fillRect(0,0,1080,1920);}
   finishFX(ctx,t,o);
   if(t>DUR-.6){ctx.fillStyle=`rgba(0,0,0,${P(t,DUR-.6,.6)})`;ctx.fillRect(0,0,1080,1920);}
-  renderDOM(t);renderCaps(t);
+  renderDOM(t);renderCaps(t);renderAnnot(t);
 }
 async function init(){
   TIMING=await (await fetch('../treve/assets/timing.json')).json();

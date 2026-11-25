@@ -14,6 +14,7 @@ const dir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.dirname(dir); // sert le dépôt entier (assets partagés dans ../treve)
 const FPS = 30, DUR = 69.5;
 const args = process.argv.slice(2);
+const ANNOT = args.includes('--annot');
 mkdirSync(path.join(dir, 'build'), { recursive: true });
 
 // petit serveur statique (fetch() ne marche pas en file://)
@@ -31,7 +32,7 @@ const port = server.address().port;
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
 page.on('pageerror', e => console.error('page error:', e.message));
-await page.goto(`http://127.0.0.1:${port}/treve2/index.html`);
+await page.goto(`http://127.0.0.1:${port}/treve2/index.html${ANNOT ? '?annot' : ''}`);
 await page.waitForFunction(() => window.READY === true);
 
 if (args[0] === '--stills') {
@@ -40,7 +41,7 @@ if (args[0] === '--stills') {
     await page.screenshot({ path: path.join(dir, 'build', `still_${t}.jpg`), type: 'jpeg', quality: 85 });
   }
 } else {
-  const out = path.join(dir, 'build', 'treve-anime.mp4');
+  const out = path.join(dir, 'build', ANNOT ? 'treve-anime-annote.mp4' : 'treve-anime.mp4');
   const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-',
     '-i', path.join(root, 'treve', 'assets', 'voix.wav'),
     '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p',
