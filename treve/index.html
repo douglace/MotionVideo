@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>La trêve de Noël 1914 — motion design</title>
+<style>
+@font-face{font-family:Cormorant;src:url(assets/fonts/cormorant-garamond-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Cormorant;src:url(assets/fonts/cormorant-garamond-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Cormorant;src:url(assets/fonts/cormorant-garamond-latin-600-italic.woff2);font-weight:600;font-style:italic}
+@font-face{font-family:Cormorant;src:url(assets/fonts/cormorant-garamond-latin-700-italic.woff2);font-weight:700;font-style:italic}
+@font-face{font-family:Inter;src:url(assets/fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Inter;src:url(assets/fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Inter;src:url(assets/fonts/inter-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:Plex;src:url(assets/fonts/ibm-plex-mono-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Plex;src:url(assets/fonts/ibm-plex-mono-latin-500-normal.woff2);font-weight:500}
+:root{--gold:#F2C46B;--cream:#FFF6E6;--red:#D9483B;--ink:#0b0907}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#000}
+canvas{position:absolute;inset:0}
+.layer{position:absolute;left:0;top:0;width:1080px;will-change:transform,opacity}
+.center{display:flex;flex-direction:column;align-items:center;text-align:center}
+.serif{font-family:Cormorant,serif;font-weight:700;color:var(--cream);text-shadow:0 6px 40px rgba(0,0,0,.65)}
+.mono{font-family:Plex,monospace;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--cream)}
+.sans{font-family:Inter,sans-serif}
+.w{display:inline-block;will-change:transform,opacity}
+.line{display:block;overflow:hidden;padding:0 20px 18px}
+
+/* header */
+#header{top:132px}
+#header .mono{font-size:25px;opacity:.9;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+#progress{position:absolute;left:90px;top:184px;width:900px;height:3px;background:rgba(255,246,230,.18);border-radius:3px;overflow:hidden}
+#progress i{display:block;height:100%;width:100%;background:var(--gold);transform-origin:0 50%}
+
+/* captions */
+#caps{top:1290px;height:200px}
+#caps .chunk{position:absolute;left:0;width:1080px;text-align:center;font-family:Inter,sans-serif;font-weight:800;font-size:66px;letter-spacing:-.01em;
+  color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.35),0 6px 28px rgba(0,0,0,.75)}
+#caps .w{margin:0 .13em}
+
+/* hook */
+#hook{top:620px}
+#hook .serif{font-size:132px;line-height:1.0}
+#hook .it{font-style:italic;color:var(--gold)}
+
+/* date */
+#date{top:640px}
+#date .mono{font-size:38px;color:var(--gold)}
+#date .year{font-family:Cormorant,serif;font-weight:700;font-size:330px;line-height:.9;color:var(--cream);text-shadow:0 10px 60px rgba(0,0,0,.6)}
+#date .rule{width:520px;height:3px;background:var(--gold);margin:26px 0 30px;transform-origin:50% 50%}
+#date .sub{font-size:30px}
+
+/* face à face */
+#front{top:560px;height:260px}
+#front .axis{position:absolute;top:120px;left:80px;width:920px;height:2px;background:rgba(255,246,230,.55);transform-origin:50% 50%}
+#front .nml{position:absolute;top:60px;left:390px;width:300px;height:130px;border-left:2px dashed rgba(242,196,107,.85);border-right:2px dashed rgba(242,196,107,.85);transform-origin:50% 50%}
+#front .nml span{position:absolute;top:150px;left:0;width:100%;text-align:center;font-size:20px;color:var(--gold)}
+#front .side{position:absolute;top:100px;font-size:30px;font-weight:500}
+#front .side b{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--cream);margin:0 14px;vertical-align:1px}
+#front .l{left:70px}
+#front .r{right:70px;text-align:right}
+
+/* chip */
+.chip{display:inline-flex;align-items:center;gap:16px;padding:14px 26px;border:1.5px solid rgba(242,196,107,.7);border-radius:40px;background:rgba(11,9,7,.45);
+  font-family:Plex,monospace;font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:24px;color:var(--cream)}
+.chip .dot{width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+#night{top:240px;left:0}
+#night .chip{margin-left:90px}
+
+/* wave */
+#wave{top:560px}
+#wave .label{position:absolute;top:0;width:1080px;text-align:center;font-family:Cormorant,serif;font-style:italic;font-weight:600;font-size:56px;color:var(--gold);text-shadow:0 4px 24px rgba(0,0,0,.7)}
+
+/* exchange chips */
+#swap{top:600px}
+#swap .row{display:flex;justify-content:center;gap:28px}
+#swap .chip{font-size:30px;padding:18px 34px}
+
+/* sources card */
+#sources{top:470px}
+#sources .card{width:760px;margin:0 auto;padding:40px 48px;border:1.5px solid rgba(255,246,230,.35);border-radius:22px;background:rgba(11,9,7,.62)}
+#sources .mono{font-size:22px;color:var(--gold)}
+#sources .item{display:flex;align-items:center;gap:26px;margin-top:30px;font-family:Cormorant,serif;font-weight:700;font-size:62px;color:var(--cream)}
+#sources svg{flex:none}
+
+/* trêves locales */
+#local{top:520px}
+#local .ringrow{position:relative;width:1080px;height:90px}
+#local .ln{position:absolute;top:44px;height:2px;width:330px;background:var(--gold)}
+#local .ln.a{left:150px;transform-origin:100% 50%}
+#local .ln.b{right:150px;transform-origin:0 50%}
+#local svg{position:absolute;left:495px;top:0}
+#local .t1{font-size:40px;margin-top:26px;color:var(--cream)}
+#local .t2{font-size:30px;margin-top:14px;color:var(--red);font-weight:500}
+
+/* shutter + title */
+.bar{position:absolute;left:0;width:1080px;height:960px;background:#050403}
+#barT{top:0}#barB{top:960px}
+#turn{top:760px}
+#turn .mono{font-size:28px;color:var(--gold)}
+#turn .serif{font-size:150px;font-style:italic;line-height:1}
+#turn .rule{width:300px;height:3px;background:var(--gold);margin-top:34px}
+
+/* calendar */
+#cal{top:420px}
+#cal .mono.lbl{font-size:26px;color:var(--gold)}
+#cal .win{position:relative;height:200px;width:1080px;overflow:hidden;margin-top:18px}
+#cal .day{position:absolute;left:0;width:1080px;text-align:center;font-family:Cormorant,serif;font-weight:700;font-size:180px;line-height:200px;color:var(--cream);text-shadow:0 8px 40px rgba(0,0,0,.6)}
+
+/* stamp */
+#stamp{top:560px}
+#stamp .serif{font-size:112px;letter-spacing:.02em}
+#stamp .st{margin-top:10px;padding:14px 36px;border:7px solid var(--red);border-radius:10px;font-family:Inter,sans-serif;font-weight:800;font-size:76px;letter-spacing:.12em;color:var(--red);
+  background:rgba(20,6,4,.25);text-shadow:none}
+
+/* final question */
+#final{top:420px}
+#final .q{font-family:Cormorant,serif;font-style:italic;font-weight:600;font-size:64px;color:var(--cream);text-shadow:0 4px 24px rgba(0,0,0,.7)}
+#final .opt{margin-top:40px;width:860px;padding:34px 40px;border-radius:26px;border:2px solid rgba(255,246,230,.5);background:rgba(11,9,7,.55)}
+#final .opt .k{font-family:Plex,monospace;font-size:24px;letter-spacing:.2em;color:var(--gold)}
+#final .opt .v{font-family:Cormorant,serif;font-weight:700;font-size:84px;line-height:1.02;color:var(--cream);margin-top:8px}
+#final .or{margin-top:34px;font-family:Cormorant,serif;font-style:italic;font-weight:700;font-size:72px;color:var(--gold)}
+#final .soldats{margin-top:40px;font-family:Cormorant,serif;font-style:italic;font-weight:600;font-size:60px;color:var(--cream)}
+#cta{top:1560px;opacity:0}
+#cta .chip{font-size:26px}
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="bg" width="1080" height="1920"></canvas>
+  <canvas id="fx" width="1080" height="1920"></canvas>
+
+  <div id="header" class="layer center"><div class="mono">1914 · Reconstitutions illustrées</div></div>
+  <div id="progress" class="layer"><i></i></div>
+
+  <div id="hook" class="layer center"></div>
+
+  <div id="date" class="layer center">
+    <div class="mono m1">Décembre</div>
+    <div class="year">1914</div>
+    <div class="rule"></div>
+    <div class="mono sub">Front de l’Ouest</div>
+  </div>
+
+  <div id="front" class="layer">
+    <div class="axis"></div>
+    <div class="nml"><span class="mono">No man’s land</span></div>
+    <div class="side l mono">Britanniques<b></b></div>
+    <div class="side r mono"><b></b>Allemands</div>
+  </div>
+
+  <div id="night" class="layer"><div class="chip"><span class="dot"></span>24 déc. 1914 · Nuit</div></div>
+
+  <div id="wave" class="layer">
+    <svg width="1080" height="260" viewBox="0 0 1080 260" style="position:absolute;top:70px;left:0">
+      <path id="wavePath" fill="none" stroke="#F2C46B" stroke-width="4" stroke-linecap="round"/>
+      <path id="wavePath2" fill="none" stroke="rgba(255,246,230,.45)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="label">« Stille Nacht »</div>
+  </div>
+
+  <div id="swap" class="layer"><div class="row">
+    <div class="chip c1"><span class="dot"></span>Nourriture</div>
+    <div class="chip c2"><span class="dot"></span>Tabac</div>
+  </div></div>
+
+  <div id="sources" class="layer"><div class="card">
+    <div class="mono">Témoignages d’époque</div>
+    <div class="item i1"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="25" fill="none" stroke="#F2C46B" stroke-width="3"/><path class="tick" d="M16 29 L25 38 L41 19" fill="none" stroke="#F2C46B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg>Lettres de soldats</div>
+    <div class="item i2"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="25" fill="none" stroke="#F2C46B" stroke-width="3"/><path class="tick" d="M16 29 L25 38 L41 19" fill="none" stroke="#F2C46B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg>Photographies</div>
+  </div></div>
+
+  <div id="local" class="layer center">
+    <div class="ringrow"><div class="ln a"></div><div class="ln b"></div>
+      <svg width="90" height="90" viewBox="0 0 90 90"><circle id="ring" cx="45" cy="45" r="36" fill="none" stroke="#F2C46B" stroke-width="3" pathLength="1" transform="rotate(-90 45 45)"/><circle id="ringDot" cx="45" cy="45" r="9" fill="#F2C46B"/></svg>
+    </div>
+    <div class="mono t1">Trêves locales</div>
+    <div class="mono t2">Non officielles</div>
+  </div>
+
+  <div id="cal" class="layer center">
+    <div class="mono lbl">Les combats reprennent</div>
+    <div class="win"></div>
+  </div>
+
+  <div id="stamp" class="layer center">
+    <div class="serif">Fraternisation</div>
+    <div class="st">Condamnée</div>
+  </div>
+
+  <div id="final" class="layer center">
+    <div class="q">Alors, cette trêve était-elle…</div>
+    <div class="opt o1"><div class="k">A</div><div class="v">une désobéissance dangereuse</div></div>
+    <div class="or">ou</div>
+    <div class="opt o2"><div class="k">B</div><div class="v">le geste le plus courageux</div></div>
+    <div class="soldats">de ces soldats ?</div>
+  </div>
+  <div id="cta" class="layer center"><div class="chip"><span class="dot"></span>A ou B ? Réponds en commentaire</div></div>
+
+  <div id="caps" class="layer"></div>
+
+  <div id="barT" class="bar"></div><div id="barB" class="bar"></div>
+  <div id="turn" class="layer center">
+    <div class="mono">Et le</div>
+    <div class="serif">retournement</div>
+    <div class="rule"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   Easing — tables du skill motion-design (personnalité Premium)
+   ============================================================ */
+function bezier(x1,y1,x2,y2){
+  const cx=3*x1,bx=3*(x2-x1)-cx,ax=1-cx-bx,cy=3*y1,by=3*(y2-y1)-cy,ay=1-cy-by;
+  const sx=t=>((ax*t+bx)*t+cx)*t, sy=t=>((ay*t+by)*t+cy)*t, dx=t=>(3*ax*t+2*bx)*t+cx;
+  return x=>{ if(x<=0)return 0; if(x>=1)return 1; let t=x;
+    for(let i=0;i<8;i++){const e=sx(t)-x; if(Math.abs(e)<1e-6)break; const d=dx(t); if(Math.abs(d)<1e-6)break; t-=e/d;}
+    return sy(t);} }
+const E={
+  premium: bezier(.4,0,.2,1),        // signature (80 % des animations)
+  enter:   bezier(.05,.7,.1,1),      // MD3 emphasized — entrées
+  exit:    bezier(.3,0,1,1),         // MD3 accelerate — sorties
+  sine:    x=>-(Math.cos(Math.PI*x)-1)/2,
+  expo:    x=>x>=1?1:1-Math.pow(2,-10*x),
+  lin:     x=>x,
+};
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,k)=>a+(b-a)*k;
+/** progress of an animation that starts at t0 and lasts d seconds */
+const P=(t,t0,d,ease=E.premium)=>ease(clamp((t-t0)/d));
+/** enter at a (dur da) … exit at b (dur db): returns {k: 0..1 visibility, i: enter progress, o: exit progress} */
+function life(t,a,b,da=.5,db=.3){const i=P(t,a,da,E.enter),o=P(t,b-db,db,E.exit);return {i,o,k:i*(1-o),on:t>=a&&t<b};}
+const $=s=>document.querySelector(s);
+const css=(el,o)=>{for(const k in o)el.style[k]=o[k];};
+const tf=(x=0,y=0,s=1,r=0)=>`translate(${x}px,${y}px) scale(${s}) rotate(${r}deg)`;
+function noise1(x){const i=Math.floor(x),f=x-i,h=n=>{const s=Math.sin(n*127.1+311.7)*43758.5453;return s-Math.floor(s);};const u=f*f*(3-2*f);return lerp(h(i),h(i+1),u);}
+
+/* ============================================================
+   Data
+   ============================================================ */
+let TIMING, IMGS=[];
+const DUR=69.5;
+function wt(word,n=1){ // time of the n-th occurrence of a word
+  let c=0; for(const w of TIMING.words){ if(w.w.replace(/[.,:;?…\s\u00a0]/g,'').toLowerCase()===word.toLowerCase()){ if(++c===n) return w.t; } }
+  throw new Error('word '+word);
+}
+function st(i){return TIMING.sentences[i].t;}
+
+/* ============================================================
+   Shots — caméra (Ken Burns) + transitions
+   cx,cy = point de l'image au centre du cadre ; s = échelle
+   ============================================================ */
+let SHOTS;
+function buildShots(){
+  SHOTS=[
+   {img:0,t0:0,      t1:st(2), a:{s:1.12,cx:.50,cy:.46}, b:{s:1.24,cx:.47,cy:.56}, tr:'cut'},       // poignée de main — accroche
+   {img:1,t0:st(2),  t1:st(3), a:{s:1.30,cx:.62,cy:.32}, b:{s:1.06,cx:.52,cy:.48}, tr:'dip'},       // sentinelle — reveal (zoom out)
+   {img:2,t0:st(3),  t1:st(4), a:{s:1.06,cx:.50,cy:.50}, b:{s:1.16,cx:.56,cy:.42}, tr:'dissolve'},  // bougies
+   {img:3,t0:st(4),  t1:st(5), a:{s:1.10,cx:.46,cy:.42}, b:{s:1.18,cx:.50,cy:.38}, tr:'dissolve'},  // chants
+   {img:1,t0:st(5),  t1:st(6), a:{s:1.18,cx:.58,cy:.40}, b:{s:1.40,cx:.70,cy:.24}, tr:'dissolve'},  // tension : push vers les lignes
+   {img:0,t0:st(6),  t1:st(7), a:{s:1.20,cx:.42,cy:.70}, b:{s:1.08,cx:.50,cy:.52}, tr:'dissolve'},  // rencontre
+   {img:4,t0:st(7),  t1:st(8), a:{s:1.08,cx:.52,cy:.55}, b:{s:1.18,cx:.55,cy:.60}, tr:'dissolve'},  // échanges
+   {img:5,t0:st(8),  t1:st(9), a:{s:1.14,cx:.50,cy:.45}, b:{s:1.06,cx:.50,cy:.52}, tr:'dip', grade:'mourn'}, // tombes
+   {img:4,t0:st(9),  t1:st(10),a:{s:1.22,cx:.62,cy:.42}, b:{s:1.10,cx:.50,cy:.52}, tr:'dissolve'},  // témoignages
+   {img:6,t0:st(10), t1:st(12),a:{s:1.06,cx:.50,cy:.42}, b:{s:1.18,cx:.56,cy:.30}, tr:'dissolve'},  // mais attention
+   {img:1,t0:st(12), t1:st(13),a:{s:1.12,cx:.55,cy:.45}, b:{s:1.20,cx:.60,cy:.40}, tr:'cut', grade:'war', shake:1},
+   {img:6,t0:st(13), t1:st(14),a:{s:1.30,cx:.48,cy:.36}, b:{s:1.08,cx:.50,cy:.50}, tr:'shutter', grade:'dusk'},
+   {img:1,t0:st(14), t1:53.6,  a:{s:1.10,cx:.50,cy:.50}, b:{s:1.22,cx:.62,cy:.34}, tr:'dissolve', grade:'war'},
+   {img:6,t0:53.6,   t1:st(15),a:{s:1.10,cx:.52,cy:.45}, b:{s:1.20,cx:.46,cy:.52}, tr:'dissolve', grade:'dusk'},
+   {img:1,t0:st(15), t1:st(16),a:{s:1.24,cx:.40,cy:.36}, b:{s:1.14,cx:.44,cy:.40}, tr:'dissolve', grade:'war'},
+   {img:0,t0:st(16), t1:st(17),a:{s:1.06,cx:.50,cy:.50}, b:{s:1.26,cx:.46,cy:.78}, tr:'dip'},       // poignée de main : push lent sur les mains
+   {img:0,t0:st(17), t1:65.9,  a:{s:1.26,cx:.46,cy:.78}, b:{s:1.34,cx:.46,cy:.82}, tr:'cut', grade:'final'},
+   {img:6,t0:65.9,   t1:DUR+1, a:{s:1.04,cx:.50,cy:.40}, b:{s:1.12,cx:.50,cy:.34}, tr:'dissolve', grade:'final'},
+  ];
+}
+const XF=.55; // durée de fondu (Premium 350–600 ms)
+function cam(sh,t){
+  const k=E.sine(clamp((t-sh.t0+XF)/(sh.t1-sh.t0+XF*2)));
+  let s=lerp(sh.a.s,sh.b.s,k),cx=lerp(sh.a.cx,sh.b.cx,k),cy=lerp(sh.a.cy,sh.b.cy,k);
+  return {s,cx,cy};
+}
+function drawImg(ctx,img,c,alpha,shake){
+  const W=1080,H=1920; const iw=img.width,ih=img.height;
+  const base=Math.max(W/iw,H/ih); const sc=base*c.s; const dw=iw*sc,dh=ih*sc;
+  let x=W/2-c.cx*dw, y=H/2-c.cy*dh;
+  x=Math.min(0,Math.max(W-dw,x)); y=Math.min(0,Math.max(H-dh,y));
+  x+=shake.x; y+=shake.y;
+  ctx.globalAlpha=alpha; ctx.drawImage(img,x,y,dw,dh); ctx.globalAlpha=1;
+}
+const GRADES={
+  mourn:'saturate(0.35) brightness(0.82) contrast(1.05)',
+  war:'saturate(0.8) brightness(0.86) contrast(1.12)',
+  dusk:'saturate(1.08) brightness(0.95)',
+  final:'saturate(0.85) brightness(0.7)',
+};
+
+/* ============================================================
+   Ambiance — neige / braises, grain, vignette, lueur
+   ============================================================ */
+const SNOW=[...Array(170)].map((_,i)=>{const r=Math.sin(i*91.7)*1e4;const f=r-Math.floor(r);const g=Math.sin(i*37.3)*1e4;const h=g-Math.floor(g);
+  const z=.25+((i*0.6180339)%1)*.75; return {x:f*1080,y:h*1920,z,ph:i*1.7,sp:40+z*120,dr:-12-z*18,r:1.4+z*4.2};});
+let GRAIN=[];
+function makeGrain(){
+  for(let k=0;k<8;k++){const c=document.createElement('canvas');c.width=540;c.height=960;const x=c.getContext('2d');const d=x.createImageData(540,960);
+    let seed=k*9973+1; for(let i=0;i<d.data.length;i+=4){seed=(seed*16807)%2147483647;const v=seed%255;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=255;}
+    x.putImageData(d,0,0);GRAIN.push(c);}
+}
+let SPR;
+function makeSprite(){SPR=document.createElement('canvas');SPR.width=SPR.height=64;const x=SPR.getContext('2d');const g=x.createRadialGradient(32,32,0,32,32,32);
+  g.addColorStop(0,'rgba(255,255,255,1)');g.addColorStop(.4,'rgba(255,255,255,.55)');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,64,64);}
+
+function ambient(fx,t,shot){
+  const W=1080,H=1920; fx.clearRect(0,0,W,H);
+  const indoor=shot.img===2||shot.img===3;
+  // 1) particules : neige dehors, poussière/braises chaudes dedans
+  const slow=shot.grade==='mourn'?.55:1;
+  for(const p of SNOW){
+    const y=((p.y+t*p.sp*slow*(indoor?-.25:1))%H+H)%H;
+    const x=((p.x+t*p.dr*slow+Math.sin(t*.8+p.ph)*14*p.z)%W+W)%W;
+    const a=(indoor? .22:.55)*p.z*(shot.grade==='final'?.6:1);
+    fx.globalAlpha=a; const r=p.r*(indoor?.7:1)*4.6;
+    if(indoor){fx.globalCompositeOperation='lighter';}
+    fx.drawImage(SPR,x-r/2,y-r/2,r,r); fx.globalCompositeOperation='source-over';
+  }
+  fx.globalAlpha=1;
+  // 2) lueur des bougies (couche ambiante, scintillement)
+  if(indoor){
+    const fl=.75+.25*noise1(t*7)+.1*noise1(t*19+3);
+    const g=fx.createRadialGradient(620,980,40,620,980,760);
+    g.addColorStop(0,`rgba(255,170,80,${.20*fl})`);g.addColorStop(1,'rgba(255,170,80,0)');
+    fx.globalCompositeOperation='lighter';fx.fillStyle=g;fx.fillRect(0,0,W,H);fx.globalCompositeOperation='source-over';
+  }
+  // 3) vignette (+ battement de cœur pendant la tension « sans savoir… »)
+  let beat=0;
+  const ta=st(5),tb=st(6);
+  if(t>ta&&t<tb){const ph=((t-ta)*1.15)%1; beat=(Math.exp(-ph*9)+.6*Math.exp(-Math.max(0,ph-.22)*9)*(ph>.22))*.18*P(t,ta,.6)*(1-P(t,tb-.5,.5));}
+  const v=fx.createRadialGradient(540,900,300,540,960,1250);
+  v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,`rgba(0,0,0,${.48+beat})`);
+  fx.fillStyle=v;fx.fillRect(0,0,W,H);
+  // dégradés haut/bas pour la lisibilité du texte
+  const top=fx.createLinearGradient(0,0,0,420);top.addColorStop(0,'rgba(0,0,0,.55)');top.addColorStop(1,'rgba(0,0,0,0)');fx.fillStyle=top;fx.fillRect(0,0,W,420);
+  const bot=fx.createLinearGradient(0,1150,0,1920);bot.addColorStop(0,'rgba(0,0,0,0)');bot.addColorStop(.45,'rgba(0,0,0,.32)');bot.addColorStop(1,'rgba(0,0,0,.6)');fx.fillStyle=bot;fx.fillRect(0,1150,W,770);
+  // 4) grain argentique
+  fx.globalAlpha=.07;fx.globalCompositeOperation='overlay';
+  fx.drawImage(GRAIN[Math.floor(t*24)%GRAIN.length],0,0,W,H);
+  fx.globalCompositeOperation='source-over';fx.globalAlpha=1;
+}
+
+/* ============================================================
+   Rendu fond
+   ============================================================ */
+function renderBG(t){
+  const ctx=$('#bg').getContext('2d');
+  ctx.fillStyle='#000';ctx.fillRect(0,0,1080,1920);
+  let idx=SHOTS.findIndex(s=>t>=s.t0&&t<s.t1); if(idx<0) idx=SHOTS.length-1;
+  const cur=SHOTS[idx], prev=SHOTS[idx-1];
+  // secousse de caméra (combat + coup de tampon)
+  let sh={x:0,y:0};
+  if(cur.shake){const a=4*P(t,cur.t0,.3);sh={x:(noise1(t*14)-.5)*2*a,y:(noise1(t*14+50)-.5)*2*a};}
+  const stampT=wt('fraternisation')+.42;
+  if(t>stampT&&t<stampT+.35){const k=1-P(t,stampT,.35,E.lin);sh={x:(noise1(t*60)-.5)*26*k,y:(noise1(t*60+9)-.5)*26*k};}
+  const dt=t-cur.t0;
+  const draw=(s,a)=>{ctx.filter=GRADES[s.grade]||'none';drawImg(ctx,IMGS[s.img],cam(s,t),a,sh);ctx.filter='none';};
+  if(prev && cur.tr==='dissolve' && dt<XF){draw(prev,1);draw(cur,P(t,cur.t0,XF,E.premium));}
+  else if(prev && cur.tr==='dip' && dt<.45){ draw(cur,P(t,cur.t0,.45,E.premium)); }
+  else draw(cur,1);
+  // sortie vers « dip » : fondu au noir avant la coupe
+  const next=SHOTS[idx+1];
+  if(next && next.tr==='dip' && next.t0-t<.3){ctx.fillStyle=`rgba(0,0,0,${P(t,next.t0-.3,.3,E.exit)})`;ctx.fillRect(0,0,1080,1920);}
+  // fondu final
+  if(t>DUR-.6){ctx.fillStyle=`rgba(0,0,0,${P(t,DUR-.6,.6)})`;ctx.fillRect(0,0,1080,1920);}
+  return cur;
+}
+
+/* ============================================================
+   Sous-titres karaoké (couche primaire, chunks de 1–2 mots)
+   ============================================================ */
+let CHUNK_EL=[];
+function buildCaps(){
+  const box=$('#caps');
+  TIMING.chunks.forEach((c,ci)=>{
+    const d=document.createElement('div');d.className='chunk';
+    const ws=TIMING.words.filter(w=>w.chunk===ci);
+    d.innerHTML=ws.map(w=>`<span class="w">${w.w}</span>`).join('');
+    box.appendChild(d); CHUNK_EL.push({el:d,c,ws,spans:[...d.querySelectorAll('.w')]});
+  });
+}
+// segments où la typographie plein écran porte déjà le texte → pas de sous-titres
+let NOCAP;
+function renderCaps(t){
+  const hidden=NOCAP.some(([a,b])=>t>=a&&t<b);
+  for(const {el,c,ws,spans} of CHUNK_EL){
+    const a=c.t,b=c.end;
+    if(hidden||t<a-.05||t>=b){el.style.opacity=0;continue;}
+    const o=P(t,b-.12,.12,E.exit);        // sortie rapide (exit < enter), finie avant le segment suivant
+    el.style.opacity=1-o; el.style.transform=tf(0,-14*o);
+    ws.forEach((w,i)=>{
+      const k=P(t,w.t,.28,E.enter);        // entrée mot à mot : montée 26px + fondu
+      const active=t>=w.t&&(i===ws.length-1||t<ws[i+1].t);
+      const pop=active?1+.06*(1-P(t,w.t,.22,E.premium)):1;
+      css(spans[i],{opacity:k,transform:tf(0,26*(1-k),lerp(.92,1,k)*pop),color:active?'#F2C46B':'#FFFFFF'});
+    });
+  }
+}
+
+/* ============================================================
+   Modules typographiques (beats narratifs)
+   ============================================================ */
+function wordsHTML(text,cls=''){return text.split(' ').map(w=>`<span class="w ${cls}">${w}</span>`).join(' ');}
+function buildHook(){
+  $('#hook').innerHTML=`
+   <div class="g1"><span class="line serif">${wordsHTML('Ils devaient')}</span><span class="line serif it">${wordsHTML('se tirer dessus.')}</span></div>
+   <div class="g2" style="position:absolute;top:0;width:1080px"><span class="line serif it">${wordsHTML('À Noël,')}</span><span class="line serif">${wordsHTML('ils se sont serré')}</span><span class="line serif">${wordsHTML('la main.')}</span></div>`;
+}
+function revealWords(group,t,times){
+  [...group.querySelectorAll('.w')].forEach((s,i)=>{const k=P(t,times[i],.5,E.enter);css(s,{opacity:k,transform:tf(0,90*(1-k))});});
+}
+function chunkWordTimes(fromChunk,n){ // times of the n words starting at chunk index
+  const ws=TIMING.words.filter(w=>w.chunk>=fromChunk); return ws.slice(0,n).map(w=>w.t);
+}
+function renderHook(t){
+  const el=$('#hook'), g1=el.querySelector('.g1'), g2=el.querySelector('.g2');
+  const t2=st(1), end=st(2);
+  el.style.display=t<end+.1?'':'none'; if(t>=end+.1) return;
+  revealWords(g1,t,chunkWordTimes(0,5));
+  const o1=P(t,t2-.25,.3,E.exit); css(g1,{opacity:1-o1,transform:tf(0,-60*o1)});
+  revealWords(g2,t,chunkWordTimes(3,8));
+  const o2=P(t,end-.3,.3,E.exit); css(g2,{opacity:t<t2-.1?0:1-o2,transform:tf(0,-60*o2)});
+}
+function renderDate(t){
+  const el=$('#date'); const a=st(2)+.2, b=wt('britanniques')-.1;
+  const L=life(t,a,b,.7,.35); el.style.opacity=L.k; if(!L.k){return;}
+  const tr=P(t,a,1.1,E.premium);
+  css(el.querySelector('.year'),{letterSpacing:lerp(.35,.02,tr)+'em',transform:tf(0,0,lerp(1.08,1,tr))});
+  css(el.querySelector('.m1'),{letterSpacing:lerp(.6,.32,tr)+'em'});
+  const r=P(t,a+.5,.7); el.querySelector('.rule').style.transform=`scaleX(${r})`;
+  const s=P(t,wt('front'),.5,E.enter); css(el.querySelector('.sub'),{opacity:s,transform:tf(0,20*(1-s))});
+  el.style.transform=tf(0,-50*L.o);
+}
+function renderFront(t){
+  const el=$('#front'); const a=wt('britanniques')-.15, b=st(3)-.05;
+  const L=life(t,a,b,.5,.35); el.style.opacity=L.k; if(!L.k)return;
+  const ax=P(t,a,.7); el.querySelector('.axis').style.transform=`scaleX(${ax})`;
+  const l=P(t,wt('britanniques'),.6,E.enter), r=P(t,wt('allemands'),.6,E.enter);
+  // « face à face » : les deux camps se rapprochent (contre-mouvement), la zone se resserre
+  const ff=P(t,wt('face',1),1.2,E.premium);
+  css(el.querySelector('.l'),{opacity:l,transform:tf(-80*(1-l)+28*ff,0)});
+  css(el.querySelector('.r'),{opacity:r,transform:tf(80*(1-r)-28*ff,0)});
+  const n=P(t,wt('face',1),.6,E.enter); const nml=el.querySelector('.nml');
+  css(nml,{opacity:n,transform:`scaleX(${lerp(1.4,1,n)*lerp(1,.86,ff)})`});
+  el.style.transform=tf(0,-30*L.o);
+}
+function renderNight(t){
+  const el=$('#night'); const a=st(3)+.25, b=st(5)-.1;
+  const L=life(t,a,b,.5,.3); el.style.opacity=L.k; if(!L.k)return;
+  el.style.transform=tf(-40*(1-L.i),0);
+  el.querySelector('.dot').style.opacity=.55+.45*Math.sin(t*4);
+}
+function renderWave(t){
+  const el=$('#wave'); const a=st(4), b=st(5)+.1;
+  const L=life(t,a,b,.4,.35); el.style.opacity=L.k; if(!L.k)return;
+  const draw=P(t,wt('traversent'),1.5,E.premium);
+  const mk=(amp,ph,w)=>{let d='';for(let x=0;x<=1080;x+=12){const y=130+Math.sin(x/w+t*3+ph)*amp*Math.sin(Math.PI*x/1080);d+=(x?'L':'M')+x+' '+y.toFixed(1);}return d;};
+  const p1=$('#wavePath'),p2=$('#wavePath2');
+  p1.setAttribute('d',mk(42,0,70)); p2.setAttribute('d',mk(26,1.6,52));
+  for(const p of [p1,p2]){p.style.strokeDasharray='1400';p.style.strokeDashoffset=String(1400*(1-draw));}
+  const lb=P(t,a+.15,.6,E.enter); css(el.querySelector('.label'),{opacity:lb,transform:tf(lerp(-30,30,draw),20*(1-lb))});
+}
+function renderSwap(t){
+  const el=$('#swap'); const a=wt('nourriture')-.05, b=st(8);
+  el.style.opacity=t<b?1-P(t,b-.3,.3,E.exit):0; if(t<a-.1||t>b) {el.style.opacity=0;return;}
+  const c1=P(t,wt('nourriture'),.5,E.enter), c2=P(t,wt('tabac'),.5,E.enter);
+  css(el.querySelector('.c1'),{opacity:c1,transform:tf(0,30*(1-c1))});
+  css(el.querySelector('.c2'),{opacity:c2,transform:tf(0,30*(1-c2))});
+}
+function renderSources(t){
+  const el=$('#sources'); const a=wt('légende')-.1, b=st(10)-.05;
+  const L=life(t,a,b,.55,.3); el.style.opacity=L.k; if(!L.k)return;
+  el.style.transform=tf(0,40*(1-L.i)-30*L.o,lerp(.96,1,L.i));
+  [['.i1','lettres'],['.i2','photographies']].forEach(([s,w])=>{
+    const k=P(t,wt(w),.45,E.enter); const it=el.querySelector(s); css(it,{opacity:k,transform:tf(-24*(1-k),0)});
+    it.querySelector('.tick').style.strokeDasharray='1'; it.querySelector('.tick').style.strokeDashoffset=String(1-P(t,wt(w)+.2,.4));
+  });
+}
+function renderLocal(t){
+  const el=$('#local'); const a=st(11)-.05, b=st(12)-.1;
+  const L=life(t,a,b,.5,.3); el.style.opacity=L.k; if(!L.k)return;
+  const ring=P(t,a,.8); $('#ring').style.strokeDasharray='1'; $('#ring').style.strokeDashoffset=String(1-ring);
+  const dot=P(t,a+.35,.5,E.enter); $('#ringDot').style.transform=`scale(${dot})`; $('#ringDot').style.transformOrigin='45px 45px';
+  const ln=P(t,a+.25,.7); el.querySelector('.ln.a').style.transform=`scaleX(${ln})`; el.querySelector('.ln.b').style.transform=`scaleX(${ln})`;
+  const t1=P(t,wt('locales'),.5,E.enter), t2=P(t,wt('officielles'),.5,E.enter);
+  css(el.querySelector('.t1'),{opacity:t1,transform:tf(0,20*(1-t1))});
+  css(el.querySelector('.t2'),{opacity:t2,transform:tf(0,20*(1-t2))});
+  el.style.transform=tf(0,-30*L.o);
+}
+function renderShutter(t){
+  const c=st(13), close=.28, open=.42;
+  let k=0; if(t>c-close&&t<c) k=P(t,c-close,close,E.exit); else if(t>=c&&t<c+.15) k=1; else if(t>=c+.15) k=1-P(t,c+.15,open,E.enter);
+  // la fermeture reste partielle (letterbox 2.39:1) pendant le titre
+  const hold = t>=c+.15 && t<wt('après')+.3 ? lerp(1,.34,P(t,c+.15,open,E.enter)) : null;
+  const target = hold!==null? (t>wt('après')-.1 ? lerp(.34,0,P(t,wt('après')-.1,.5)) : .34) : k;
+  const v=Math.max(k*(t<c+.15?1:0),target);
+  $('#barT').style.transform=tf(0,-960*(1-v)); $('#barB').style.transform=tf(0,960*(1-v));
+  const el=$('#turn'); const a=c+.2, b=wt('après')+.1;
+  const L=life(t,a,b,.6,.35); el.style.opacity=L.k; if(!L.k)return;
+  css(el.querySelector('.serif'),{letterSpacing:lerp(.12,0,P(t,a,1.2))+'em'});
+  el.querySelector('.rule').style.transform=`scaleX(${P(t,a+.3,.7)})`;
+  el.style.transform=tf(0,30*(1-L.i)-40*L.o);
+}
+function renderCal(t){
+  const el=$('#cal'); const a=st(14)+.05, b=st(15)-.1;
+  const L=life(t,a,b,.5,.35); el.style.opacity=L.k; if(!L.k)return;
+  el.style.transform=tf(0,30*(1-L.i)-30*L.o);
+  const win=el.querySelector('.win');
+  if(!win.children.length){['25 déc.','26 déc.','27 déc.','28 déc.','29 déc.','30 déc.','31 déc.','1er janv.'].forEach(d=>{const x=document.createElement('div');x.className='day';x.textContent=d;win.appendChild(x);});}
+  // une date par « beat » : lendemain → 26 ; plusieurs jours → défilement jusqu’au 1er janvier
+  const t26=wt('lendemain'), tp=wt('plusieurs');
+  const flips=[t26,tp,tp+.22,tp+.40,tp+.56,tp+.70,tp+.82];
+  let pos=0; flips.forEach((ft,i)=>{pos+=P(t,ft,i===0?.45:.2,i===0?E.premium:E.premium);});
+  [...win.children].forEach((d,i)=>{const y=(i-pos)*200; d.style.transform=tf(0,y); d.style.opacity=clamp(1-Math.abs(i-pos));});
+}
+function renderStamp(t){
+  const el=$('#stamp'); const a=wt('fraternisation')-.1, b=st(16)-.05;
+  const L=life(t,a,b,.45,.3); el.style.opacity=L.k; if(!L.k)return;
+  const w=P(t,a,.6,E.enter); css(el.querySelector('.serif'),{opacity:w,transform:tf(0,30*(1-w)),letterSpacing:lerp(.12,.02,w)+'em'});
+  // tampon = « Impact » : chute rapide (expo) → onde → stabilisation
+  const s0=a+.52, s=P(t,s0,.18,E.expo);
+  css(el.querySelector('.st'),{opacity:t<s0?0:1,transform:tf(0,0,lerp(1.9,1,s),-7)});
+  el.style.transform=tf(0,-30*L.o);
+}
+function renderFinal(t){
+  const el=$('#final'); const a=st(17)-.05;
+  const L=life(t,a,DUR+1,.6,.3); el.style.opacity=L.k*(1-P(t,DUR-.6,.6)); if(!L.k)return;
+  const q=P(t,a,.6,E.enter); css(el.querySelector('.q'),{opacity:q,transform:tf(0,24*(1-q))});
+  const o1=P(t,wt('désobéissance')-.15,.55,E.enter), or=P(t,wt('ou',1)>a?wt('ou',1):wt('ou',2),.4,E.enter), o2=P(t,wt('geste')-.1,.55,E.enter), so=P(t,wt('soldats')-.1,.5,E.enter);
+  css(el.querySelector('.o1'),{opacity:o1,transform:tf(-70*(1-o1),0)});
+  css(el.querySelector('.or'),{opacity:or,transform:tf(0,0,lerp(.7,1,or))});
+  css(el.querySelector('.o2'),{opacity:o2,transform:tf(70*(1-o2),0)});
+  css(el.querySelector('.soldats'),{opacity:so,transform:tf(0,24*(1-so))});
+  // l'option en cours de lecture s'éclaire
+  const activeA=t>=wt('désobéissance')-.15&&t<wt('geste')-.1, activeB=t>=wt('geste')-.1&&t<wt('soldats')+.6;
+  el.querySelector('.o1').style.borderColor=activeA?'rgba(242,196,107,.95)':'rgba(255,246,230,.35)';
+  el.querySelector('.o2').style.borderColor=activeB?'rgba(242,196,107,.95)':'rgba(255,246,230,.35)';
+  const cta=$('#cta'), ca=wt('soldats')+.5; const c=P(t,ca,.5,E.enter);
+  cta.style.opacity=c*(1-P(t,DUR-.4,.4)); cta.style.transform=tf(0,30*(1-c),1+.025*Math.sin((t-ca)*5)*c);
+}
+function renderHeader(t){
+  const k=P(t,.15,.6); $('#header').style.opacity=k*(1-P(t,st(17)-.3,.4)); $('#progress').style.opacity=k*.9*(1-P(t,DUR-.6,.6));
+  $('#progress i').style.transform=`scaleX(${clamp(t/DUR)})`;
+}
+
+/* ============================================================
+   Entrée principale
+   ============================================================ */
+function renderAt(t){
+  const shot=renderBG(t);
+  ambient($('#fx').getContext('2d'),t,shot);
+  renderHeader(t);renderHook(t);renderDate(t);renderFront(t);renderNight(t);renderWave(t);renderSwap(t);
+  renderSources(t);renderLocal(t);renderShutter(t);renderCal(t);renderStamp(t);renderFinal(t);renderCaps(t);
+}
+async function init(){
+  TIMING=await (await fetch('assets/timing.json')).json();
+  IMGS=await Promise.all([0,1,2,3,4,5,6].map(i=>new Promise(r=>{const im=new Image();im.onload=()=>r(im);im.src=`assets/plate_${i}.jpg`;})));
+  await document.fonts.load('700 100px Cormorant');await document.fonts.load('italic 700 100px Cormorant');await document.fonts.load('italic 600 100px Cormorant');
+  await document.fonts.load('800 60px Inter');await document.fonts.load('500 20px Plex');await document.fonts.ready;
+  makeGrain();makeSprite();buildShots();buildCaps();buildHook();
+  NOCAP=[[0,wt('britanniques')-.1],[st(13)-.05,wt('après')-.05],[wt('fraternisation')-.1,st(16)-.05],[st(17)-.05,DUR+1]];
+  window.READY=true;
+  const q=new URLSearchParams(location.search); if(q.has('t')) renderAt(parseFloat(q.get('t')));
+  else if(q.has('play')){const t0=performance.now();const loop=()=>{renderAt(((performance.now()-t0)/1000)%DUR);requestAnimationFrame(loop);};loop();}
+}
+init();
+</script>
+</body>
+</html>

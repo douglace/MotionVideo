@@ -1,0 +1,1755 @@
+{
+ "duration": 69.5,
+ "chunks": [
+  {
+   "text": "Ils devaient",
+   "t": 0.0,
+   "end": 0.5,
+   "sent": 0
+  },
+  {
+   "text": "se tirer",
+   "t": 0.5,
+   "end": 0.867,
+   "sent": 0
+  },
+  {
+   "text": "dessus.",
+   "t": 0.867,
+   "end": 1.36,
+   "sent": 0
+  },
+  {
+   "text": "À Noël,",
+   "t": 1.36,
+   "end": 2.126,
+   "sent": 1
+  },
+  {
+   "text": "ils se",
+   "t": 2.126,
+   "end": 2.393,
+   "sent": 1
+  },
+  {
+   "text": "sont serré",
+   "t": 2.393,
+   "end": 2.86,
+   "sent": 1
+  },
+  {
+   "text": "la main.",
+   "t": 2.86,
+   "end": 3.92,
+   "sent": 1
+  },
+  {
+   "text": "Décembre 1914.",
+   "t": 3.92,
+   "end": 6.787,
+   "sent": 2
+  },
+  {
+   "text": "Sur le",
+   "t": 6.787,
+   "end": 7.087,
+   "sent": 2
+  },
+  {
+   "text": "front de",
+   "t": 7.087,
+   "end": 7.32,
+   "sent": 2
+  },
+  {
+   "text": "l’Ouest, des",
+   "t": 7.32,
+   "end": 8.153,
+   "sent": 2
+  },
+  {
+   "text": "Britanniques et",
+   "t": 8.153,
+   "end": 8.887,
+   "sent": 2
+  },
+  {
+   "text": "des Allemands",
+   "t": 8.887,
+   "end": 9.687,
+   "sent": 2
+  },
+  {
+   "text": "vivent face",
+   "t": 9.687,
+   "end": 10.62,
+   "sent": 2
+  },
+  {
+   "text": "à face",
+   "t": 10.62,
+   "end": 11.02,
+   "sent": 2
+  },
+  {
+   "text": "dans les",
+   "t": 11.02,
+   "end": 11.253,
+   "sent": 2
+  },
+  {
+   "text": "tranchées.",
+   "t": 11.253,
+   "end": 12.93,
+   "sent": 2
+  },
+  {
+   "text": "La nuit",
+   "t": 12.93,
+   "end": 13.296,
+   "sent": 3
+  },
+  {
+   "text": "de Noël,",
+   "t": 13.296,
+   "end": 13.93,
+   "sent": 3
+  },
+  {
+   "text": "des lumières",
+   "t": 13.93,
+   "end": 14.63,
+   "sent": 3
+  },
+  {
+   "text": "apparaissent côté",
+   "t": 14.63,
+   "end": 15.53,
+   "sent": 3
+  },
+  {
+   "text": "allemand.",
+   "t": 15.53,
+   "end": 16.11,
+   "sent": 3
+  },
+  {
+   "text": "Des chants",
+   "t": 16.11,
+   "end": 16.61,
+   "sent": 4
+  },
+  {
+   "text": "traversent les",
+   "t": 16.61,
+   "end": 17.21,
+   "sent": 4
+  },
+  {
+   "text": "lignes.",
+   "t": 17.21,
+   "end": 18.21,
+   "sent": 4
+  },
+  {
+   "text": "Puis des",
+   "t": 18.21,
+   "end": 18.576,
+   "sent": 5
+  },
+  {
+   "text": "hommes sortent,",
+   "t": 18.576,
+   "end": 19.376,
+   "sent": 5
+  },
+  {
+   "text": "sans savoir",
+   "t": 19.376,
+   "end": 20.11,
+   "sent": 5
+  },
+  {
+   "text": "si l’autre",
+   "t": 20.11,
+   "end": 20.543,
+   "sent": 5
+  },
+  {
+   "text": "camp va",
+   "t": 20.543,
+   "end": 20.876,
+   "sent": 5
+  },
+  {
+   "text": "tirer.",
+   "t": 20.876,
+   "end": 21.74,
+   "sent": 5
+  },
+  {
+   "text": "Dans certains",
+   "t": 21.74,
+   "end": 22.273,
+   "sent": 6
+  },
+  {
+   "text": "secteurs, ils",
+   "t": 22.273,
+   "end": 23.14,
+   "sent": 6
+  },
+  {
+   "text": "se rencontrent",
+   "t": 23.14,
+   "end": 23.906,
+   "sent": 6
+  },
+  {
+   "text": "entre les",
+   "t": 23.906,
+   "end": 24.273,
+   "sent": 6
+  },
+  {
+   "text": "tranchées.",
+   "t": 24.273,
+   "end": 25.44,
+   "sent": 6
+  },
+  {
+   "text": "Ils échangent",
+   "t": 25.44,
+   "end": 26.106,
+   "sent": 7
+  },
+  {
+   "text": "nourriture et",
+   "t": 26.106,
+   "end": 26.973,
+   "sent": 7
+  },
+  {
+   "text": "tabac.",
+   "t": 26.973,
+   "end": 27.84,
+   "sent": 7
+  },
+  {
+   "text": "Ils profitent",
+   "t": 27.84,
+   "end": 28.473,
+   "sent": 8
+  },
+  {
+   "text": "aussi du",
+   "t": 28.473,
+   "end": 28.973,
+   "sent": 8
+  },
+  {
+   "text": "silence pour",
+   "t": 28.973,
+   "end": 29.673,
+   "sent": 8
+  },
+  {
+   "text": "enterrer leurs",
+   "t": 29.673,
+   "end": 30.173,
+   "sent": 8
+  },
+  {
+   "text": "morts.",
+   "t": 30.173,
+   "end": 31.11,
+   "sent": 8
+  },
+  {
+   "text": "Ce n’est",
+   "t": 31.11,
+   "end": 31.377,
+   "sent": 9
+  },
+  {
+   "text": "pas une",
+   "t": 31.377,
+   "end": 31.677,
+   "sent": 9
+  },
+  {
+   "text": "légende :",
+   "t": 31.677,
+   "end": 32.543,
+   "sent": 9
+  },
+  {
+   "text": "des lettres",
+   "t": 32.543,
+   "end": 33.243,
+   "sent": 9
+  },
+  {
+   "text": "et des",
+   "t": 33.243,
+   "end": 33.377,
+   "sent": 9
+  },
+  {
+   "text": "photographies",
+   "t": 33.377,
+   "end": 34.01,
+   "sent": 9
+  },
+  {
+   "text": "témoignent de",
+   "t": 34.01,
+   "end": 34.577,
+   "sent": 9
+  },
+  {
+   "text": "ces rencontres.",
+   "t": 34.577,
+   "end": 35.86,
+   "sent": 9
+  },
+  {
+   "text": "Mais attention :",
+   "t": 35.86,
+   "end": 36.793,
+   "sent": 10
+  },
+  {
+   "text": "ce n’est",
+   "t": 36.793,
+   "end": 36.993,
+   "sent": 10
+  },
+  {
+   "text": "pas toute",
+   "t": 36.993,
+   "end": 37.393,
+   "sent": 10
+  },
+  {
+   "text": "la guerre",
+   "t": 37.393,
+   "end": 37.826,
+   "sent": 10
+  },
+  {
+   "text": "qui s’arrête.",
+   "t": 37.826,
+   "end": 38.92,
+   "sent": 10
+  },
+  {
+   "text": "Ces trêves",
+   "t": 38.92,
+   "end": 39.52,
+   "sent": 11
+  },
+  {
+   "text": "sont locales,",
+   "t": 39.52,
+   "end": 40.453,
+   "sent": 11
+  },
+  {
+   "text": "non officielles.",
+   "t": 40.453,
+   "end": 41.833,
+   "sent": 11
+  },
+  {
+   "text": "Ailleurs, on",
+   "t": 41.833,
+   "end": 42.7,
+   "sent": 12
+  },
+  {
+   "text": "continue à",
+   "t": 42.7,
+   "end": 43.233,
+   "sent": 12
+  },
+  {
+   "text": "combattre.",
+   "t": 43.233,
+   "end": 44.2,
+   "sent": 12
+  },
+  {
+   "text": "Et le",
+   "t": 44.2,
+   "end": 44.467,
+   "sent": 13
+  },
+  {
+   "text": "retournement est",
+   "t": 44.467,
+   "end": 45.067,
+   "sent": 13
+  },
+  {
+   "text": "là :",
+   "t": 45.067,
+   "end": 45.6,
+   "sent": 13
+  },
+  {
+   "text": "après s’être",
+   "t": 45.6,
+   "end": 46.267,
+   "sent": 13
+  },
+  {
+   "text": "rencontrés, ces",
+   "t": 46.267,
+   "end": 47.434,
+   "sent": 13
+  },
+  {
+   "text": "hommes doivent",
+   "t": 47.434,
+   "end": 47.867,
+   "sent": 13
+  },
+  {
+   "text": "reprendre leur",
+   "t": 47.867,
+   "end": 48.634,
+   "sent": 13
+  },
+  {
+   "text": "place dans",
+   "t": 48.634,
+   "end": 49.0,
+   "sent": 13
+  },
+  {
+   "text": "des armées",
+   "t": 49.0,
+   "end": 49.567,
+   "sent": 13
+  },
+  {
+   "text": "toujours ennemies.",
+   "t": 49.567,
+   "end": 51.1,
+   "sent": 13
+  },
+  {
+   "text": "Les combats",
+   "t": 51.1,
+   "end": 52.367,
+   "sent": 14
+  },
+  {
+   "text": "reprennent, selon",
+   "t": 52.367,
+   "end": 52.8,
+   "sent": 14
+  },
+  {
+   "text": "les secteurs,",
+   "t": 52.8,
+   "end": 53.633,
+   "sent": 14
+  },
+  {
+   "text": "dès le",
+   "t": 53.633,
+   "end": 53.933,
+   "sent": 14
+  },
+  {
+   "text": "lendemain ou",
+   "t": 53.933,
+   "end": 54.6,
+   "sent": 14
+  },
+  {
+   "text": "après plusieurs",
+   "t": 54.6,
+   "end": 55.433,
+   "sent": 14
+  },
+  {
+   "text": "jours.",
+   "t": 55.433,
+   "end": 56.267,
+   "sent": 14
+  },
+  {
+   "text": "Les commandements",
+   "t": 56.267,
+   "end": 56.933,
+   "sent": 15
+  },
+  {
+   "text": "condamnent la",
+   "t": 56.933,
+   "end": 57.533,
+   "sent": 15
+  },
+  {
+   "text": "fraternisation.",
+   "t": 57.533,
+   "end": 58.9,
+   "sent": 15
+  },
+  {
+   "text": "Une poignée",
+   "t": 58.9,
+   "end": 59.433,
+   "sent": 16
+  },
+  {
+   "text": "de main",
+   "t": 59.433,
+   "end": 59.733,
+   "sent": 16
+  },
+  {
+   "text": "n’a pas",
+   "t": 59.733,
+   "end": 60.033,
+   "sent": 16
+  },
+  {
+   "text": "suffi à",
+   "t": 60.033,
+   "end": 60.633,
+   "sent": 16
+  },
+  {
+   "text": "arrêter la",
+   "t": 60.633,
+   "end": 61.167,
+   "sent": 16
+  },
+  {
+   "text": "guerre.",
+   "t": 61.167,
+   "end": 62.39,
+   "sent": 16
+  },
+  {
+   "text": "Alors, cette",
+   "t": 62.39,
+   "end": 63.39,
+   "sent": 17
+  },
+  {
+   "text": "trêve était-elle",
+   "t": 63.39,
+   "end": 64.29,
+   "sent": 17
+  },
+  {
+   "text": "une désobéissance",
+   "t": 64.29,
+   "end": 65.09,
+   "sent": 17
+  },
+  {
+   "text": "dangereuse… ou",
+   "t": 65.09,
+   "end": 66.323,
+   "sent": 17
+  },
+  {
+   "text": "le geste",
+   "t": 66.323,
+   "end": 66.856,
+   "sent": 17
+  },
+  {
+   "text": "le plus",
+   "t": 66.856,
+   "end": 67.156,
+   "sent": 17
+  },
+  {
+   "text": "courageux de",
+   "t": 67.156,
+   "end": 67.79,
+   "sent": 17
+  },
+  {
+   "text": "ces soldats ?",
+   "t": 67.79,
+   "end": 68.3,
+   "sent": 17
+  }
+ ],
+ "words": [
+  {
+   "w": "Ils",
+   "t": 0.0,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "devaient",
+   "t": 0.233,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "se",
+   "t": 0.5,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "tirer",
+   "t": 0.605,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "dessus.",
+   "t": 0.867,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "À",
+   "t": 1.36,
+   "chunk": 3,
+   "sent": 1
+  },
+  {
+   "w": "Noël,",
+   "t": 1.487,
+   "chunk": 3,
+   "sent": 1
+  },
+  {
+   "w": "ils",
+   "t": 2.126,
+   "chunk": 4,
+   "sent": 1
+  },
+  {
+   "w": "se",
+   "t": 2.286,
+   "chunk": 4,
+   "sent": 1
+  },
+  {
+   "w": "sont",
+   "t": 2.393,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "serré",
+   "t": 2.626,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "la",
+   "t": 2.86,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "main.",
+   "t": 3.126,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "Décembre",
+   "t": 3.92,
+   "chunk": 7,
+   "sent": 2
+  },
+  {
+   "w": "1914.",
+   "t": 4.687,
+   "chunk": 7,
+   "sent": 2
+  },
+  {
+   "w": "Sur",
+   "t": 6.787,
+   "chunk": 8,
+   "sent": 2
+  },
+  {
+   "w": "le",
+   "t": 6.967,
+   "chunk": 8,
+   "sent": 2
+  },
+  {
+   "w": "front",
+   "t": 7.087,
+   "chunk": 9,
+   "sent": 2
+  },
+  {
+   "w": "de",
+   "t": 7.253,
+   "chunk": 9,
+   "sent": 2
+  },
+  {
+   "w": "l’Ouest,",
+   "t": 7.32,
+   "chunk": 10,
+   "sent": 2
+  },
+  {
+   "w": "des",
+   "t": 8.053,
+   "chunk": 10,
+   "sent": 2
+  },
+  {
+   "w": "Britanniques",
+   "t": 8.153,
+   "chunk": 11,
+   "sent": 2
+  },
+  {
+   "w": "et",
+   "t": 8.782,
+   "chunk": 11,
+   "sent": 2
+  },
+  {
+   "w": "des",
+   "t": 8.887,
+   "chunk": 12,
+   "sent": 2
+  },
+  {
+   "w": "Allemands",
+   "t": 9.12,
+   "chunk": 12,
+   "sent": 2
+  },
+  {
+   "w": "vivent",
+   "t": 9.687,
+   "chunk": 13,
+   "sent": 2
+  },
+  {
+   "w": "face",
+   "t": 10.287,
+   "chunk": 13,
+   "sent": 2
+  },
+  {
+   "w": "à",
+   "t": 10.62,
+   "chunk": 14,
+   "sent": 2
+  },
+  {
+   "w": "face",
+   "t": 10.7,
+   "chunk": 14,
+   "sent": 2
+  },
+  {
+   "w": "dans",
+   "t": 11.02,
+   "chunk": 15,
+   "sent": 2
+  },
+  {
+   "w": "les",
+   "t": 11.153,
+   "chunk": 15,
+   "sent": 2
+  },
+  {
+   "w": "tranchées.",
+   "t": 11.253,
+   "chunk": 16,
+   "sent": 2
+  },
+  {
+   "w": "La",
+   "t": 12.93,
+   "chunk": 17,
+   "sent": 3
+  },
+  {
+   "w": "nuit",
+   "t": 13.063,
+   "chunk": 17,
+   "sent": 3
+  },
+  {
+   "w": "de",
+   "t": 13.296,
+   "chunk": 18,
+   "sent": 3
+  },
+  {
+   "w": "Noël,",
+   "t": 13.477,
+   "chunk": 18,
+   "sent": 3
+  },
+  {
+   "w": "des",
+   "t": 13.93,
+   "chunk": 19,
+   "sent": 3
+  },
+  {
+   "w": "lumières",
+   "t": 14.096,
+   "chunk": 19,
+   "sent": 3
+  },
+  {
+   "w": "apparaissent",
+   "t": 14.63,
+   "chunk": 20,
+   "sent": 3
+  },
+  {
+   "w": "côté",
+   "t": 15.305,
+   "chunk": 20,
+   "sent": 3
+  },
+  {
+   "w": "allemand.",
+   "t": 15.53,
+   "chunk": 21,
+   "sent": 3
+  },
+  {
+   "w": "Des",
+   "t": 16.11,
+   "chunk": 22,
+   "sent": 4
+  },
+  {
+   "w": "chants",
+   "t": 16.276,
+   "chunk": 22,
+   "sent": 4
+  },
+  {
+   "w": "traversent",
+   "t": 16.61,
+   "chunk": 23,
+   "sent": 4
+  },
+  {
+   "w": "les",
+   "t": 17.071,
+   "chunk": 23,
+   "sent": 4
+  },
+  {
+   "w": "lignes.",
+   "t": 17.21,
+   "chunk": 24,
+   "sent": 4
+  },
+  {
+   "w": "Puis",
+   "t": 18.21,
+   "chunk": 25,
+   "sent": 5
+  },
+  {
+   "w": "des",
+   "t": 18.41,
+   "chunk": 25,
+   "sent": 5
+  },
+  {
+   "w": "hommes",
+   "t": 18.576,
+   "chunk": 26,
+   "sent": 5
+  },
+  {
+   "w": "sortent,",
+   "t": 18.776,
+   "chunk": 26,
+   "sent": 5
+  },
+  {
+   "w": "sans",
+   "t": 19.376,
+   "chunk": 27,
+   "sent": 5
+  },
+  {
+   "w": "savoir",
+   "t": 19.61,
+   "chunk": 27,
+   "sent": 5
+  },
+  {
+   "w": "si",
+   "t": 20.11,
+   "chunk": 28,
+   "sent": 5
+  },
+  {
+   "w": "l’autre",
+   "t": 20.206,
+   "chunk": 28,
+   "sent": 5
+  },
+  {
+   "w": "camp",
+   "t": 20.543,
+   "chunk": 29,
+   "sent": 5
+  },
+  {
+   "w": "va",
+   "t": 20.765,
+   "chunk": 29,
+   "sent": 5
+  },
+  {
+   "w": "tirer.",
+   "t": 20.876,
+   "chunk": 30,
+   "sent": 5
+  },
+  {
+   "w": "Dans",
+   "t": 21.74,
+   "chunk": 31,
+   "sent": 6
+  },
+  {
+   "w": "certains",
+   "t": 21.906,
+   "chunk": 31,
+   "sent": 6
+  },
+  {
+   "w": "secteurs,",
+   "t": 22.273,
+   "chunk": 32,
+   "sent": 6
+  },
+  {
+   "w": "ils",
+   "t": 23.006,
+   "chunk": 32,
+   "sent": 6
+  },
+  {
+   "w": "se",
+   "t": 23.14,
+   "chunk": 33,
+   "sent": 6
+  },
+  {
+   "w": "rencontrent",
+   "t": 23.306,
+   "chunk": 33,
+   "sent": 6
+  },
+  {
+   "w": "entre",
+   "t": 23.906,
+   "chunk": 34,
+   "sent": 6
+  },
+  {
+   "w": "les",
+   "t": 24.136,
+   "chunk": 34,
+   "sent": 6
+  },
+  {
+   "w": "tranchées.",
+   "t": 24.273,
+   "chunk": 35,
+   "sent": 6
+  },
+  {
+   "w": "Ils",
+   "t": 25.44,
+   "chunk": 36,
+   "sent": 7
+  },
+  {
+   "w": "échangent",
+   "t": 25.706,
+   "chunk": 36,
+   "sent": 7
+  },
+  {
+   "w": "nourriture",
+   "t": 26.106,
+   "chunk": 37,
+   "sent": 7
+  },
+  {
+   "w": "et",
+   "t": 26.773,
+   "chunk": 37,
+   "sent": 7
+  },
+  {
+   "w": "tabac.",
+   "t": 26.973,
+   "chunk": 38,
+   "sent": 7
+  },
+  {
+   "w": "Ils",
+   "t": 27.84,
+   "chunk": 39,
+   "sent": 8
+  },
+  {
+   "w": "profitent",
+   "t": 28.006,
+   "chunk": 39,
+   "sent": 8
+  },
+  {
+   "w": "aussi",
+   "t": 28.473,
+   "chunk": 40,
+   "sent": 8
+  },
+  {
+   "w": "du",
+   "t": 28.83,
+   "chunk": 40,
+   "sent": 8
+  },
+  {
+   "w": "silence",
+   "t": 28.973,
+   "chunk": 41,
+   "sent": 8
+  },
+  {
+   "w": "pour",
+   "t": 29.473,
+   "chunk": 41,
+   "sent": 8
+  },
+  {
+   "w": "enterrer",
+   "t": 29.673,
+   "chunk": 42,
+   "sent": 8
+  },
+  {
+   "w": "leurs",
+   "t": 30.006,
+   "chunk": 42,
+   "sent": 8
+  },
+  {
+   "w": "morts.",
+   "t": 30.173,
+   "chunk": 43,
+   "sent": 8
+  },
+  {
+   "w": "Ce",
+   "t": 31.11,
+   "chunk": 44,
+   "sent": 9
+  },
+  {
+   "w": "n’est",
+   "t": 31.186,
+   "chunk": 44,
+   "sent": 9
+  },
+  {
+   "w": "pas",
+   "t": 31.377,
+   "chunk": 45,
+   "sent": 9
+  },
+  {
+   "w": "une",
+   "t": 31.543,
+   "chunk": 45,
+   "sent": 9
+  },
+  {
+   "w": "légende :",
+   "t": 31.677,
+   "chunk": 46,
+   "sent": 9
+  },
+  {
+   "w": "des",
+   "t": 32.543,
+   "chunk": 47,
+   "sent": 9
+  },
+  {
+   "w": "lettres",
+   "t": 32.71,
+   "chunk": 47,
+   "sent": 9
+  },
+  {
+   "w": "et",
+   "t": 33.243,
+   "chunk": 48,
+   "sent": 9
+  },
+  {
+   "w": "des",
+   "t": 33.297,
+   "chunk": 48,
+   "sent": 9
+  },
+  {
+   "w": "photographies",
+   "t": 33.377,
+   "chunk": 49,
+   "sent": 9
+  },
+  {
+   "w": "témoignent",
+   "t": 34.01,
+   "chunk": 50,
+   "sent": 9
+  },
+  {
+   "w": "de",
+   "t": 34.482,
+   "chunk": 50,
+   "sent": 9
+  },
+  {
+   "w": "ces",
+   "t": 34.577,
+   "chunk": 51,
+   "sent": 9
+  },
+  {
+   "w": "rencontres.",
+   "t": 34.743,
+   "chunk": 51,
+   "sent": 9
+  },
+  {
+   "w": "Mais",
+   "t": 35.86,
+   "chunk": 52,
+   "sent": 10
+  },
+  {
+   "w": "attention",
+   "t": 35.993,
+   "chunk": 52,
+   "sent": 10
+  },
+  {
+   "w": "ce",
+   "t": 36.793,
+   "chunk": 53,
+   "sent": 10
+  },
+  {
+   "w": "n’est",
+   "t": 36.85,
+   "chunk": 53,
+   "sent": 10
+  },
+  {
+   "w": "pas",
+   "t": 36.993,
+   "chunk": 54,
+   "sent": 10
+  },
+  {
+   "w": "toute",
+   "t": 37.143,
+   "chunk": 54,
+   "sent": 10
+  },
+  {
+   "w": "la",
+   "t": 37.393,
+   "chunk": 55,
+   "sent": 10
+  },
+  {
+   "w": "guerre",
+   "t": 37.56,
+   "chunk": 55,
+   "sent": 10
+  },
+  {
+   "w": "qui",
+   "t": 37.826,
+   "chunk": 56,
+   "sent": 10
+  },
+  {
+   "w": "s’arrête.",
+   "t": 37.993,
+   "chunk": 56,
+   "sent": 10
+  },
+  {
+   "w": "Ces",
+   "t": 38.92,
+   "chunk": 57,
+   "sent": 11
+  },
+  {
+   "w": "trêves",
+   "t": 39.153,
+   "chunk": 57,
+   "sent": 11
+  },
+  {
+   "w": "sont",
+   "t": 39.52,
+   "chunk": 58,
+   "sent": 11
+  },
+  {
+   "w": "locales,",
+   "t": 39.686,
+   "chunk": 58,
+   "sent": 11
+  },
+  {
+   "w": "non",
+   "t": 40.453,
+   "chunk": 59,
+   "sent": 11
+  },
+  {
+   "w": "officielles.",
+   "t": 40.74,
+   "chunk": 59,
+   "sent": 11
+  },
+  {
+   "w": "Ailleurs,",
+   "t": 41.833,
+   "chunk": 60,
+   "sent": 12
+  },
+  {
+   "w": "on",
+   "t": 42.542,
+   "chunk": 60,
+   "sent": 12
+  },
+  {
+   "w": "continue",
+   "t": 42.7,
+   "chunk": 61,
+   "sent": 12
+  },
+  {
+   "w": "à",
+   "t": 43.174,
+   "chunk": 61,
+   "sent": 12
+  },
+  {
+   "w": "combattre.",
+   "t": 43.233,
+   "chunk": 62,
+   "sent": 12
+  },
+  {
+   "w": "Et",
+   "t": 44.2,
+   "chunk": 63,
+   "sent": 13
+  },
+  {
+   "w": "le",
+   "t": 44.334,
+   "chunk": 63,
+   "sent": 13
+  },
+  {
+   "w": "retournement",
+   "t": 44.467,
+   "chunk": 64,
+   "sent": 13
+  },
+  {
+   "w": "est",
+   "t": 44.947,
+   "chunk": 64,
+   "sent": 13
+  },
+  {
+   "w": "là :",
+   "t": 45.067,
+   "chunk": 65,
+   "sent": 13
+  },
+  {
+   "w": "après",
+   "t": 45.6,
+   "chunk": 66,
+   "sent": 13
+  },
+  {
+   "w": "s’être",
+   "t": 45.903,
+   "chunk": 66,
+   "sent": 13
+  },
+  {
+   "w": "rencontrés,",
+   "t": 46.267,
+   "chunk": 67,
+   "sent": 13
+  },
+  {
+   "w": "ces",
+   "t": 47.167,
+   "chunk": 67,
+   "sent": 13
+  },
+  {
+   "w": "hommes",
+   "t": 47.434,
+   "chunk": 68,
+   "sent": 13
+  },
+  {
+   "w": "doivent",
+   "t": 47.6,
+   "chunk": 68,
+   "sent": 13
+  },
+  {
+   "w": "reprendre",
+   "t": 47.867,
+   "chunk": 69,
+   "sent": 13
+  },
+  {
+   "w": "leur",
+   "t": 48.398,
+   "chunk": 69,
+   "sent": 13
+  },
+  {
+   "w": "place",
+   "t": 48.634,
+   "chunk": 70,
+   "sent": 13
+  },
+  {
+   "w": "dans",
+   "t": 48.9,
+   "chunk": 70,
+   "sent": 13
+  },
+  {
+   "w": "des",
+   "t": 49.0,
+   "chunk": 71,
+   "sent": 13
+  },
+  {
+   "w": "armées",
+   "t": 49.234,
+   "chunk": 71,
+   "sent": 13
+  },
+  {
+   "w": "toujours",
+   "t": 49.567,
+   "chunk": 72,
+   "sent": 13
+  },
+  {
+   "w": "ennemies.",
+   "t": 50.2,
+   "chunk": 72,
+   "sent": 13
+  },
+  {
+   "w": "Les",
+   "t": 51.1,
+   "chunk": 73,
+   "sent": 14
+  },
+  {
+   "w": "combats",
+   "t": 51.533,
+   "chunk": 73,
+   "sent": 14
+  },
+  {
+   "w": "reprennent,",
+   "t": 52.367,
+   "chunk": 74,
+   "sent": 14
+  },
+  {
+   "w": "selon",
+   "t": 52.667,
+   "chunk": 74,
+   "sent": 14
+  },
+  {
+   "w": "les",
+   "t": 52.8,
+   "chunk": 75,
+   "sent": 14
+  },
+  {
+   "w": "secteurs,",
+   "t": 53.008,
+   "chunk": 75,
+   "sent": 14
+  },
+  {
+   "w": "dès",
+   "t": 53.633,
+   "chunk": 76,
+   "sent": 14
+  },
+  {
+   "w": "le",
+   "t": 53.813,
+   "chunk": 76,
+   "sent": 14
+  },
+  {
+   "w": "lendemain",
+   "t": 53.933,
+   "chunk": 77,
+   "sent": 14
+  },
+  {
+   "w": "ou",
+   "t": 54.467,
+   "chunk": 77,
+   "sent": 14
+  },
+  {
+   "w": "après",
+   "t": 54.6,
+   "chunk": 78,
+   "sent": 14
+  },
+  {
+   "w": "plusieurs",
+   "t": 54.933,
+   "chunk": 78,
+   "sent": 14
+  },
+  {
+   "w": "jours.",
+   "t": 55.433,
+   "chunk": 79,
+   "sent": 14
+  },
+  {
+   "w": "Les",
+   "t": 56.267,
+   "chunk": 80,
+   "sent": 15
+  },
+  {
+   "w": "commandements",
+   "t": 56.433,
+   "chunk": 80,
+   "sent": 15
+  },
+  {
+   "w": "condamnent",
+   "t": 56.933,
+   "chunk": 81,
+   "sent": 15
+  },
+  {
+   "w": "la",
+   "t": 57.433,
+   "chunk": 81,
+   "sent": 15
+  },
+  {
+   "w": "fraternisation.",
+   "t": 57.533,
+   "chunk": 82,
+   "sent": 15
+  },
+  {
+   "w": "Une",
+   "t": 58.9,
+   "chunk": 83,
+   "sent": 16
+  },
+  {
+   "w": "poignée",
+   "t": 59.133,
+   "chunk": 83,
+   "sent": 16
+  },
+  {
+   "w": "de",
+   "t": 59.433,
+   "chunk": 84,
+   "sent": 16
+  },
+  {
+   "w": "main",
+   "t": 59.533,
+   "chunk": 84,
+   "sent": 16
+  },
+  {
+   "w": "n’a",
+   "t": 59.733,
+   "chunk": 85,
+   "sent": 16
+  },
+  {
+   "w": "pas",
+   "t": 59.867,
+   "chunk": 85,
+   "sent": 16
+  },
+  {
+   "w": "suffi",
+   "t": 60.033,
+   "chunk": 86,
+   "sent": 16
+  },
+  {
+   "w": "à",
+   "t": 60.533,
+   "chunk": 86,
+   "sent": 16
+  },
+  {
+   "w": "arrêter",
+   "t": 60.633,
+   "chunk": 87,
+   "sent": 16
+  },
+  {
+   "w": "la",
+   "t": 61.048,
+   "chunk": 87,
+   "sent": 16
+  },
+  {
+   "w": "guerre.",
+   "t": 61.167,
+   "chunk": 88,
+   "sent": 16
+  },
+  {
+   "w": "Alors,",
+   "t": 62.39,
+   "chunk": 89,
+   "sent": 17
+  },
+  {
+   "w": "cette",
+   "t": 63.123,
+   "chunk": 89,
+   "sent": 17
+  },
+  {
+   "w": "trêve",
+   "t": 63.39,
+   "chunk": 90,
+   "sent": 17
+  },
+  {
+   "w": "était-elle",
+   "t": 63.823,
+   "chunk": 90,
+   "sent": 17
+  },
+  {
+   "w": "une",
+   "t": 64.29,
+   "chunk": 91,
+   "sent": 17
+  },
+  {
+   "w": "désobéissance",
+   "t": 64.44,
+   "chunk": 91,
+   "sent": 17
+  },
+  {
+   "w": "dangereuse…",
+   "t": 65.09,
+   "chunk": 92,
+   "sent": 17
+  },
+  {
+   "w": "ou",
+   "t": 66.123,
+   "chunk": 92,
+   "sent": 17
+  },
+  {
+   "w": "le",
+   "t": 66.323,
+   "chunk": 93,
+   "sent": 17
+  },
+  {
+   "w": "geste",
+   "t": 66.49,
+   "chunk": 93,
+   "sent": 17
+  },
+  {
+   "w": "le",
+   "t": 66.856,
+   "chunk": 94,
+   "sent": 17
+  },
+  {
+   "w": "plus",
+   "t": 66.956,
+   "chunk": 94,
+   "sent": 17
+  },
+  {
+   "w": "courageux",
+   "t": 67.156,
+   "chunk": 95,
+   "sent": 17
+  },
+  {
+   "w": "de",
+   "t": 67.675,
+   "chunk": 95,
+   "sent": 17
+  },
+  {
+   "w": "ces",
+   "t": 67.79,
+   "chunk": 96,
+   "sent": 17
+  },
+  {
+   "w": "soldats",
+   "t": 67.923,
+   "chunk": 96,
+   "sent": 17
+  }
+ ],
+ "sentences": [
+  {
+   "i": 0,
+   "t": 0.0,
+   "text": "Ils devaient se tirer dessus."
+  },
+  {
+   "i": 1,
+   "t": 1.36,
+   "text": "À Noël, ils se sont serré la main."
+  },
+  {
+   "i": 2,
+   "t": 3.92,
+   "text": "Décembre 1914. Sur le front de l’Ouest, des Britanniques et des Allemands vivent face à face dans les tranchées."
+  },
+  {
+   "i": 3,
+   "t": 12.93,
+   "text": "La nuit de Noël, des lumières apparaissent côté allemand."
+  },
+  {
+   "i": 4,
+   "t": 16.11,
+   "text": "Des chants traversent les lignes."
+  },
+  {
+   "i": 5,
+   "t": 18.21,
+   "text": "Puis des hommes sortent, sans savoir si l’autre camp va tirer."
+  },
+  {
+   "i": 6,
+   "t": 21.74,
+   "text": "Dans certains secteurs, ils se rencontrent entre les tranchées."
+  },
+  {
+   "i": 7,
+   "t": 25.44,
+   "text": "Ils échangent nourriture et tabac."
+  },
+  {
+   "i": 8,
+   "t": 27.84,
+   "text": "Ils profitent aussi du silence pour enterrer leurs morts."
+  },
+  {
+   "i": 9,
+   "t": 31.11,
+   "text": "Ce n’est pas une légende : des lettres et des photographies témoignent de ces rencontres."
+  },
+  {
+   "i": 10,
+   "t": 35.86,
+   "text": "Mais attention : ce n’est pas toute la guerre qui s’arrête."
+  },
+  {
+   "i": 11,
+   "t": 38.92,
+   "text": "Ces trêves sont locales, non officielles."
+  },
+  {
+   "i": 12,
+   "t": 41.833,
+   "text": "Ailleurs, on continue à combattre."
+  },
+  {
+   "i": 13,
+   "t": 44.2,
+   "text": "Et le retournement est là : après s’être rencontrés, ces hommes doivent reprendre leur place dans des armées toujours ennemies."
+  },
+  {
+   "i": 14,
+   "t": 51.1,
+   "text": "Les combats reprennent, selon les secteurs, dès le lendemain ou après plusieurs jours."
+  },
+  {
+   "i": 15,
+   "t": 56.267,
+   "text": "Les commandements condamnent la fraternisation."
+  },
+  {
+   "i": 16,
+   "t": 58.9,
+   "text": "Une poignée de main n’a pas suffi à arrêter la guerre."
+  },
+  {
+   "i": 17,
+   "t": 62.39,
+   "text": "Alors, cette trêve était-elle une désobéissance dangereuse… ou le geste le plus courageux de ces soldats ?"
+  }
+ ]
+}
