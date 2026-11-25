@@ -1,0 +1,25 @@
+# un mot = "mot@temps" ; "|" sépare les segments de sous-titres ; une ligne = une phrase
+Le@0.23 28@0.50 juin@0.87 | 1914.@1.17 | deux@2.47 coups@2.70 de@2.90 | feu@3.07 à@3.30 Sarajevo@3.70 | embrasent@4.73 la@5.30 | planète@5.60 entière.@6.03
+Comment@6.80 un@7.10 seul@7.33 | assassinat@7.83 | a-t-il@8.30 déclenché@8.73 | la@9.20 Première@9.40 | guerre@10.20 mondiale ?@10.53
+En@11.67 réalité,@11.80 | l’Europe@12.43 est@12.70 déjà@12.97 | une@13.30 poudrière.@13.57
+Depuis@14.10 40@14.53 ans,@14.97 | les@15.13 grandes@15.27 | puissances@15.77 se@16.37 | disputent@16.60 | les@17.40 colonies,@17.57 | les@18.27 mers@18.37 et@18.47 | les@18.70 frontières.@18.87
+La@19.60 France@19.80 veut@20.13 | reprendre@20.40 | l’Alsace-Lorraine@20.87 | à@21.60 l’Allemagne.@21.80
+L’Allemagne@22.83 | réclame@23.63 un@23.90 empire@24.17 | mondial.@24.63
+Et@25.13 dans@25.27 les@25.40 | Balkans,@25.53 | les@26.03 peuples@26.17 | exigent@26.53 leur@26.80 | indépendance.@27.00
+Par@28.23 peur@28.37 d’être@28.73 | isolée,@29.07 | l’Europe@29.57 se@29.85 coupe@30.17 | en@30.50 deux@30.63 blocs@30.97 | armés :@31.23
+la@31.87 Triple@32.03 | Alliance,@32.30 | Allemagne,@32.93 | Autriche-Hongrie@33.77 | et@35.00 Italie,@35.20 | face@35.80 à@36.05 la@36.25 | Triple@36.53 Entente,@36.73 | France,@37.20 | Russie@38.07 et@38.40 | Royaume-Uni.@38.73
+Le@39.63 piège@39.75 est@39.95 | simple :@40.17 | si@40.70 un@40.85 pays@41.00 | attaque,@41.17 | ses@41.70 alliés@41.90 | doivent@42.23 entrer@42.70 en@43.00 | guerre.@43.20
+Le@44.00 28@44.13 juin@44.70 | à@44.97 Sarajevo,@45.17 | Gavrilo@46.07 Princip,@46.70 | un@47.47 jeune@47.60 | nationaliste@47.93 | serbe,@48.67 | abat@49.10 l’archiduc@49.43 | François@50.07 | Ferdinand,@50.73 | héritier@51.53 de@51.90 | l’Autriche-Hongrie.@52.30
+Vienne@53.83 accuse@54.67 la@55.05 | Serbie@55.60 et@56.00 lui@56.47 | envoie@56.87 un@57.20 | ultimatum@57.50 | impossible@58.33 à@58.90 | accepter.@59.23
+Alors@60.60 | les@61.27 dominos@61.50 | tombent@61.90 en@62.20 5@62.50 | semaines.@62.80
+Le@63.43 28@63.57 juillet,@64.07 | l’Autriche-Hongrie@64.47 | attaque@65.53 la@65.80 | Serbie.@66.20
+La@66.50 Russie@66.67 | mobilise@67.07 pour@67.37 la@67.50 | défendre.@67.57
+Le@68.27 1er@68.50 août,@68.93 | l’Allemagne@69.47 | déclare@70.20 la@70.50 guerre@70.77 | à@71.23 la@71.40 Russie,@71.57 | puis@71.97 à@72.37 la@72.50 | France@72.63 le@72.90 3@73.20 | août.@73.57
+Elle@74.23 envahit@74.53 la@74.80 | Belgique@74.97 neutre,@75.67
+et@76.07 le@76.30 4@76.50 | août,@76.87 | le@77.20 Royaume-Uni@77.37 | entre@77.83 dans@78.20 le@78.30 | conflit.@78.40
+Chaque@79.37 camp@79.80 jure@80.13 | qu’il@80.60 ne@81.00 fait@81.30 | que@81.53 se@81.80 défendre.@82.03
+Tous@82.97 croient@83.40 | rentrer@83.60 avant@84.03 | Noël.@84.23
+Mais@84.60 la@84.75 course@84.93 | aux@85.27 armements@85.40 et@85.90 | les@86.10 alliances@86.50 | transforment@87.13 une@87.80 | crise@88.10 locale@88.37 en@88.60 | guerre@88.80 totale.@89.37
+Quatre@90.23 ans@90.42 plus@90.67 | tard,@90.93 | 18@91.27 millions@91.50 de@91.75 | morts@92.23 et@92.50 quatre@92.77 | empires@93.20 | effondrés.@93.70
+En@94.60 1914,@94.85 | personne@95.90 n’a@96.30 voulu@96.50 | tout@96.80 détruire.@97.00
+Personne@97.80 n’a@98.20 su@98.35 | arrêter@98.70 la@99.30 machine.@99.50

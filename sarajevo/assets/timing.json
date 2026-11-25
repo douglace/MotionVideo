@@ -1,0 +1,2313 @@
+{
+ "duration": 101.89,
+ "chunks": [
+  {
+   "text": "Le 28 juin",
+   "t": 0.23,
+   "sent": 0,
+   "end": 1.17
+  },
+  {
+   "text": "1914.",
+   "t": 1.17,
+   "sent": 0,
+   "end": 2.47
+  },
+  {
+   "text": "deux coups de",
+   "t": 2.47,
+   "sent": 0,
+   "end": 3.07
+  },
+  {
+   "text": "feu à Sarajevo",
+   "t": 3.07,
+   "sent": 0,
+   "end": 4.73
+  },
+  {
+   "text": "embrasent la",
+   "t": 4.73,
+   "sent": 0,
+   "end": 5.6
+  },
+  {
+   "text": "planète entière.",
+   "t": 5.6,
+   "sent": 0,
+   "end": 6.8
+  },
+  {
+   "text": "Comment un seul",
+   "t": 6.8,
+   "sent": 1,
+   "end": 7.83
+  },
+  {
+   "text": "assassinat",
+   "t": 7.83,
+   "sent": 1,
+   "end": 8.3
+  },
+  {
+   "text": "a-t-il déclenché",
+   "t": 8.3,
+   "sent": 1,
+   "end": 9.2
+  },
+  {
+   "text": "la Première",
+   "t": 9.2,
+   "sent": 1,
+   "end": 10.2
+  },
+  {
+   "text": "guerre mondiale ?",
+   "t": 10.2,
+   "sent": 1,
+   "end": 11.67
+  },
+  {
+   "text": "En réalité,",
+   "t": 11.67,
+   "sent": 2,
+   "end": 12.43
+  },
+  {
+   "text": "l’Europe est déjà",
+   "t": 12.43,
+   "sent": 2,
+   "end": 13.3
+  },
+  {
+   "text": "une poudrière.",
+   "t": 13.3,
+   "sent": 2,
+   "end": 14.1
+  },
+  {
+   "text": "Depuis 40 ans,",
+   "t": 14.1,
+   "sent": 3,
+   "end": 15.13
+  },
+  {
+   "text": "les grandes",
+   "t": 15.13,
+   "sent": 3,
+   "end": 15.77
+  },
+  {
+   "text": "puissances se",
+   "t": 15.77,
+   "sent": 3,
+   "end": 16.6
+  },
+  {
+   "text": "disputent",
+   "t": 16.6,
+   "sent": 3,
+   "end": 17.4
+  },
+  {
+   "text": "les colonies,",
+   "t": 17.4,
+   "sent": 3,
+   "end": 18.27
+  },
+  {
+   "text": "les mers et",
+   "t": 18.27,
+   "sent": 3,
+   "end": 18.7
+  },
+  {
+   "text": "les frontières.",
+   "t": 18.7,
+   "sent": 3,
+   "end": 19.6
+  },
+  {
+   "text": "La France veut",
+   "t": 19.6,
+   "sent": 4,
+   "end": 20.4
+  },
+  {
+   "text": "reprendre",
+   "t": 20.4,
+   "sent": 4,
+   "end": 20.87
+  },
+  {
+   "text": "l’Alsace-Lorraine",
+   "t": 20.87,
+   "sent": 4,
+   "end": 21.6
+  },
+  {
+   "text": "à l’Allemagne.",
+   "t": 21.6,
+   "sent": 4,
+   "end": 22.83
+  },
+  {
+   "text": "L’Allemagne",
+   "t": 22.83,
+   "sent": 5,
+   "end": 23.63
+  },
+  {
+   "text": "réclame un empire",
+   "t": 23.63,
+   "sent": 5,
+   "end": 24.63
+  },
+  {
+   "text": "mondial.",
+   "t": 24.63,
+   "sent": 5,
+   "end": 25.13
+  },
+  {
+   "text": "Et dans les",
+   "t": 25.13,
+   "sent": 6,
+   "end": 25.53
+  },
+  {
+   "text": "Balkans,",
+   "t": 25.53,
+   "sent": 6,
+   "end": 26.03
+  },
+  {
+   "text": "les peuples",
+   "t": 26.03,
+   "sent": 6,
+   "end": 26.53
+  },
+  {
+   "text": "exigent leur",
+   "t": 26.53,
+   "sent": 6,
+   "end": 27.0
+  },
+  {
+   "text": "indépendance.",
+   "t": 27.0,
+   "sent": 6,
+   "end": 28.23
+  },
+  {
+   "text": "Par peur d’être",
+   "t": 28.23,
+   "sent": 7,
+   "end": 29.07
+  },
+  {
+   "text": "isolée,",
+   "t": 29.07,
+   "sent": 7,
+   "end": 29.57
+  },
+  {
+   "text": "l’Europe se coupe",
+   "t": 29.57,
+   "sent": 7,
+   "end": 30.5
+  },
+  {
+   "text": "en deux blocs",
+   "t": 30.5,
+   "sent": 7,
+   "end": 31.23
+  },
+  {
+   "text": "armés :",
+   "t": 31.23,
+   "sent": 7,
+   "end": 31.87
+  },
+  {
+   "text": "la Triple",
+   "t": 31.87,
+   "sent": 8,
+   "end": 32.3
+  },
+  {
+   "text": "Alliance,",
+   "t": 32.3,
+   "sent": 8,
+   "end": 32.93
+  },
+  {
+   "text": "Allemagne,",
+   "t": 32.93,
+   "sent": 8,
+   "end": 33.77
+  },
+  {
+   "text": "Autriche-Hongrie",
+   "t": 33.77,
+   "sent": 8,
+   "end": 35.0
+  },
+  {
+   "text": "et Italie,",
+   "t": 35.0,
+   "sent": 8,
+   "end": 35.8
+  },
+  {
+   "text": "face à la",
+   "t": 35.8,
+   "sent": 8,
+   "end": 36.53
+  },
+  {
+   "text": "Triple Entente,",
+   "t": 36.53,
+   "sent": 8,
+   "end": 37.2
+  },
+  {
+   "text": "France,",
+   "t": 37.2,
+   "sent": 8,
+   "end": 38.07
+  },
+  {
+   "text": "Russie et",
+   "t": 38.07,
+   "sent": 8,
+   "end": 38.73
+  },
+  {
+   "text": "Royaume-Uni.",
+   "t": 38.73,
+   "sent": 8,
+   "end": 39.63
+  },
+  {
+   "text": "Le piège est",
+   "t": 39.63,
+   "sent": 9,
+   "end": 40.17
+  },
+  {
+   "text": "simple :",
+   "t": 40.17,
+   "sent": 9,
+   "end": 40.7
+  },
+  {
+   "text": "si un pays",
+   "t": 40.7,
+   "sent": 9,
+   "end": 41.17
+  },
+  {
+   "text": "attaque,",
+   "t": 41.17,
+   "sent": 9,
+   "end": 41.7
+  },
+  {
+   "text": "ses alliés",
+   "t": 41.7,
+   "sent": 9,
+   "end": 42.23
+  },
+  {
+   "text": "doivent entrer en",
+   "t": 42.23,
+   "sent": 9,
+   "end": 43.2
+  },
+  {
+   "text": "guerre.",
+   "t": 43.2,
+   "sent": 9,
+   "end": 44.0
+  },
+  {
+   "text": "Le 28 juin",
+   "t": 44.0,
+   "sent": 10,
+   "end": 44.97
+  },
+  {
+   "text": "à Sarajevo,",
+   "t": 44.97,
+   "sent": 10,
+   "end": 46.07
+  },
+  {
+   "text": "Gavrilo Princip,",
+   "t": 46.07,
+   "sent": 10,
+   "end": 47.47
+  },
+  {
+   "text": "un jeune",
+   "t": 47.47,
+   "sent": 10,
+   "end": 47.93
+  },
+  {
+   "text": "nationaliste",
+   "t": 47.93,
+   "sent": 10,
+   "end": 48.67
+  },
+  {
+   "text": "serbe,",
+   "t": 48.67,
+   "sent": 10,
+   "end": 49.1
+  },
+  {
+   "text": "abat l’archiduc",
+   "t": 49.1,
+   "sent": 10,
+   "end": 50.07
+  },
+  {
+   "text": "François",
+   "t": 50.07,
+   "sent": 10,
+   "end": 50.73
+  },
+  {
+   "text": "Ferdinand,",
+   "t": 50.73,
+   "sent": 10,
+   "end": 51.53
+  },
+  {
+   "text": "héritier de",
+   "t": 51.53,
+   "sent": 10,
+   "end": 52.3
+  },
+  {
+   "text": "l’Autriche-Hongrie.",
+   "t": 52.3,
+   "sent": 10,
+   "end": 53.7
+  },
+  {
+   "text": "Vienne accuse la",
+   "t": 53.83,
+   "sent": 11,
+   "end": 55.6
+  },
+  {
+   "text": "Serbie et lui",
+   "t": 55.6,
+   "sent": 11,
+   "end": 56.87
+  },
+  {
+   "text": "envoie un",
+   "t": 56.87,
+   "sent": 11,
+   "end": 57.5
+  },
+  {
+   "text": "ultimatum",
+   "t": 57.5,
+   "sent": 11,
+   "end": 58.33
+  },
+  {
+   "text": "impossible à",
+   "t": 58.33,
+   "sent": 11,
+   "end": 59.23
+  },
+  {
+   "text": "accepter.",
+   "t": 59.23,
+   "sent": 11,
+   "end": 60.6
+  },
+  {
+   "text": "Alors",
+   "t": 60.6,
+   "sent": 12,
+   "end": 61.27
+  },
+  {
+   "text": "les dominos",
+   "t": 61.27,
+   "sent": 12,
+   "end": 61.9
+  },
+  {
+   "text": "tombent en 5",
+   "t": 61.9,
+   "sent": 12,
+   "end": 62.8
+  },
+  {
+   "text": "semaines.",
+   "t": 62.8,
+   "sent": 12,
+   "end": 63.43
+  },
+  {
+   "text": "Le 28 juillet,",
+   "t": 63.43,
+   "sent": 13,
+   "end": 64.47
+  },
+  {
+   "text": "l’Autriche-Hongrie",
+   "t": 64.47,
+   "sent": 13,
+   "end": 65.53
+  },
+  {
+   "text": "attaque la",
+   "t": 65.53,
+   "sent": 13,
+   "end": 66.2
+  },
+  {
+   "text": "Serbie.",
+   "t": 66.2,
+   "sent": 13,
+   "end": 66.5
+  },
+  {
+   "text": "La Russie",
+   "t": 66.5,
+   "sent": 14,
+   "end": 67.07
+  },
+  {
+   "text": "mobilise pour la",
+   "t": 67.07,
+   "sent": 14,
+   "end": 67.57
+  },
+  {
+   "text": "défendre.",
+   "t": 67.57,
+   "sent": 14,
+   "end": 68.27
+  },
+  {
+   "text": "Le 1er août,",
+   "t": 68.27,
+   "sent": 15,
+   "end": 69.47
+  },
+  {
+   "text": "l’Allemagne",
+   "t": 69.47,
+   "sent": 15,
+   "end": 70.2
+  },
+  {
+   "text": "déclare la guerre",
+   "t": 70.2,
+   "sent": 15,
+   "end": 71.23
+  },
+  {
+   "text": "à la Russie,",
+   "t": 71.23,
+   "sent": 15,
+   "end": 71.97
+  },
+  {
+   "text": "puis à la",
+   "t": 71.97,
+   "sent": 15,
+   "end": 72.63
+  },
+  {
+   "text": "France le 3",
+   "t": 72.63,
+   "sent": 15,
+   "end": 73.57
+  },
+  {
+   "text": "août.",
+   "t": 73.57,
+   "sent": 15,
+   "end": 74.23
+  },
+  {
+   "text": "Elle envahit la",
+   "t": 74.23,
+   "sent": 16,
+   "end": 74.97
+  },
+  {
+   "text": "Belgique neutre,",
+   "t": 74.97,
+   "sent": 16,
+   "end": 76.07
+  },
+  {
+   "text": "et le 4",
+   "t": 76.07,
+   "sent": 17,
+   "end": 76.87
+  },
+  {
+   "text": "août,",
+   "t": 76.87,
+   "sent": 17,
+   "end": 77.2
+  },
+  {
+   "text": "le Royaume-Uni",
+   "t": 77.2,
+   "sent": 17,
+   "end": 77.83
+  },
+  {
+   "text": "entre dans le",
+   "t": 77.83,
+   "sent": 17,
+   "end": 78.4
+  },
+  {
+   "text": "conflit.",
+   "t": 78.4,
+   "sent": 17,
+   "end": 79.37
+  },
+  {
+   "text": "Chaque camp jure",
+   "t": 79.37,
+   "sent": 18,
+   "end": 80.6
+  },
+  {
+   "text": "qu’il ne fait",
+   "t": 80.6,
+   "sent": 18,
+   "end": 81.53
+  },
+  {
+   "text": "que se défendre.",
+   "t": 81.53,
+   "sent": 18,
+   "end": 82.97
+  },
+  {
+   "text": "Tous croient",
+   "t": 82.97,
+   "sent": 19,
+   "end": 83.6
+  },
+  {
+   "text": "rentrer avant",
+   "t": 83.6,
+   "sent": 19,
+   "end": 84.23
+  },
+  {
+   "text": "Noël.",
+   "t": 84.23,
+   "sent": 19,
+   "end": 84.6
+  },
+  {
+   "text": "Mais la course",
+   "t": 84.6,
+   "sent": 20,
+   "end": 85.27
+  },
+  {
+   "text": "aux armements et",
+   "t": 85.27,
+   "sent": 20,
+   "end": 86.1
+  },
+  {
+   "text": "les alliances",
+   "t": 86.1,
+   "sent": 20,
+   "end": 87.13
+  },
+  {
+   "text": "transforment une",
+   "t": 87.13,
+   "sent": 20,
+   "end": 88.1
+  },
+  {
+   "text": "crise locale en",
+   "t": 88.1,
+   "sent": 20,
+   "end": 88.8
+  },
+  {
+   "text": "guerre totale.",
+   "t": 88.8,
+   "sent": 20,
+   "end": 90.23
+  },
+  {
+   "text": "Quatre ans plus",
+   "t": 90.23,
+   "sent": 21,
+   "end": 90.93
+  },
+  {
+   "text": "tard,",
+   "t": 90.93,
+   "sent": 21,
+   "end": 91.27
+  },
+  {
+   "text": "18 millions de",
+   "t": 91.27,
+   "sent": 21,
+   "end": 92.23
+  },
+  {
+   "text": "morts et quatre",
+   "t": 92.23,
+   "sent": 21,
+   "end": 93.2
+  },
+  {
+   "text": "empires",
+   "t": 93.2,
+   "sent": 21,
+   "end": 93.7
+  },
+  {
+   "text": "effondrés.",
+   "t": 93.7,
+   "sent": 21,
+   "end": 94.6
+  },
+  {
+   "text": "En 1914,",
+   "t": 94.6,
+   "sent": 22,
+   "end": 95.9
+  },
+  {
+   "text": "personne n’a voulu",
+   "t": 95.9,
+   "sent": 22,
+   "end": 96.8
+  },
+  {
+   "text": "tout détruire.",
+   "t": 96.8,
+   "sent": 22,
+   "end": 97.8
+  },
+  {
+   "text": "Personne n’a su",
+   "t": 97.8,
+   "sent": 23,
+   "end": 98.7
+  },
+  {
+   "text": "arrêter la machine.",
+   "t": 98.7,
+   "sent": 23,
+   "end": 100.9
+  }
+ ],
+ "words": [
+  {
+   "w": "Le",
+   "t": 0.23,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "28",
+   "t": 0.5,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "juin",
+   "t": 0.87,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "1914.",
+   "t": 1.17,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "deux",
+   "t": 2.47,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "coups",
+   "t": 2.7,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "de",
+   "t": 2.9,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "feu",
+   "t": 3.07,
+   "chunk": 3,
+   "sent": 0
+  },
+  {
+   "w": "à",
+   "t": 3.3,
+   "chunk": 3,
+   "sent": 0
+  },
+  {
+   "w": "Sarajevo",
+   "t": 3.7,
+   "chunk": 3,
+   "sent": 0
+  },
+  {
+   "w": "embrasent",
+   "t": 4.73,
+   "chunk": 4,
+   "sent": 0
+  },
+  {
+   "w": "la",
+   "t": 5.3,
+   "chunk": 4,
+   "sent": 0
+  },
+  {
+   "w": "planète",
+   "t": 5.6,
+   "chunk": 5,
+   "sent": 0
+  },
+  {
+   "w": "entière.",
+   "t": 6.03,
+   "chunk": 5,
+   "sent": 0
+  },
+  {
+   "w": "Comment",
+   "t": 6.8,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "un",
+   "t": 7.1,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "seul",
+   "t": 7.33,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "assassinat",
+   "t": 7.83,
+   "chunk": 7,
+   "sent": 1
+  },
+  {
+   "w": "a-t-il",
+   "t": 8.3,
+   "chunk": 8,
+   "sent": 1
+  },
+  {
+   "w": "déclenché",
+   "t": 8.73,
+   "chunk": 8,
+   "sent": 1
+  },
+  {
+   "w": "la",
+   "t": 9.2,
+   "chunk": 9,
+   "sent": 1
+  },
+  {
+   "w": "Première",
+   "t": 9.4,
+   "chunk": 9,
+   "sent": 1
+  },
+  {
+   "w": "guerre",
+   "t": 10.2,
+   "chunk": 10,
+   "sent": 1
+  },
+  {
+   "w": "mondiale ?",
+   "t": 10.53,
+   "chunk": 10,
+   "sent": 1
+  },
+  {
+   "w": "En",
+   "t": 11.67,
+   "chunk": 11,
+   "sent": 2
+  },
+  {
+   "w": "réalité,",
+   "t": 11.8,
+   "chunk": 11,
+   "sent": 2
+  },
+  {
+   "w": "l’Europe",
+   "t": 12.43,
+   "chunk": 12,
+   "sent": 2
+  },
+  {
+   "w": "est",
+   "t": 12.7,
+   "chunk": 12,
+   "sent": 2
+  },
+  {
+   "w": "déjà",
+   "t": 12.97,
+   "chunk": 12,
+   "sent": 2
+  },
+  {
+   "w": "une",
+   "t": 13.3,
+   "chunk": 13,
+   "sent": 2
+  },
+  {
+   "w": "poudrière.",
+   "t": 13.57,
+   "chunk": 13,
+   "sent": 2
+  },
+  {
+   "w": "Depuis",
+   "t": 14.1,
+   "chunk": 14,
+   "sent": 3
+  },
+  {
+   "w": "40",
+   "t": 14.53,
+   "chunk": 14,
+   "sent": 3
+  },
+  {
+   "w": "ans,",
+   "t": 14.97,
+   "chunk": 14,
+   "sent": 3
+  },
+  {
+   "w": "les",
+   "t": 15.13,
+   "chunk": 15,
+   "sent": 3
+  },
+  {
+   "w": "grandes",
+   "t": 15.27,
+   "chunk": 15,
+   "sent": 3
+  },
+  {
+   "w": "puissances",
+   "t": 15.77,
+   "chunk": 16,
+   "sent": 3
+  },
+  {
+   "w": "se",
+   "t": 16.37,
+   "chunk": 16,
+   "sent": 3
+  },
+  {
+   "w": "disputent",
+   "t": 16.6,
+   "chunk": 17,
+   "sent": 3
+  },
+  {
+   "w": "les",
+   "t": 17.4,
+   "chunk": 18,
+   "sent": 3
+  },
+  {
+   "w": "colonies,",
+   "t": 17.57,
+   "chunk": 18,
+   "sent": 3
+  },
+  {
+   "w": "les",
+   "t": 18.27,
+   "chunk": 19,
+   "sent": 3
+  },
+  {
+   "w": "mers",
+   "t": 18.37,
+   "chunk": 19,
+   "sent": 3
+  },
+  {
+   "w": "et",
+   "t": 18.47,
+   "chunk": 19,
+   "sent": 3
+  },
+  {
+   "w": "les",
+   "t": 18.7,
+   "chunk": 20,
+   "sent": 3
+  },
+  {
+   "w": "frontières.",
+   "t": 18.87,
+   "chunk": 20,
+   "sent": 3
+  },
+  {
+   "w": "La",
+   "t": 19.6,
+   "chunk": 21,
+   "sent": 4
+  },
+  {
+   "w": "France",
+   "t": 19.8,
+   "chunk": 21,
+   "sent": 4
+  },
+  {
+   "w": "veut",
+   "t": 20.13,
+   "chunk": 21,
+   "sent": 4
+  },
+  {
+   "w": "reprendre",
+   "t": 20.4,
+   "chunk": 22,
+   "sent": 4
+  },
+  {
+   "w": "l’Alsace-Lorraine",
+   "t": 20.87,
+   "chunk": 23,
+   "sent": 4
+  },
+  {
+   "w": "à",
+   "t": 21.6,
+   "chunk": 24,
+   "sent": 4
+  },
+  {
+   "w": "l’Allemagne.",
+   "t": 21.8,
+   "chunk": 24,
+   "sent": 4
+  },
+  {
+   "w": "L’Allemagne",
+   "t": 22.83,
+   "chunk": 25,
+   "sent": 5
+  },
+  {
+   "w": "réclame",
+   "t": 23.63,
+   "chunk": 26,
+   "sent": 5
+  },
+  {
+   "w": "un",
+   "t": 23.9,
+   "chunk": 26,
+   "sent": 5
+  },
+  {
+   "w": "empire",
+   "t": 24.17,
+   "chunk": 26,
+   "sent": 5
+  },
+  {
+   "w": "mondial.",
+   "t": 24.63,
+   "chunk": 27,
+   "sent": 5
+  },
+  {
+   "w": "Et",
+   "t": 25.13,
+   "chunk": 28,
+   "sent": 6
+  },
+  {
+   "w": "dans",
+   "t": 25.27,
+   "chunk": 28,
+   "sent": 6
+  },
+  {
+   "w": "les",
+   "t": 25.4,
+   "chunk": 28,
+   "sent": 6
+  },
+  {
+   "w": "Balkans,",
+   "t": 25.53,
+   "chunk": 29,
+   "sent": 6
+  },
+  {
+   "w": "les",
+   "t": 26.03,
+   "chunk": 30,
+   "sent": 6
+  },
+  {
+   "w": "peuples",
+   "t": 26.17,
+   "chunk": 30,
+   "sent": 6
+  },
+  {
+   "w": "exigent",
+   "t": 26.53,
+   "chunk": 31,
+   "sent": 6
+  },
+  {
+   "w": "leur",
+   "t": 26.8,
+   "chunk": 31,
+   "sent": 6
+  },
+  {
+   "w": "indépendance.",
+   "t": 27.0,
+   "chunk": 32,
+   "sent": 6
+  },
+  {
+   "w": "Par",
+   "t": 28.23,
+   "chunk": 33,
+   "sent": 7
+  },
+  {
+   "w": "peur",
+   "t": 28.37,
+   "chunk": 33,
+   "sent": 7
+  },
+  {
+   "w": "d’être",
+   "t": 28.73,
+   "chunk": 33,
+   "sent": 7
+  },
+  {
+   "w": "isolée,",
+   "t": 29.07,
+   "chunk": 34,
+   "sent": 7
+  },
+  {
+   "w": "l’Europe",
+   "t": 29.57,
+   "chunk": 35,
+   "sent": 7
+  },
+  {
+   "w": "se",
+   "t": 29.85,
+   "chunk": 35,
+   "sent": 7
+  },
+  {
+   "w": "coupe",
+   "t": 30.17,
+   "chunk": 35,
+   "sent": 7
+  },
+  {
+   "w": "en",
+   "t": 30.5,
+   "chunk": 36,
+   "sent": 7
+  },
+  {
+   "w": "deux",
+   "t": 30.63,
+   "chunk": 36,
+   "sent": 7
+  },
+  {
+   "w": "blocs",
+   "t": 30.97,
+   "chunk": 36,
+   "sent": 7
+  },
+  {
+   "w": "armés :",
+   "t": 31.23,
+   "chunk": 37,
+   "sent": 7
+  },
+  {
+   "w": "la",
+   "t": 31.87,
+   "chunk": 38,
+   "sent": 8
+  },
+  {
+   "w": "Triple",
+   "t": 32.03,
+   "chunk": 38,
+   "sent": 8
+  },
+  {
+   "w": "Alliance,",
+   "t": 32.3,
+   "chunk": 39,
+   "sent": 8
+  },
+  {
+   "w": "Allemagne,",
+   "t": 32.93,
+   "chunk": 40,
+   "sent": 8
+  },
+  {
+   "w": "Autriche-Hongrie",
+   "t": 33.77,
+   "chunk": 41,
+   "sent": 8
+  },
+  {
+   "w": "et",
+   "t": 35.0,
+   "chunk": 42,
+   "sent": 8
+  },
+  {
+   "w": "Italie,",
+   "t": 35.2,
+   "chunk": 42,
+   "sent": 8
+  },
+  {
+   "w": "face",
+   "t": 35.8,
+   "chunk": 43,
+   "sent": 8
+  },
+  {
+   "w": "à",
+   "t": 36.05,
+   "chunk": 43,
+   "sent": 8
+  },
+  {
+   "w": "la",
+   "t": 36.25,
+   "chunk": 43,
+   "sent": 8
+  },
+  {
+   "w": "Triple",
+   "t": 36.53,
+   "chunk": 44,
+   "sent": 8
+  },
+  {
+   "w": "Entente,",
+   "t": 36.73,
+   "chunk": 44,
+   "sent": 8
+  },
+  {
+   "w": "France,",
+   "t": 37.2,
+   "chunk": 45,
+   "sent": 8
+  },
+  {
+   "w": "Russie",
+   "t": 38.07,
+   "chunk": 46,
+   "sent": 8
+  },
+  {
+   "w": "et",
+   "t": 38.4,
+   "chunk": 46,
+   "sent": 8
+  },
+  {
+   "w": "Royaume-Uni.",
+   "t": 38.73,
+   "chunk": 47,
+   "sent": 8
+  },
+  {
+   "w": "Le",
+   "t": 39.63,
+   "chunk": 48,
+   "sent": 9
+  },
+  {
+   "w": "piège",
+   "t": 39.75,
+   "chunk": 48,
+   "sent": 9
+  },
+  {
+   "w": "est",
+   "t": 39.95,
+   "chunk": 48,
+   "sent": 9
+  },
+  {
+   "w": "simple :",
+   "t": 40.17,
+   "chunk": 49,
+   "sent": 9
+  },
+  {
+   "w": "si",
+   "t": 40.7,
+   "chunk": 50,
+   "sent": 9
+  },
+  {
+   "w": "un",
+   "t": 40.85,
+   "chunk": 50,
+   "sent": 9
+  },
+  {
+   "w": "pays",
+   "t": 41.0,
+   "chunk": 50,
+   "sent": 9
+  },
+  {
+   "w": "attaque,",
+   "t": 41.17,
+   "chunk": 51,
+   "sent": 9
+  },
+  {
+   "w": "ses",
+   "t": 41.7,
+   "chunk": 52,
+   "sent": 9
+  },
+  {
+   "w": "alliés",
+   "t": 41.9,
+   "chunk": 52,
+   "sent": 9
+  },
+  {
+   "w": "doivent",
+   "t": 42.23,
+   "chunk": 53,
+   "sent": 9
+  },
+  {
+   "w": "entrer",
+   "t": 42.7,
+   "chunk": 53,
+   "sent": 9
+  },
+  {
+   "w": "en",
+   "t": 43.0,
+   "chunk": 53,
+   "sent": 9
+  },
+  {
+   "w": "guerre.",
+   "t": 43.2,
+   "chunk": 54,
+   "sent": 9
+  },
+  {
+   "w": "Le",
+   "t": 44.0,
+   "chunk": 55,
+   "sent": 10
+  },
+  {
+   "w": "28",
+   "t": 44.13,
+   "chunk": 55,
+   "sent": 10
+  },
+  {
+   "w": "juin",
+   "t": 44.7,
+   "chunk": 55,
+   "sent": 10
+  },
+  {
+   "w": "à",
+   "t": 44.97,
+   "chunk": 56,
+   "sent": 10
+  },
+  {
+   "w": "Sarajevo,",
+   "t": 45.17,
+   "chunk": 56,
+   "sent": 10
+  },
+  {
+   "w": "Gavrilo",
+   "t": 46.07,
+   "chunk": 57,
+   "sent": 10
+  },
+  {
+   "w": "Princip,",
+   "t": 46.7,
+   "chunk": 57,
+   "sent": 10
+  },
+  {
+   "w": "un",
+   "t": 47.47,
+   "chunk": 58,
+   "sent": 10
+  },
+  {
+   "w": "jeune",
+   "t": 47.6,
+   "chunk": 58,
+   "sent": 10
+  },
+  {
+   "w": "nationaliste",
+   "t": 47.93,
+   "chunk": 59,
+   "sent": 10
+  },
+  {
+   "w": "serbe,",
+   "t": 48.67,
+   "chunk": 60,
+   "sent": 10
+  },
+  {
+   "w": "abat",
+   "t": 49.1,
+   "chunk": 61,
+   "sent": 10
+  },
+  {
+   "w": "l’archiduc",
+   "t": 49.43,
+   "chunk": 61,
+   "sent": 10
+  },
+  {
+   "w": "François",
+   "t": 50.07,
+   "chunk": 62,
+   "sent": 10
+  },
+  {
+   "w": "Ferdinand,",
+   "t": 50.73,
+   "chunk": 63,
+   "sent": 10
+  },
+  {
+   "w": "héritier",
+   "t": 51.53,
+   "chunk": 64,
+   "sent": 10
+  },
+  {
+   "w": "de",
+   "t": 51.9,
+   "chunk": 64,
+   "sent": 10
+  },
+  {
+   "w": "l’Autriche-Hongrie.",
+   "t": 52.3,
+   "chunk": 65,
+   "sent": 10
+  },
+  {
+   "w": "Vienne",
+   "t": 53.83,
+   "chunk": 66,
+   "sent": 11
+  },
+  {
+   "w": "accuse",
+   "t": 54.67,
+   "chunk": 66,
+   "sent": 11
+  },
+  {
+   "w": "la",
+   "t": 55.05,
+   "chunk": 66,
+   "sent": 11
+  },
+  {
+   "w": "Serbie",
+   "t": 55.6,
+   "chunk": 67,
+   "sent": 11
+  },
+  {
+   "w": "et",
+   "t": 56.0,
+   "chunk": 67,
+   "sent": 11
+  },
+  {
+   "w": "lui",
+   "t": 56.47,
+   "chunk": 67,
+   "sent": 11
+  },
+  {
+   "w": "envoie",
+   "t": 56.87,
+   "chunk": 68,
+   "sent": 11
+  },
+  {
+   "w": "un",
+   "t": 57.2,
+   "chunk": 68,
+   "sent": 11
+  },
+  {
+   "w": "ultimatum",
+   "t": 57.5,
+   "chunk": 69,
+   "sent": 11
+  },
+  {
+   "w": "impossible",
+   "t": 58.33,
+   "chunk": 70,
+   "sent": 11
+  },
+  {
+   "w": "à",
+   "t": 58.9,
+   "chunk": 70,
+   "sent": 11
+  },
+  {
+   "w": "accepter.",
+   "t": 59.23,
+   "chunk": 71,
+   "sent": 11
+  },
+  {
+   "w": "Alors",
+   "t": 60.6,
+   "chunk": 72,
+   "sent": 12
+  },
+  {
+   "w": "les",
+   "t": 61.27,
+   "chunk": 73,
+   "sent": 12
+  },
+  {
+   "w": "dominos",
+   "t": 61.5,
+   "chunk": 73,
+   "sent": 12
+  },
+  {
+   "w": "tombent",
+   "t": 61.9,
+   "chunk": 74,
+   "sent": 12
+  },
+  {
+   "w": "en",
+   "t": 62.2,
+   "chunk": 74,
+   "sent": 12
+  },
+  {
+   "w": "5",
+   "t": 62.5,
+   "chunk": 74,
+   "sent": 12
+  },
+  {
+   "w": "semaines.",
+   "t": 62.8,
+   "chunk": 75,
+   "sent": 12
+  },
+  {
+   "w": "Le",
+   "t": 63.43,
+   "chunk": 76,
+   "sent": 13
+  },
+  {
+   "w": "28",
+   "t": 63.57,
+   "chunk": 76,
+   "sent": 13
+  },
+  {
+   "w": "juillet,",
+   "t": 64.07,
+   "chunk": 76,
+   "sent": 13
+  },
+  {
+   "w": "l’Autriche-Hongrie",
+   "t": 64.47,
+   "chunk": 77,
+   "sent": 13
+  },
+  {
+   "w": "attaque",
+   "t": 65.53,
+   "chunk": 78,
+   "sent": 13
+  },
+  {
+   "w": "la",
+   "t": 65.8,
+   "chunk": 78,
+   "sent": 13
+  },
+  {
+   "w": "Serbie.",
+   "t": 66.2,
+   "chunk": 79,
+   "sent": 13
+  },
+  {
+   "w": "La",
+   "t": 66.5,
+   "chunk": 80,
+   "sent": 14
+  },
+  {
+   "w": "Russie",
+   "t": 66.67,
+   "chunk": 80,
+   "sent": 14
+  },
+  {
+   "w": "mobilise",
+   "t": 67.07,
+   "chunk": 81,
+   "sent": 14
+  },
+  {
+   "w": "pour",
+   "t": 67.37,
+   "chunk": 81,
+   "sent": 14
+  },
+  {
+   "w": "la",
+   "t": 67.5,
+   "chunk": 81,
+   "sent": 14
+  },
+  {
+   "w": "défendre.",
+   "t": 67.57,
+   "chunk": 82,
+   "sent": 14
+  },
+  {
+   "w": "Le",
+   "t": 68.27,
+   "chunk": 83,
+   "sent": 15
+  },
+  {
+   "w": "1er",
+   "t": 68.5,
+   "chunk": 83,
+   "sent": 15
+  },
+  {
+   "w": "août,",
+   "t": 68.93,
+   "chunk": 83,
+   "sent": 15
+  },
+  {
+   "w": "l’Allemagne",
+   "t": 69.47,
+   "chunk": 84,
+   "sent": 15
+  },
+  {
+   "w": "déclare",
+   "t": 70.2,
+   "chunk": 85,
+   "sent": 15
+  },
+  {
+   "w": "la",
+   "t": 70.5,
+   "chunk": 85,
+   "sent": 15
+  },
+  {
+   "w": "guerre",
+   "t": 70.77,
+   "chunk": 85,
+   "sent": 15
+  },
+  {
+   "w": "à",
+   "t": 71.23,
+   "chunk": 86,
+   "sent": 15
+  },
+  {
+   "w": "la",
+   "t": 71.4,
+   "chunk": 86,
+   "sent": 15
+  },
+  {
+   "w": "Russie,",
+   "t": 71.57,
+   "chunk": 86,
+   "sent": 15
+  },
+  {
+   "w": "puis",
+   "t": 71.97,
+   "chunk": 87,
+   "sent": 15
+  },
+  {
+   "w": "à",
+   "t": 72.37,
+   "chunk": 87,
+   "sent": 15
+  },
+  {
+   "w": "la",
+   "t": 72.5,
+   "chunk": 87,
+   "sent": 15
+  },
+  {
+   "w": "France",
+   "t": 72.63,
+   "chunk": 88,
+   "sent": 15
+  },
+  {
+   "w": "le",
+   "t": 72.9,
+   "chunk": 88,
+   "sent": 15
+  },
+  {
+   "w": "3",
+   "t": 73.2,
+   "chunk": 88,
+   "sent": 15
+  },
+  {
+   "w": "août.",
+   "t": 73.57,
+   "chunk": 89,
+   "sent": 15
+  },
+  {
+   "w": "Elle",
+   "t": 74.23,
+   "chunk": 90,
+   "sent": 16
+  },
+  {
+   "w": "envahit",
+   "t": 74.53,
+   "chunk": 90,
+   "sent": 16
+  },
+  {
+   "w": "la",
+   "t": 74.8,
+   "chunk": 90,
+   "sent": 16
+  },
+  {
+   "w": "Belgique",
+   "t": 74.97,
+   "chunk": 91,
+   "sent": 16
+  },
+  {
+   "w": "neutre,",
+   "t": 75.67,
+   "chunk": 91,
+   "sent": 16
+  },
+  {
+   "w": "et",
+   "t": 76.07,
+   "chunk": 92,
+   "sent": 17
+  },
+  {
+   "w": "le",
+   "t": 76.3,
+   "chunk": 92,
+   "sent": 17
+  },
+  {
+   "w": "4",
+   "t": 76.5,
+   "chunk": 92,
+   "sent": 17
+  },
+  {
+   "w": "août,",
+   "t": 76.87,
+   "chunk": 93,
+   "sent": 17
+  },
+  {
+   "w": "le",
+   "t": 77.2,
+   "chunk": 94,
+   "sent": 17
+  },
+  {
+   "w": "Royaume-Uni",
+   "t": 77.37,
+   "chunk": 94,
+   "sent": 17
+  },
+  {
+   "w": "entre",
+   "t": 77.83,
+   "chunk": 95,
+   "sent": 17
+  },
+  {
+   "w": "dans",
+   "t": 78.2,
+   "chunk": 95,
+   "sent": 17
+  },
+  {
+   "w": "le",
+   "t": 78.3,
+   "chunk": 95,
+   "sent": 17
+  },
+  {
+   "w": "conflit.",
+   "t": 78.4,
+   "chunk": 96,
+   "sent": 17
+  },
+  {
+   "w": "Chaque",
+   "t": 79.37,
+   "chunk": 97,
+   "sent": 18
+  },
+  {
+   "w": "camp",
+   "t": 79.8,
+   "chunk": 97,
+   "sent": 18
+  },
+  {
+   "w": "jure",
+   "t": 80.13,
+   "chunk": 97,
+   "sent": 18
+  },
+  {
+   "w": "qu’il",
+   "t": 80.6,
+   "chunk": 98,
+   "sent": 18
+  },
+  {
+   "w": "ne",
+   "t": 81.0,
+   "chunk": 98,
+   "sent": 18
+  },
+  {
+   "w": "fait",
+   "t": 81.3,
+   "chunk": 98,
+   "sent": 18
+  },
+  {
+   "w": "que",
+   "t": 81.53,
+   "chunk": 99,
+   "sent": 18
+  },
+  {
+   "w": "se",
+   "t": 81.8,
+   "chunk": 99,
+   "sent": 18
+  },
+  {
+   "w": "défendre.",
+   "t": 82.03,
+   "chunk": 99,
+   "sent": 18
+  },
+  {
+   "w": "Tous",
+   "t": 82.97,
+   "chunk": 100,
+   "sent": 19
+  },
+  {
+   "w": "croient",
+   "t": 83.4,
+   "chunk": 100,
+   "sent": 19
+  },
+  {
+   "w": "rentrer",
+   "t": 83.6,
+   "chunk": 101,
+   "sent": 19
+  },
+  {
+   "w": "avant",
+   "t": 84.03,
+   "chunk": 101,
+   "sent": 19
+  },
+  {
+   "w": "Noël.",
+   "t": 84.23,
+   "chunk": 102,
+   "sent": 19
+  },
+  {
+   "w": "Mais",
+   "t": 84.6,
+   "chunk": 103,
+   "sent": 20
+  },
+  {
+   "w": "la",
+   "t": 84.75,
+   "chunk": 103,
+   "sent": 20
+  },
+  {
+   "w": "course",
+   "t": 84.93,
+   "chunk": 103,
+   "sent": 20
+  },
+  {
+   "w": "aux",
+   "t": 85.27,
+   "chunk": 104,
+   "sent": 20
+  },
+  {
+   "w": "armements",
+   "t": 85.4,
+   "chunk": 104,
+   "sent": 20
+  },
+  {
+   "w": "et",
+   "t": 85.9,
+   "chunk": 104,
+   "sent": 20
+  },
+  {
+   "w": "les",
+   "t": 86.1,
+   "chunk": 105,
+   "sent": 20
+  },
+  {
+   "w": "alliances",
+   "t": 86.5,
+   "chunk": 105,
+   "sent": 20
+  },
+  {
+   "w": "transforment",
+   "t": 87.13,
+   "chunk": 106,
+   "sent": 20
+  },
+  {
+   "w": "une",
+   "t": 87.8,
+   "chunk": 106,
+   "sent": 20
+  },
+  {
+   "w": "crise",
+   "t": 88.1,
+   "chunk": 107,
+   "sent": 20
+  },
+  {
+   "w": "locale",
+   "t": 88.37,
+   "chunk": 107,
+   "sent": 20
+  },
+  {
+   "w": "en",
+   "t": 88.6,
+   "chunk": 107,
+   "sent": 20
+  },
+  {
+   "w": "guerre",
+   "t": 88.8,
+   "chunk": 108,
+   "sent": 20
+  },
+  {
+   "w": "totale.",
+   "t": 89.37,
+   "chunk": 108,
+   "sent": 20
+  },
+  {
+   "w": "Quatre",
+   "t": 90.23,
+   "chunk": 109,
+   "sent": 21
+  },
+  {
+   "w": "ans",
+   "t": 90.42,
+   "chunk": 109,
+   "sent": 21
+  },
+  {
+   "w": "plus",
+   "t": 90.67,
+   "chunk": 109,
+   "sent": 21
+  },
+  {
+   "w": "tard,",
+   "t": 90.93,
+   "chunk": 110,
+   "sent": 21
+  },
+  {
+   "w": "18",
+   "t": 91.27,
+   "chunk": 111,
+   "sent": 21
+  },
+  {
+   "w": "millions",
+   "t": 91.5,
+   "chunk": 111,
+   "sent": 21
+  },
+  {
+   "w": "de",
+   "t": 91.75,
+   "chunk": 111,
+   "sent": 21
+  },
+  {
+   "w": "morts",
+   "t": 92.23,
+   "chunk": 112,
+   "sent": 21
+  },
+  {
+   "w": "et",
+   "t": 92.5,
+   "chunk": 112,
+   "sent": 21
+  },
+  {
+   "w": "quatre",
+   "t": 92.77,
+   "chunk": 112,
+   "sent": 21
+  },
+  {
+   "w": "empires",
+   "t": 93.2,
+   "chunk": 113,
+   "sent": 21
+  },
+  {
+   "w": "effondrés.",
+   "t": 93.7,
+   "chunk": 114,
+   "sent": 21
+  },
+  {
+   "w": "En",
+   "t": 94.6,
+   "chunk": 115,
+   "sent": 22
+  },
+  {
+   "w": "1914,",
+   "t": 94.85,
+   "chunk": 115,
+   "sent": 22
+  },
+  {
+   "w": "personne",
+   "t": 95.9,
+   "chunk": 116,
+   "sent": 22
+  },
+  {
+   "w": "n’a",
+   "t": 96.3,
+   "chunk": 116,
+   "sent": 22
+  },
+  {
+   "w": "voulu",
+   "t": 96.5,
+   "chunk": 116,
+   "sent": 22
+  },
+  {
+   "w": "tout",
+   "t": 96.8,
+   "chunk": 117,
+   "sent": 22
+  },
+  {
+   "w": "détruire.",
+   "t": 97.0,
+   "chunk": 117,
+   "sent": 22
+  },
+  {
+   "w": "Personne",
+   "t": 97.8,
+   "chunk": 118,
+   "sent": 23
+  },
+  {
+   "w": "n’a",
+   "t": 98.2,
+   "chunk": 118,
+   "sent": 23
+  },
+  {
+   "w": "su",
+   "t": 98.35,
+   "chunk": 118,
+   "sent": 23
+  },
+  {
+   "w": "arrêter",
+   "t": 98.7,
+   "chunk": 119,
+   "sent": 23
+  },
+  {
+   "w": "la",
+   "t": 99.3,
+   "chunk": 119,
+   "sent": 23
+  },
+  {
+   "w": "machine.",
+   "t": 99.5,
+   "chunk": 119,
+   "sent": 23
+  }
+ ],
+ "sentences": [
+  {
+   "i": 0,
+   "t": 0.23,
+   "text": "Le 28 juin 1914. deux coups de feu à Sarajevo embrasent la planète entière."
+  },
+  {
+   "i": 1,
+   "t": 6.8,
+   "text": "Comment un seul assassinat a-t-il déclenché la Première guerre mondiale ?"
+  },
+  {
+   "i": 2,
+   "t": 11.67,
+   "text": "En réalité, l’Europe est déjà une poudrière."
+  },
+  {
+   "i": 3,
+   "t": 14.1,
+   "text": "Depuis 40 ans, les grandes puissances se disputent les colonies, les mers et les frontières."
+  },
+  {
+   "i": 4,
+   "t": 19.6,
+   "text": "La France veut reprendre l’Alsace-Lorraine à l’Allemagne."
+  },
+  {
+   "i": 5,
+   "t": 22.83,
+   "text": "L’Allemagne réclame un empire mondial."
+  },
+  {
+   "i": 6,
+   "t": 25.13,
+   "text": "Et dans les Balkans, les peuples exigent leur indépendance."
+  },
+  {
+   "i": 7,
+   "t": 28.23,
+   "text": "Par peur d’être isolée, l’Europe se coupe en deux blocs armés :"
+  },
+  {
+   "i": 8,
+   "t": 31.87,
+   "text": "la Triple Alliance, Allemagne, Autriche-Hongrie et Italie, face à la Triple Entente, France, Russie et Royaume-Uni."
+  },
+  {
+   "i": 9,
+   "t": 39.63,
+   "text": "Le piège est simple : si un pays attaque, ses alliés doivent entrer en guerre."
+  },
+  {
+   "i": 10,
+   "t": 44.0,
+   "text": "Le 28 juin à Sarajevo, Gavrilo Princip, un jeune nationaliste serbe, abat l’archiduc François Ferdinand, héritier de l’Autriche-Hongrie."
+  },
+  {
+   "i": 11,
+   "t": 53.83,
+   "text": "Vienne accuse la Serbie et lui envoie un ultimatum impossible à accepter."
+  },
+  {
+   "i": 12,
+   "t": 60.6,
+   "text": "Alors les dominos tombent en 5 semaines."
+  },
+  {
+   "i": 13,
+   "t": 63.43,
+   "text": "Le 28 juillet, l’Autriche-Hongrie attaque la Serbie."
+  },
+  {
+   "i": 14,
+   "t": 66.5,
+   "text": "La Russie mobilise pour la défendre."
+  },
+  {
+   "i": 15,
+   "t": 68.27,
+   "text": "Le 1er août, l’Allemagne déclare la guerre à la Russie, puis à la France le 3 août."
+  },
+  {
+   "i": 16,
+   "t": 74.23,
+   "text": "Elle envahit la Belgique neutre,"
+  },
+  {
+   "i": 17,
+   "t": 76.07,
+   "text": "et le 4 août, le Royaume-Uni entre dans le conflit."
+  },
+  {
+   "i": 18,
+   "t": 79.37,
+   "text": "Chaque camp jure qu’il ne fait que se défendre."
+  },
+  {
+   "i": 19,
+   "t": 82.97,
+   "text": "Tous croient rentrer avant Noël."
+  },
+  {
+   "i": 20,
+   "t": 84.6,
+   "text": "Mais la course aux armements et les alliances transforment une crise locale en guerre totale."
+  },
+  {
+   "i": 21,
+   "t": 90.23,
+   "text": "Quatre ans plus tard, 18 millions de morts et quatre empires effondrés."
+  },
+  {
+   "i": 22,
+   "t": 94.6,
+   "text": "En 1914, personne n’a voulu tout détruire."
+  },
+  {
+   "i": 23,
+   "t": 97.8,
+   "text": "Personne n’a su arrêter la machine."
+  }
+ ]
+}
