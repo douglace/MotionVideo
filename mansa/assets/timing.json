@@ -1,0 +1,1971 @@
+{
+ "duration": 68.0,
+ "chunks": [
+  {
+   "text": "Un roi",
+   "t": 0,
+   "sent": 0,
+   "end": 0.27
+  },
+  {
+   "text": "traverse le",
+   "t": 0.27,
+   "sent": 0,
+   "end": 0.8
+  },
+  {
+   "text": "désert avec",
+   "t": 0.8,
+   "sent": 0,
+   "end": 1.6
+  },
+  {
+   "text": "une fortune",
+   "t": 1.6,
+   "sent": 0,
+   "end": 2.0
+  },
+  {
+   "text": "en or.",
+   "t": 2.0,
+   "sent": 0,
+   "end": 2.81
+  },
+  {
+   "text": "À son",
+   "t": 2.81,
+   "sent": 1,
+   "end": 3.01
+  },
+  {
+   "text": "passage, le",
+   "t": 3.01,
+   "sent": 1,
+   "end": 3.88
+  },
+  {
+   "text": "prix du",
+   "t": 3.88,
+   "sent": 1,
+   "end": 4.25
+  },
+  {
+   "text": "métal précieux",
+   "t": 4.25,
+   "sent": 1,
+   "end": 4.98
+  },
+  {
+   "text": "va même",
+   "t": 4.98,
+   "sent": 1,
+   "end": 5.35
+  },
+  {
+   "text": "chuter.",
+   "t": 5.35,
+   "sent": 1,
+   "end": 6.24
+  },
+  {
+   "text": "Nous sommes",
+   "t": 6.24,
+   "sent": 2,
+   "end": 6.51
+  },
+  {
+   "text": "en mille",
+   "t": 6.51,
+   "sent": 2,
+   "end": 6.91
+  },
+  {
+   "text": "trois cent",
+   "t": 6.91,
+   "sent": 2,
+   "end": 7.31
+  },
+  {
+   "text": "vingt-quatre.",
+   "t": 7.31,
+   "sent": 2,
+   "end": 8.48
+  },
+  {
+   "text": "Mansa Moussa,",
+   "t": 8.48,
+   "sent": 3,
+   "end": 9.55
+  },
+  {
+   "text": "souverain de",
+   "t": 9.55,
+   "sent": 3,
+   "end": 10.08
+  },
+  {
+   "text": "l’empire du",
+   "t": 10.08,
+   "sent": 3,
+   "end": 10.62
+  },
+  {
+   "text": "Mali, part",
+   "t": 10.62,
+   "sent": 3,
+   "end": 11.42
+  },
+  {
+   "text": "en pèlerinage",
+   "t": 11.42,
+   "sent": 3,
+   "end": 12.22
+  },
+  {
+   "text": "vers La",
+   "t": 12.22,
+   "sent": 3,
+   "end": 12.62
+  },
+  {
+   "text": "Mecque.",
+   "t": 12.62,
+   "sent": 3,
+   "end": 13.59
+  },
+  {
+   "text": "Son royaume",
+   "t": 13.59,
+   "sent": 4,
+   "end": 14.39
+  },
+  {
+   "text": "est au",
+   "t": 14.39,
+   "sent": 4,
+   "end": 14.63
+  },
+  {
+   "text": "cœur des",
+   "t": 14.63,
+   "sent": 4,
+   "end": 15.13
+  },
+  {
+   "text": "échanges",
+   "t": 15.13,
+   "sent": 4,
+   "end": 15.46
+  },
+  {
+   "text": "commerciaux entre",
+   "t": 15.46,
+   "sent": 4,
+   "end": 16.19
+  },
+  {
+   "text": "l’Afrique de",
+   "t": 16.19,
+   "sent": 4,
+   "end": 16.49
+  },
+  {
+   "text": "l’Ouest et",
+   "t": 16.49,
+   "sent": 4,
+   "end": 17.16
+  },
+  {
+   "text": "le nord",
+   "t": 17.16,
+   "sent": 4,
+   "end": 17.43
+  },
+  {
+   "text": "du continent.",
+   "t": 17.43,
+   "sent": 4,
+   "end": 18.35
+  },
+  {
+   "text": "L’or contribue",
+   "t": 18.35,
+   "sent": 5,
+   "end": 18.97
+  },
+  {
+   "text": "à sa",
+   "t": 18.97,
+   "sent": 5,
+   "end": 19.25
+  },
+  {
+   "text": "puissance.",
+   "t": 19.25,
+   "sent": 5,
+   "end": 20.28
+  },
+  {
+   "text": "Avec sa",
+   "t": 20.28,
+   "sent": 6,
+   "end": 20.42
+  },
+  {
+   "text": "caravane, le",
+   "t": 20.42,
+   "sent": 6,
+   "end": 21.22
+  },
+  {
+   "text": "souverain remonte",
+   "t": 21.22,
+   "sent": 6,
+   "end": 21.88
+  },
+  {
+   "text": "le Sahara",
+   "t": 21.88,
+   "sent": 6,
+   "end": 22.55
+  },
+  {
+   "text": "et atteint",
+   "t": 22.55,
+   "sent": 6,
+   "end": 23.22
+  },
+  {
+   "text": "Le Caire,",
+   "t": 23.22,
+   "sent": 6,
+   "end": 23.88
+  },
+  {
+   "text": "capitale du",
+   "t": 23.88,
+   "sent": 6,
+   "end": 24.42
+  },
+  {
+   "text": "sultanat mamelouk.",
+   "t": 24.42,
+   "sent": 6,
+   "end": 26.26
+  },
+  {
+   "text": "Là, il",
+   "t": 26.26,
+   "sent": 7,
+   "end": 26.93
+  },
+  {
+   "text": "est reçu",
+   "t": 26.93,
+   "sent": 7,
+   "end": 27.33
+  },
+  {
+   "text": "par le",
+   "t": 27.33,
+   "sent": 7,
+   "end": 27.6
+  },
+  {
+   "text": "sultan d’Égypte.",
+   "t": 27.6,
+   "sent": 7,
+   "end": 28.59
+  },
+  {
+   "text": "Moussa distribue",
+   "t": 28.59,
+   "sent": 8,
+   "end": 29.25
+  },
+  {
+   "text": "des cadeaux",
+   "t": 29.25,
+   "sent": 8,
+   "end": 29.65
+  },
+  {
+   "text": "et son",
+   "t": 29.65,
+   "sent": 8,
+   "end": 29.92
+  },
+  {
+   "text": "entourage dépense",
+   "t": 29.92,
+   "sent": 8,
+   "end": 30.89
+  },
+  {
+   "text": "de l’or",
+   "t": 30.89,
+   "sent": 8,
+   "end": 31.12
+  },
+  {
+   "text": "sur les marchés.",
+   "t": 31.12,
+   "sent": 8,
+   "end": 31.99
+  },
+  {
+   "text": "Mais cette",
+   "t": 31.99,
+   "sent": 9,
+   "end": 32.12
+  },
+  {
+   "text": "abondance a",
+   "t": 32.12,
+   "sent": 9,
+   "end": 32.82
+  },
+  {
+   "text": "une conséquence",
+   "t": 32.82,
+   "sent": 9,
+   "end": 33.42
+  },
+  {
+   "text": "inattendue.",
+   "t": 33.42,
+   "sent": 9,
+   "end": 34.52
+  },
+  {
+   "text": "Le métal",
+   "t": 34.52,
+   "sent": 10,
+   "end": 35.12
+  },
+  {
+   "text": "perd de",
+   "t": 35.12,
+   "sent": 10,
+   "end": 35.48
+  },
+  {
+   "text": "sa valeur.",
+   "t": 35.48,
+   "sent": 10,
+   "end": 36.41
+  },
+  {
+   "text": "Des années",
+   "t": 36.41,
+   "sent": 11,
+   "end": 36.71
+  },
+  {
+   "text": "plus tard,",
+   "t": 36.71,
+   "sent": 11,
+   "end": 37.41
+  },
+  {
+   "text": "le chroniqueur",
+   "t": 37.41,
+   "sent": 11,
+   "end": 38.14
+  },
+  {
+   "text": "Al-Omari",
+   "t": 38.14,
+   "sent": 11,
+   "end": 38.44
+  },
+  {
+   "text": "rapporte que",
+   "t": 38.44,
+   "sent": 11,
+   "end": 39.06
+  },
+  {
+   "text": "son prix",
+   "t": 39.06,
+   "sent": 11,
+   "end": 39.94
+  },
+  {
+   "text": "reste déprimé.",
+   "t": 39.94,
+   "sent": 11,
+   "end": 41.39
+  },
+  {
+   "text": "Il tient",
+   "t": 41.39,
+   "sent": 12,
+   "end": 41.66
+  },
+  {
+   "text": "son récit",
+   "t": 41.66,
+   "sent": 12,
+   "end": 41.92
+  },
+  {
+   "text": "de personnes",
+   "t": 41.92,
+   "sent": 12,
+   "end": 42.46
+  },
+  {
+   "text": "qui ont",
+   "t": 42.46,
+   "sent": 12,
+   "end": 42.72
+  },
+  {
+   "text": "connu la",
+   "t": 42.72,
+   "sent": 12,
+   "end": 42.99
+  },
+  {
+   "text": "visite du",
+   "t": 42.99,
+   "sent": 12,
+   "end": 43.39
+  },
+  {
+   "text": "roi.",
+   "t": 43.39,
+   "sent": 12,
+   "end": 44.28
+  },
+  {
+   "text": "Impossible",
+   "t": 44.28,
+   "sent": 13,
+   "end": 45.14
+  },
+  {
+   "text": "cependant de",
+   "t": 45.14,
+   "sent": 13,
+   "end": 45.64
+  },
+  {
+   "text": "calculer exactement",
+   "t": 45.64,
+   "sent": 13,
+   "end": 46.81
+  },
+  {
+   "text": "sa fortune",
+   "t": 46.81,
+   "sent": 13,
+   "end": 47.34
+  },
+  {
+   "text": "en argent",
+   "t": 47.34,
+   "sent": 13,
+   "end": 47.71
+  },
+  {
+   "text": "d’aujourd’hui.",
+   "t": 47.71,
+   "sent": 13,
+   "end": 48.59
+  },
+  {
+   "text": "Le pèlerinage",
+   "t": 48.59,
+   "sent": 14,
+   "end": 49.02
+  },
+  {
+   "text": "continue jusqu’à",
+   "t": 49.02,
+   "sent": 14,
+   "end": 49.69
+  },
+  {
+   "text": "La Mecque.",
+   "t": 49.69,
+   "sent": 14,
+   "end": 50.76
+  },
+  {
+   "text": "Puis Moussa",
+   "t": 50.76,
+   "sent": 15,
+   "end": 51.56
+  },
+  {
+   "text": "rentre au",
+   "t": 51.56,
+   "sent": 15,
+   "end": 51.93
+  },
+  {
+   "text": "Mali et",
+   "t": 51.93,
+   "sent": 15,
+   "end": 52.43
+  },
+  {
+   "text": "soutient le",
+   "t": 52.43,
+   "sent": 15,
+   "end": 53.06
+  },
+  {
+   "text": "développement de",
+   "t": 53.06,
+   "sent": 15,
+   "end": 53.53
+  },
+  {
+   "text": "Tombouctou comme",
+   "t": 53.53,
+   "sent": 15,
+   "end": 54.36
+  },
+  {
+   "text": "centre du",
+   "t": 54.36,
+   "sent": 15,
+   "end": 54.63
+  },
+  {
+   "text": "savoir.",
+   "t": 54.63,
+   "sent": 15,
+   "end": 55.74
+  },
+  {
+   "text": "En mille",
+   "t": 55.74,
+   "sent": 16,
+   "end": 56.14
+  },
+  {
+   "text": "trois cent",
+   "t": 56.14,
+   "sent": 16,
+   "end": 56.54
+  },
+  {
+   "text": "soixante-quinze,",
+   "t": 56.54,
+   "sent": 16,
+   "end": 57.61
+  },
+  {
+   "text": "l’Atlas catalan",
+   "t": 57.61,
+   "sent": 16,
+   "end": 58.61
+  },
+  {
+   "text": "représente encore",
+   "t": 58.61,
+   "sent": 16,
+   "end": 59.51
+  },
+  {
+   "text": "ce roi",
+   "t": 59.51,
+   "sent": 16,
+   "end": 59.64
+  },
+  {
+   "text": "africain tenant",
+   "t": 59.64,
+   "sent": 16,
+   "end": 60.34
+  },
+  {
+   "text": "de l’or.",
+   "t": 60.34,
+   "sent": 16,
+   "end": 61.38
+  },
+  {
+   "text": "Alors, qu’est-ce",
+   "t": 61.38,
+   "sent": 17,
+   "end": 62.18
+  },
+  {
+   "text": "qui marque",
+   "t": 62.18,
+   "sent": 17,
+   "end": 62.88
+  },
+  {
+   "text": "le plus",
+   "t": 62.88,
+   "sent": 17,
+   "end": 63.18
+  },
+  {
+   "text": "durablement",
+   "t": 63.18,
+   "sent": 17,
+   "end": 63.82
+  },
+  {
+   "text": "l’histoire :",
+   "t": 63.82,
+   "sent": 17,
+   "end": 64.65
+  },
+  {
+   "text": "la richesse",
+   "t": 64.65,
+   "sent": 17,
+   "end": 65.22
+  },
+  {
+   "text": "d’un homme,",
+   "t": 65.22,
+   "sent": 17,
+   "end": 65.92
+  },
+  {
+   "text": "ou ce",
+   "t": 65.92,
+   "sent": 17,
+   "end": 66.18
+  },
+  {
+   "text": "qu’il en",
+   "t": 66.18,
+   "sent": 17,
+   "end": 66.35
+  },
+  {
+   "text": "fait ?",
+   "t": 66.35,
+   "sent": 17,
+   "end": 67.0
+  }
+ ],
+ "words": [
+  {
+   "w": "Un",
+   "t": 0.0,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "roi",
+   "t": 0.108,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "traverse",
+   "t": 0.27,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "le",
+   "t": 0.588,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "désert",
+   "t": 0.8,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "avec",
+   "t": 1.12,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "une",
+   "t": 1.6,
+   "chunk": 3,
+   "sent": 0
+  },
+  {
+   "w": "fortune",
+   "t": 1.728,
+   "chunk": 3,
+   "sent": 0
+  },
+  {
+   "w": "en",
+   "t": 2.0,
+   "chunk": 4,
+   "sent": 0
+  },
+  {
+   "w": "or.",
+   "t": 2.324,
+   "chunk": 4,
+   "sent": 0
+  },
+  {
+   "w": "À",
+   "t": 2.81,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "son",
+   "t": 2.89,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "passage,",
+   "t": 3.01,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "le",
+   "t": 3.532,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "prix",
+   "t": 3.88,
+   "chunk": 7,
+   "sent": 1
+  },
+  {
+   "w": "du",
+   "t": 4.028,
+   "chunk": 7,
+   "sent": 1
+  },
+  {
+   "w": "métal",
+   "t": 4.25,
+   "chunk": 8,
+   "sent": 1
+  },
+  {
+   "w": "précieux",
+   "t": 4.542,
+   "chunk": 8,
+   "sent": 1
+  },
+  {
+   "w": "va",
+   "t": 4.98,
+   "chunk": 9,
+   "sent": 1
+  },
+  {
+   "w": "même",
+   "t": 5.079,
+   "chunk": 9,
+   "sent": 1
+  },
+  {
+   "w": "chuter.",
+   "t": 5.35,
+   "chunk": 10,
+   "sent": 1
+  },
+  {
+   "w": "Nous",
+   "t": 6.24,
+   "chunk": 11,
+   "sent": 2
+  },
+  {
+   "w": "sommes",
+   "t": 6.312,
+   "chunk": 11,
+   "sent": 2
+  },
+  {
+   "w": "en",
+   "t": 6.51,
+   "chunk": 12,
+   "sent": 2
+  },
+  {
+   "w": "mille",
+   "t": 6.617,
+   "chunk": 12,
+   "sent": 2
+  },
+  {
+   "w": "trois",
+   "t": 6.91,
+   "chunk": 13,
+   "sent": 2
+  },
+  {
+   "w": "cent",
+   "t": 7.07,
+   "chunk": 13,
+   "sent": 2
+  },
+  {
+   "w": "vingt-quatre.",
+   "t": 7.31,
+   "chunk": 14,
+   "sent": 2
+  },
+  {
+   "w": "Mansa",
+   "t": 8.48,
+   "chunk": 15,
+   "sent": 3
+  },
+  {
+   "w": "Moussa,",
+   "t": 8.908,
+   "chunk": 15,
+   "sent": 3
+  },
+  {
+   "w": "souverain",
+   "t": 9.55,
+   "chunk": 16,
+   "sent": 3
+  },
+  {
+   "w": "de",
+   "t": 9.868,
+   "chunk": 16,
+   "sent": 3
+  },
+  {
+   "w": "l’empire",
+   "t": 10.08,
+   "chunk": 17,
+   "sent": 3
+  },
+  {
+   "w": "du",
+   "t": 10.404,
+   "chunk": 17,
+   "sent": 3
+  },
+  {
+   "w": "Mali,",
+   "t": 10.62,
+   "chunk": 18,
+   "sent": 3
+  },
+  {
+   "w": "part",
+   "t": 11.047,
+   "chunk": 18,
+   "sent": 3
+  },
+  {
+   "w": "en",
+   "t": 11.42,
+   "chunk": 19,
+   "sent": 3
+  },
+  {
+   "w": "pèlerinage",
+   "t": 11.527,
+   "chunk": 19,
+   "sent": 3
+  },
+  {
+   "w": "vers",
+   "t": 12.22,
+   "chunk": 20,
+   "sent": 3
+  },
+  {
+   "w": "La",
+   "t": 12.38,
+   "chunk": 20,
+   "sent": 3
+  },
+  {
+   "w": "Mecque.",
+   "t": 12.62,
+   "chunk": 21,
+   "sent": 3
+  },
+  {
+   "w": "Son",
+   "t": 13.59,
+   "chunk": 22,
+   "sent": 4
+  },
+  {
+   "w": "royaume",
+   "t": 13.803,
+   "chunk": 22,
+   "sent": 4
+  },
+  {
+   "w": "est",
+   "t": 14.39,
+   "chunk": 23,
+   "sent": 4
+  },
+  {
+   "w": "au",
+   "t": 14.486,
+   "chunk": 23,
+   "sent": 4
+  },
+  {
+   "w": "cœur",
+   "t": 14.63,
+   "chunk": 24,
+   "sent": 4
+  },
+  {
+   "w": "des",
+   "t": 14.83,
+   "chunk": 24,
+   "sent": 4
+  },
+  {
+   "w": "échanges",
+   "t": 15.13,
+   "chunk": 25,
+   "sent": 4
+  },
+  {
+   "w": "commerciaux",
+   "t": 15.46,
+   "chunk": 26,
+   "sent": 4
+  },
+  {
+   "w": "entre",
+   "t": 15.81,
+   "chunk": 26,
+   "sent": 4
+  },
+  {
+   "w": "l’Afrique",
+   "t": 16.19,
+   "chunk": 27,
+   "sent": 4
+  },
+  {
+   "w": "de",
+   "t": 16.37,
+   "chunk": 27,
+   "sent": 4
+  },
+  {
+   "w": "l’Ouest",
+   "t": 16.49,
+   "chunk": 28,
+   "sent": 4
+  },
+  {
+   "w": "et",
+   "t": 16.758,
+   "chunk": 28,
+   "sent": 4
+  },
+  {
+   "w": "le",
+   "t": 17.16,
+   "chunk": 29,
+   "sent": 4
+  },
+  {
+   "w": "nord",
+   "t": 17.268,
+   "chunk": 29,
+   "sent": 4
+  },
+  {
+   "w": "du",
+   "t": 17.43,
+   "chunk": 30,
+   "sent": 4
+  },
+  {
+   "w": "continent.",
+   "t": 17.614,
+   "chunk": 30,
+   "sent": 4
+  },
+  {
+   "w": "L’or",
+   "t": 18.35,
+   "chunk": 31,
+   "sent": 5
+  },
+  {
+   "w": "contribue",
+   "t": 18.474,
+   "chunk": 31,
+   "sent": 5
+  },
+  {
+   "w": "à",
+   "t": 18.97,
+   "chunk": 32,
+   "sent": 5
+  },
+  {
+   "w": "sa",
+   "t": 19.082,
+   "chunk": 32,
+   "sent": 5
+  },
+  {
+   "w": "puissance.",
+   "t": 19.25,
+   "chunk": 33,
+   "sent": 5
+  },
+  {
+   "w": "Avec",
+   "t": 20.28,
+   "chunk": 34,
+   "sent": 6
+  },
+  {
+   "w": "sa",
+   "t": 20.355,
+   "chunk": 34,
+   "sent": 6
+  },
+  {
+   "w": "caravane,",
+   "t": 20.42,
+   "chunk": 35,
+   "sent": 6
+  },
+  {
+   "w": "le",
+   "t": 20.932,
+   "chunk": 35,
+   "sent": 6
+  },
+  {
+   "w": "souverain",
+   "t": 21.22,
+   "chunk": 36,
+   "sent": 6
+  },
+  {
+   "w": "remonte",
+   "t": 21.484,
+   "chunk": 36,
+   "sent": 6
+  },
+  {
+   "w": "le",
+   "t": 21.88,
+   "chunk": 37,
+   "sent": 6
+  },
+  {
+   "w": "Sahara",
+   "t": 22.014,
+   "chunk": 37,
+   "sent": 6
+  },
+  {
+   "w": "et",
+   "t": 22.55,
+   "chunk": 38,
+   "sent": 6
+  },
+  {
+   "w": "atteint",
+   "t": 22.729,
+   "chunk": 38,
+   "sent": 6
+  },
+  {
+   "w": "Le",
+   "t": 23.22,
+   "chunk": 39,
+   "sent": 6
+  },
+  {
+   "w": "Caire,",
+   "t": 23.396,
+   "chunk": 39,
+   "sent": 6
+  },
+  {
+   "w": "capitale",
+   "t": 23.88,
+   "chunk": 40,
+   "sent": 6
+  },
+  {
+   "w": "du",
+   "t": 24.226,
+   "chunk": 40,
+   "sent": 6
+  },
+  {
+   "w": "sultanat",
+   "t": 24.42,
+   "chunk": 41,
+   "sent": 6
+  },
+  {
+   "w": "mamelouk.",
+   "t": 25.06,
+   "chunk": 41,
+   "sent": 6
+  },
+  {
+   "w": "Là,",
+   "t": 26.26,
+   "chunk": 42,
+   "sent": 7
+  },
+  {
+   "w": "il",
+   "t": 26.528,
+   "chunk": 42,
+   "sent": 7
+  },
+  {
+   "w": "est",
+   "t": 26.93,
+   "chunk": 43,
+   "sent": 7
+  },
+  {
+   "w": "reçu",
+   "t": 27.037,
+   "chunk": 43,
+   "sent": 7
+  },
+  {
+   "w": "par",
+   "t": 27.33,
+   "chunk": 44,
+   "sent": 7
+  },
+  {
+   "w": "le",
+   "t": 27.438,
+   "chunk": 44,
+   "sent": 7
+  },
+  {
+   "w": "sultan",
+   "t": 27.6,
+   "chunk": 45,
+   "sent": 7
+  },
+  {
+   "w": "d’Égypte.",
+   "t": 27.917,
+   "chunk": 45,
+   "sent": 7
+  },
+  {
+   "w": "Moussa",
+   "t": 28.59,
+   "chunk": 46,
+   "sent": 8
+  },
+  {
+   "w": "distribue",
+   "t": 28.801,
+   "chunk": 46,
+   "sent": 8
+  },
+  {
+   "w": "des",
+   "t": 29.25,
+   "chunk": 47,
+   "sent": 8
+  },
+  {
+   "w": "cadeaux",
+   "t": 29.357,
+   "chunk": 47,
+   "sent": 8
+  },
+  {
+   "w": "et",
+   "t": 29.65,
+   "chunk": 48,
+   "sent": 8
+  },
+  {
+   "w": "son",
+   "t": 29.758,
+   "chunk": 48,
+   "sent": 8
+  },
+  {
+   "w": "entourage",
+   "t": 29.92,
+   "chunk": 49,
+   "sent": 8
+  },
+  {
+   "w": "dépense",
+   "t": 30.363,
+   "chunk": 49,
+   "sent": 8
+  },
+  {
+   "w": "de",
+   "t": 30.89,
+   "chunk": 50,
+   "sent": 8
+  },
+  {
+   "w": "l’or",
+   "t": 30.982,
+   "chunk": 50,
+   "sent": 8
+  },
+  {
+   "w": "sur",
+   "t": 31.12,
+   "chunk": 51,
+   "sent": 8
+  },
+  {
+   "w": "les",
+   "t": 31.294,
+   "chunk": 51,
+   "sent": 8
+  },
+  {
+   "w": "marchés.",
+   "t": 31.468,
+   "chunk": 51,
+   "sent": 8
+  },
+  {
+   "w": "Mais",
+   "t": 31.99,
+   "chunk": 52,
+   "sent": 9
+  },
+  {
+   "w": "cette",
+   "t": 32.025,
+   "chunk": 52,
+   "sent": 9
+  },
+  {
+   "w": "abondance",
+   "t": 32.12,
+   "chunk": 53,
+   "sent": 9
+  },
+  {
+   "w": "a",
+   "t": 32.568,
+   "chunk": 53,
+   "sent": 9
+  },
+  {
+   "w": "une",
+   "t": 32.82,
+   "chunk": 54,
+   "sent": 9
+  },
+  {
+   "w": "conséquence",
+   "t": 32.98,
+   "chunk": 54,
+   "sent": 9
+  },
+  {
+   "w": "inattendue.",
+   "t": 33.42,
+   "chunk": 55,
+   "sent": 9
+  },
+  {
+   "w": "Le",
+   "t": 34.52,
+   "chunk": 56,
+   "sent": 10
+  },
+  {
+   "w": "métal",
+   "t": 34.68,
+   "chunk": 56,
+   "sent": 10
+  },
+  {
+   "w": "perd",
+   "t": 35.12,
+   "chunk": 57,
+   "sent": 10
+  },
+  {
+   "w": "de",
+   "t": 35.264,
+   "chunk": 57,
+   "sent": 10
+  },
+  {
+   "w": "sa",
+   "t": 35.48,
+   "chunk": 58,
+   "sent": 10
+  },
+  {
+   "w": "valeur.",
+   "t": 35.728,
+   "chunk": 58,
+   "sent": 10
+  },
+  {
+   "w": "Des",
+   "t": 36.41,
+   "chunk": 59,
+   "sent": 11
+  },
+  {
+   "w": "années",
+   "t": 36.49,
+   "chunk": 59,
+   "sent": 11
+  },
+  {
+   "w": "plus",
+   "t": 36.71,
+   "chunk": 60,
+   "sent": 11
+  },
+  {
+   "w": "tard,",
+   "t": 36.99,
+   "chunk": 60,
+   "sent": 11
+  },
+  {
+   "w": "le",
+   "t": 37.41,
+   "chunk": 61,
+   "sent": 11
+  },
+  {
+   "w": "chroniqueur",
+   "t": 37.556,
+   "chunk": 61,
+   "sent": 11
+  },
+  {
+   "w": "Al-Omari",
+   "t": 38.14,
+   "chunk": 62,
+   "sent": 11
+  },
+  {
+   "w": "rapporte",
+   "t": 38.44,
+   "chunk": 63,
+   "sent": 11
+  },
+  {
+   "w": "que",
+   "t": 38.812,
+   "chunk": 63,
+   "sent": 11
+  },
+  {
+   "w": "son",
+   "t": 39.06,
+   "chunk": 64,
+   "sent": 11
+  },
+  {
+   "w": "prix",
+   "t": 39.412,
+   "chunk": 64,
+   "sent": 11
+  },
+  {
+   "w": "reste",
+   "t": 39.94,
+   "chunk": 65,
+   "sent": 11
+  },
+  {
+   "w": "déprimé.",
+   "t": 40.404,
+   "chunk": 65,
+   "sent": 11
+  },
+  {
+   "w": "Il",
+   "t": 41.39,
+   "chunk": 66,
+   "sent": 12
+  },
+  {
+   "w": "tient",
+   "t": 41.498,
+   "chunk": 66,
+   "sent": 12
+  },
+  {
+   "w": "son",
+   "t": 41.66,
+   "chunk": 67,
+   "sent": 12
+  },
+  {
+   "w": "récit",
+   "t": 41.729,
+   "chunk": 67,
+   "sent": 12
+  },
+  {
+   "w": "de",
+   "t": 41.92,
+   "chunk": 68,
+   "sent": 12
+  },
+  {
+   "w": "personnes",
+   "t": 42.028,
+   "chunk": 68,
+   "sent": 12
+  },
+  {
+   "w": "qui",
+   "t": 42.46,
+   "chunk": 69,
+   "sent": 12
+  },
+  {
+   "w": "ont",
+   "t": 42.564,
+   "chunk": 69,
+   "sent": 12
+  },
+  {
+   "w": "connu",
+   "t": 42.72,
+   "chunk": 70,
+   "sent": 12
+  },
+  {
+   "w": "la",
+   "t": 42.864,
+   "chunk": 70,
+   "sent": 12
+  },
+  {
+   "w": "visite",
+   "t": 42.99,
+   "chunk": 71,
+   "sent": 12
+  },
+  {
+   "w": "du",
+   "t": 43.23,
+   "chunk": 71,
+   "sent": 12
+  },
+  {
+   "w": "roi.",
+   "t": 43.39,
+   "chunk": 72,
+   "sent": 12
+  },
+  {
+   "w": "Impossible",
+   "t": 44.28,
+   "chunk": 73,
+   "sent": 13
+  },
+  {
+   "w": "cependant",
+   "t": 45.14,
+   "chunk": 74,
+   "sent": 13
+  },
+  {
+   "w": "de",
+   "t": 45.44,
+   "chunk": 74,
+   "sent": 13
+  },
+  {
+   "w": "calculer",
+   "t": 45.64,
+   "chunk": 75,
+   "sent": 13
+  },
+  {
+   "w": "exactement",
+   "t": 46.041,
+   "chunk": 75,
+   "sent": 13
+  },
+  {
+   "w": "sa",
+   "t": 46.81,
+   "chunk": 76,
+   "sent": 13
+  },
+  {
+   "w": "fortune",
+   "t": 46.916,
+   "chunk": 76,
+   "sent": 13
+  },
+  {
+   "w": "en",
+   "t": 47.34,
+   "chunk": 77,
+   "sent": 13
+  },
+  {
+   "w": "argent",
+   "t": 47.439,
+   "chunk": 77,
+   "sent": 13
+  },
+  {
+   "w": "d’aujourd’hui.",
+   "t": 47.71,
+   "chunk": 78,
+   "sent": 13
+  },
+  {
+   "w": "Le",
+   "t": 48.59,
+   "chunk": 79,
+   "sent": 14
+  },
+  {
+   "w": "pèlerinage",
+   "t": 48.647,
+   "chunk": 79,
+   "sent": 14
+  },
+  {
+   "w": "continue",
+   "t": 49.02,
+   "chunk": 80,
+   "sent": 14
+  },
+  {
+   "w": "jusqu’à",
+   "t": 49.288,
+   "chunk": 80,
+   "sent": 14
+  },
+  {
+   "w": "La",
+   "t": 49.69,
+   "chunk": 81,
+   "sent": 14
+  },
+  {
+   "w": "Mecque.",
+   "t": 49.975,
+   "chunk": 81,
+   "sent": 14
+  },
+  {
+   "w": "Puis",
+   "t": 50.76,
+   "chunk": 82,
+   "sent": 15
+  },
+  {
+   "w": "Moussa",
+   "t": 50.973,
+   "chunk": 82,
+   "sent": 15
+  },
+  {
+   "w": "rentre",
+   "t": 51.56,
+   "chunk": 83,
+   "sent": 15
+  },
+  {
+   "w": "au",
+   "t": 51.757,
+   "chunk": 83,
+   "sent": 15
+  },
+  {
+   "w": "Mali",
+   "t": 51.93,
+   "chunk": 84,
+   "sent": 15
+  },
+  {
+   "w": "et",
+   "t": 52.197,
+   "chunk": 84,
+   "sent": 15
+  },
+  {
+   "w": "soutient",
+   "t": 52.43,
+   "chunk": 85,
+   "sent": 15
+  },
+  {
+   "w": "le",
+   "t": 52.766,
+   "chunk": 85,
+   "sent": 15
+  },
+  {
+   "w": "développement",
+   "t": 53.06,
+   "chunk": 86,
+   "sent": 15
+  },
+  {
+   "w": "de",
+   "t": 53.373,
+   "chunk": 86,
+   "sent": 15
+  },
+  {
+   "w": "Tombouctou",
+   "t": 53.53,
+   "chunk": 87,
+   "sent": 15
+  },
+  {
+   "w": "comme",
+   "t": 53.928,
+   "chunk": 87,
+   "sent": 15
+  },
+  {
+   "w": "centre",
+   "t": 54.36,
+   "chunk": 88,
+   "sent": 15
+  },
+  {
+   "w": "du",
+   "t": 54.504,
+   "chunk": 88,
+   "sent": 15
+  },
+  {
+   "w": "savoir.",
+   "t": 54.63,
+   "chunk": 89,
+   "sent": 15
+  },
+  {
+   "w": "En",
+   "t": 55.74,
+   "chunk": 90,
+   "sent": 16
+  },
+  {
+   "w": "mille",
+   "t": 55.847,
+   "chunk": 90,
+   "sent": 16
+  },
+  {
+   "w": "trois",
+   "t": 56.14,
+   "chunk": 91,
+   "sent": 16
+  },
+  {
+   "w": "cent",
+   "t": 56.3,
+   "chunk": 91,
+   "sent": 16
+  },
+  {
+   "w": "soixante-quinze,",
+   "t": 56.54,
+   "chunk": 92,
+   "sent": 16
+  },
+  {
+   "w": "l’Atlas",
+   "t": 57.61,
+   "chunk": 93,
+   "sent": 16
+  },
+  {
+   "w": "catalan",
+   "t": 57.93,
+   "chunk": 93,
+   "sent": 16
+  },
+  {
+   "w": "représente",
+   "t": 58.61,
+   "chunk": 94,
+   "sent": 16
+  },
+  {
+   "w": "encore",
+   "t": 59.021,
+   "chunk": 94,
+   "sent": 16
+  },
+  {
+   "w": "ce",
+   "t": 59.51,
+   "chunk": 95,
+   "sent": 16
+  },
+  {
+   "w": "roi",
+   "t": 59.562,
+   "chunk": 95,
+   "sent": 16
+  },
+  {
+   "w": "africain",
+   "t": 59.64,
+   "chunk": 96,
+   "sent": 16
+  },
+  {
+   "w": "tenant",
+   "t": 59.976,
+   "chunk": 96,
+   "sent": 16
+  },
+  {
+   "w": "de",
+   "t": 60.34,
+   "chunk": 97,
+   "sent": 16
+  },
+  {
+   "w": "l’or.",
+   "t": 60.756,
+   "chunk": 97,
+   "sent": 16
+  },
+  {
+   "w": "Alors,",
+   "t": 61.38,
+   "chunk": 98,
+   "sent": 17
+  },
+  {
+   "w": "qu’est-ce",
+   "t": 61.636,
+   "chunk": 98,
+   "sent": 17
+  },
+  {
+   "w": "qui",
+   "t": 62.18,
+   "chunk": 99,
+   "sent": 17
+  },
+  {
+   "w": "marque",
+   "t": 62.367,
+   "chunk": 99,
+   "sent": 17
+  },
+  {
+   "w": "le",
+   "t": 62.88,
+   "chunk": 100,
+   "sent": 17
+  },
+  {
+   "w": "plus",
+   "t": 63.0,
+   "chunk": 100,
+   "sent": 17
+  },
+  {
+   "w": "durablement",
+   "t": 63.18,
+   "chunk": 101,
+   "sent": 17
+  },
+  {
+   "w": "l’histoire",
+   "t": 63.82,
+   "chunk": 102,
+   "sent": 17
+  },
+  {
+   "w": ":",
+   "t": 64.318,
+   "chunk": 102,
+   "sent": 17
+  },
+  {
+   "w": "la",
+   "t": 64.65,
+   "chunk": 103,
+   "sent": 17
+  },
+  {
+   "w": "richesse",
+   "t": 64.764,
+   "chunk": 103,
+   "sent": 17
+  },
+  {
+   "w": "d’un",
+   "t": 65.22,
+   "chunk": 104,
+   "sent": 17
+  },
+  {
+   "w": "homme,",
+   "t": 65.407,
+   "chunk": 104,
+   "sent": 17
+  },
+  {
+   "w": "ou",
+   "t": 65.92,
+   "chunk": 105,
+   "sent": 17
+  },
+  {
+   "w": "ce",
+   "t": 66.024,
+   "chunk": 105,
+   "sent": 17
+  },
+  {
+   "w": "qu’il",
+   "t": 66.18,
+   "chunk": 106,
+   "sent": 17
+  },
+  {
+   "w": "en",
+   "t": 66.271,
+   "chunk": 106,
+   "sent": 17
+  },
+  {
+   "w": "fait",
+   "t": 66.35,
+   "chunk": 107,
+   "sent": 17
+  },
+  {
+   "w": "?",
+   "t": 66.61,
+   "chunk": 107,
+   "sent": 17
+  }
+ ],
+ "sentences": [
+  {
+   "i": 0,
+   "t": 0,
+   "text": "Un roi traverse le désert avec une fortune en or."
+  },
+  {
+   "i": 1,
+   "t": 2.81,
+   "text": "À son passage, le prix du métal précieux va même chuter."
+  },
+  {
+   "i": 2,
+   "t": 6.24,
+   "text": "Nous sommes en mille trois cent vingt-quatre."
+  },
+  {
+   "i": 3,
+   "t": 8.48,
+   "text": "Mansa Moussa, souverain de l’empire du Mali, part en pèlerinage vers La Mecque."
+  },
+  {
+   "i": 4,
+   "t": 13.59,
+   "text": "Son royaume est au cœur des échanges commerciaux entre l’Afrique de l’Ouest et le nord du continent."
+  },
+  {
+   "i": 5,
+   "t": 18.35,
+   "text": "L’or contribue à sa puissance."
+  },
+  {
+   "i": 6,
+   "t": 20.28,
+   "text": "Avec sa caravane, le souverain remonte le Sahara et atteint Le Caire, capitale du sultanat mamelouk."
+  },
+  {
+   "i": 7,
+   "t": 26.26,
+   "text": "Là, il est reçu par le sultan d’Égypte."
+  },
+  {
+   "i": 8,
+   "t": 28.59,
+   "text": "Moussa distribue des cadeaux et son entourage dépense de l’or sur les marchés."
+  },
+  {
+   "i": 9,
+   "t": 31.99,
+   "text": "Mais cette abondance a une conséquence inattendue."
+  },
+  {
+   "i": 10,
+   "t": 34.52,
+   "text": "Le métal perd de sa valeur."
+  },
+  {
+   "i": 11,
+   "t": 36.41,
+   "text": "Des années plus tard, le chroniqueur Al-Omari rapporte que son prix reste déprimé."
+  },
+  {
+   "i": 12,
+   "t": 41.39,
+   "text": "Il tient son récit de personnes qui ont connu la visite du roi."
+  },
+  {
+   "i": 13,
+   "t": 44.28,
+   "text": "Impossible cependant de calculer exactement sa fortune en argent d’aujourd’hui."
+  },
+  {
+   "i": 14,
+   "t": 48.59,
+   "text": "Le pèlerinage continue jusqu’à La Mecque."
+  },
+  {
+   "i": 15,
+   "t": 50.76,
+   "text": "Puis Moussa rentre au Mali et soutient le développement de Tombouctou comme centre du savoir."
+  },
+  {
+   "i": 16,
+   "t": 55.74,
+   "text": "En mille trois cent soixante-quinze, l’Atlas catalan représente encore ce roi africain tenant de l’or."
+  },
+  {
+   "i": 17,
+   "t": 61.38,
+   "text": "Alors, qu’est-ce qui marque le plus durablement l’histoire : la richesse d’un homme, ou ce qu’il en fait ?"
+  }
+ ]
+}

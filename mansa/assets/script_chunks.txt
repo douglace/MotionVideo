@@ -1,0 +1,19 @@
+# segment@début (apparition du segment dans l'original) ; "|" sépare les segments ; une ligne = une phrase
+Un roi@0.00 | traverse le@0.27 | désert avec@0.80 | une fortune@1.60 | en or.@2.00
+À son@2.93 | passage, le@3.13 | prix du@4.00 | métal précieux@4.37 | va même@5.10 | chuter.@5.47
+Nous sommes@6.50 | en mille@6.77 | trois cent@7.17 | vingt-quatre.@7.57
+Mansa Moussa,@8.63 | souverain de@9.70 | l’empire du@10.23 | Mali, part@10.77 | en pèlerinage@11.57 | vers La@12.37 | Mecque.@12.77
+Son royaume@13.43 | est au@14.23 | cœur des@14.47 | échanges@14.97 | commerciaux entre@15.30 | l’Afrique de@16.03 | l’Ouest et@16.33 | le nord@17.00 | du continent.@17.27
+L’or contribue@18.33 | à sa@18.95 | puissance.@19.23
+Avec sa@20.43 | caravane, le@20.57 | souverain remonte@21.37 | le Sahara@22.03 | et atteint@22.70 | Le Caire,@23.37 | capitale du@24.03 | sultanat mamelouk.@24.57
+Là, il@26.03 | est reçu@26.70 | par le@27.10 | sultan d’Égypte.@27.37
+Moussa distribue@28.57 | des cadeaux@29.23 | et son@29.63 | entourage dépense@29.90 | de l’or@30.87 | sur les marchés.@31.10
+Mais cette@32.30 | abondance a@32.43 | une conséquence@33.13 | inattendue.@33.73
+Le métal@34.67 | perd de@35.27 | sa valeur.@35.63
+Des années@36.80 | plus tard,@37.10 | le chroniqueur@37.80 | Al-Omari@38.53 | rapporte que@38.83 | son prix@39.45 | reste déprimé.@40.33
+Il tient@41.70 | son récit@41.97 | de personnes@42.23 | qui ont@42.77 | connu la@43.03 | visite du@43.30 | roi.@43.70
+Impossible@44.37 | cependant de@45.23 | calculer exactement@45.73 | sa fortune@46.90 | en argent@47.43 | d’aujourd’hui.@47.80
+Le pèlerinage@48.90 | continue jusqu’à@49.33 | La Mecque.@50.00
+Puis Moussa@50.80 | rentre au@51.60 | Mali et@51.97 | soutient le@52.47 | développement de@53.10 | Tombouctou comme@53.57 | centre du@54.40 | savoir.@54.67
+En mille@55.60 | trois cent@56.00 | soixante-quinze,@56.40 | l’Atlas catalan@57.47 | représente encore@58.47 | ce roi@59.37 | africain tenant@59.50 | de l’or.@60.20
+Alors, qu’est-ce@61.13 | qui marque@61.93 | le plus@62.63 | durablement@62.93 | l’histoire :@63.57 | la richesse@64.40 | d’un homme,@64.97 | ou ce@65.67 | qu’il en@65.93 | fait ?@66.10
