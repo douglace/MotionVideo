@@ -1,0 +1,1955 @@
+{
+ "duration": 69.8,
+ "chunks": [
+  {
+   "text": "Ce papier",
+   "t": 0,
+   "sent": 0,
+   "end": 0.43
+  },
+  {
+   "text": "va bouleverser",
+   "t": 0.43,
+   "sent": 0,
+   "end": 1.13
+  },
+  {
+   "text": "une frontière.",
+   "t": 1.13,
+   "sent": 0,
+   "end": 2.0
+  },
+  {
+   "text": "Berlin, neuf",
+   "t": 2.0,
+   "sent": 1,
+   "end": 3.0
+  },
+  {
+   "text": "novembre mille",
+   "t": 3.0,
+   "sent": 1,
+   "end": 4.0
+  },
+  {
+   "text": "neuf cent",
+   "t": 4.0,
+   "sent": 1,
+   "end": 4.4
+  },
+  {
+   "text": "quatre-vingt-neuf.",
+   "t": 4.4,
+   "sent": 1,
+   "end": 5.35
+  },
+  {
+   "text": "Depuis vingt-huit",
+   "t": 5.35,
+   "sent": 2,
+   "end": 6.08
+  },
+  {
+   "text": "ans, un",
+   "t": 6.08,
+   "sent": 2,
+   "end": 6.68
+  },
+  {
+   "text": "mur sépare",
+   "t": 6.68,
+   "sent": 2,
+   "end": 7.45
+  },
+  {
+   "text": "la ville.",
+   "t": 7.45,
+   "sent": 2,
+   "end": 8.21
+  },
+  {
+   "text": "Mais à",
+   "t": 8.21,
+   "sent": 3,
+   "end": 8.34
+  },
+  {
+   "text": "l’automne, le",
+   "t": 8.34,
+   "sent": 3,
+   "end": 9.17
+  },
+  {
+   "text": "régime est-allemand",
+   "t": 9.17,
+   "sent": 3,
+   "end": 10.01
+  },
+  {
+   "text": "vacille.",
+   "t": 10.01,
+   "sent": 3,
+   "end": 10.89
+  },
+  {
+   "text": "Des milliers",
+   "t": 10.89,
+   "sent": 4,
+   "end": 11.49
+  },
+  {
+   "text": "de citoyens",
+   "t": 11.49,
+   "sent": 4,
+   "end": 12.09
+  },
+  {
+   "text": "manifestent pour",
+   "t": 12.09,
+   "sent": 4,
+   "end": 12.89
+  },
+  {
+   "text": "la liberté,",
+   "t": 12.89,
+   "sent": 4,
+   "end": 13.86
+  },
+  {
+   "text": "d’autres quittent",
+   "t": 13.86,
+   "sent": 4,
+   "end": 14.49
+  },
+  {
+   "text": "le pays.",
+   "t": 14.49,
+   "sent": 4,
+   "end": 15.3
+  },
+  {
+   "text": "Le pouvoir",
+   "t": 15.3,
+   "sent": 5,
+   "end": 15.93
+  },
+  {
+   "text": "prépare de",
+   "t": 15.93,
+   "sent": 5,
+   "end": 16.33
+  },
+  {
+   "text": "nouvelles règles",
+   "t": 16.33,
+   "sent": 5,
+   "end": 17.03
+  },
+  {
+   "text": "de voyage.",
+   "t": 17.03,
+   "sent": 5,
+   "end": 17.81
+  },
+  {
+   "text": "Elles doivent",
+   "t": 17.81,
+   "sent": 6,
+   "end": 18.21
+  },
+  {
+   "text": "être annoncées",
+   "t": 18.21,
+   "sent": 6,
+   "end": 18.81
+  },
+  {
+   "text": "le lendemain.",
+   "t": 18.81,
+   "sent": 6,
+   "end": 19.68
+  },
+  {
+   "text": "À dix-huit",
+   "t": 19.68,
+   "sent": 7,
+   "end": 20.18
+  },
+  {
+   "text": "heures cinquante,",
+   "t": 20.18,
+   "sent": 7,
+   "end": 21.05
+  },
+  {
+   "text": "devant les",
+   "t": 21.05,
+   "sent": 7,
+   "end": 21.42
+  },
+  {
+   "text": "journalistes, Günter",
+   "t": 21.42,
+   "sent": 7,
+   "end": 22.55
+  },
+  {
+   "text": "Schabowski lit",
+   "t": 22.55,
+   "sent": 7,
+   "end": 23.52
+  },
+  {
+   "text": "les nouvelles",
+   "t": 23.52,
+   "sent": 7,
+   "end": 23.95
+  },
+  {
+   "text": "dispositions.",
+   "t": 23.95,
+   "sent": 7,
+   "end": 24.94
+  },
+  {
+   "text": "Un journaliste",
+   "t": 24.94,
+   "sent": 8,
+   "end": 25.51
+  },
+  {
+   "text": "lui demande",
+   "t": 25.51,
+   "sent": 8,
+   "end": 25.97
+  },
+  {
+   "text": "quand elles",
+   "t": 25.97,
+   "sent": 8,
+   "end": 26.34
+  },
+  {
+   "text": "entrent en",
+   "t": 26.34,
+   "sent": 8,
+   "end": 26.77
+  },
+  {
+   "text": "vigueur.",
+   "t": 26.77,
+   "sent": 8,
+   "end": 27.43
+  },
+  {
+   "text": "Sa réponse,",
+   "t": 27.43,
+   "sent": 9,
+   "end": 28.2
+  },
+  {
+   "text": "traduite de",
+   "t": 28.2,
+   "sent": 9,
+   "end": 28.53
+  },
+  {
+   "text": "l’allemand :",
+   "t": 28.53,
+   "sent": 9,
+   "end": 29.33
+  },
+  {
+   "text": "immédiatement,",
+   "t": 29.33,
+   "sent": 9,
+   "end": 30.27
+  },
+  {
+   "text": "sans délai.",
+   "t": 30.27,
+   "sent": 9,
+   "end": 30.89
+  },
+  {
+   "text": "Les médias",
+   "t": 30.89,
+   "sent": 10,
+   "end": 31.35
+  },
+  {
+   "text": "relaient la",
+   "t": 31.35,
+   "sent": 10,
+   "end": 31.75
+  },
+  {
+   "text": "nouvelle.",
+   "t": 31.75,
+   "sent": 10,
+   "end": 32.48
+  },
+  {
+   "text": "Devant leur",
+   "t": 32.48,
+   "sent": 11,
+   "end": 32.81
+  },
+  {
+   "text": "télévision, les",
+   "t": 32.81,
+   "sent": 11,
+   "end": 33.58
+  },
+  {
+   "text": "Berlinois de",
+   "t": 33.58,
+   "sent": 11,
+   "end": 34.21
+  },
+  {
+   "text": "l’Est comprennent",
+   "t": 34.21,
+   "sent": 11,
+   "end": 34.76
+  },
+  {
+   "text": "que la",
+   "t": 34.76,
+   "sent": 11,
+   "end": 34.94
+  },
+  {
+   "text": "frontière est",
+   "t": 34.94,
+   "sent": 11,
+   "end": 35.58
+  },
+  {
+   "text": "ouverte.",
+   "t": 35.58,
+   "sent": 11,
+   "end": 36.53
+  },
+  {
+   "text": "Ils se",
+   "t": 36.53,
+   "sent": 12,
+   "end": 36.8
+  },
+  {
+   "text": "rendent aux",
+   "t": 36.8,
+   "sent": 12,
+   "end": 37.2
+  },
+  {
+   "text": "points de",
+   "t": 37.2,
+   "sent": 12,
+   "end": 37.8
+  },
+  {
+   "text": "passage.",
+   "t": 37.8,
+   "sent": 12,
+   "end": 38.47
+  },
+  {
+   "text": "Pourtant, sur",
+   "t": 38.47,
+   "sent": 13,
+   "end": 39.37
+  },
+  {
+   "text": "place, les",
+   "t": 39.37,
+   "sent": 13,
+   "end": 40.07
+  },
+  {
+   "text": "gardes n’ont",
+   "t": 40.07,
+   "sent": 13,
+   "end": 40.47
+  },
+  {
+   "text": "pas reçu",
+   "t": 40.47,
+   "sent": 13,
+   "end": 40.97
+  },
+  {
+   "text": "d’ordre d’ouverture",
+   "t": 40.97,
+   "sent": 13,
+   "end": 41.87
+  },
+  {
+   "text": "générale.",
+   "t": 41.87,
+   "sent": 13,
+   "end": 42.45
+  },
+  {
+   "text": "L’attente se",
+   "t": 42.45,
+   "sent": 14,
+   "end": 42.92
+  },
+  {
+   "text": "prolonge, la",
+   "t": 42.92,
+   "sent": 14,
+   "end": 43.52
+  },
+  {
+   "text": "foule grossit.",
+   "t": 43.52,
+   "sent": 14,
+   "end": 44.96
+  },
+  {
+   "text": "À Bornholmer",
+   "t": 44.96,
+   "sent": 15,
+   "end": 45.56
+  },
+  {
+   "text": "Strasse, vers",
+   "t": 45.56,
+   "sent": 15,
+   "end": 46.53
+  },
+  {
+   "text": "vingt-trois heures",
+   "t": 46.53,
+   "sent": 15,
+   "end": 46.99
+  },
+  {
+   "text": "trente, le",
+   "t": 46.99,
+   "sent": 15,
+   "end": 47.79
+  },
+  {
+   "text": "passage est",
+   "t": 47.79,
+   "sent": 15,
+   "end": 48.16
+  },
+  {
+   "text": "finalement ouvert.",
+   "t": 48.16,
+   "sent": 15,
+   "end": 49.34
+  },
+  {
+   "text": "Les habitants",
+   "t": 49.34,
+   "sent": 16,
+   "end": 49.77
+  },
+  {
+   "text": "traversent, se",
+   "t": 49.77,
+   "sent": 16,
+   "end": 50.71
+  },
+  {
+   "text": "retrouvent,",
+   "t": 50.71,
+   "sent": 16,
+   "end": 51.44
+  },
+  {
+   "text": "s’embrassent.",
+   "t": 51.44,
+   "sent": 16,
+   "end": 52.19
+  },
+  {
+   "text": "D’autres points",
+   "t": 52.19,
+   "sent": 17,
+   "end": 52.79
+  },
+  {
+   "text": "de passage",
+   "t": 52.79,
+   "sent": 17,
+   "end": 53.33
+  },
+  {
+   "text": "suivent.",
+   "t": 53.33,
+   "sent": 17,
+   "end": 54.07
+  },
+  {
+   "text": "Le mur",
+   "t": 54.07,
+   "sent": 18,
+   "end": 54.2
+  },
+  {
+   "text": "n’est pas",
+   "t": 54.2,
+   "sent": 18,
+   "end": 54.54
+  },
+  {
+   "text": "démoli cette",
+   "t": 54.54,
+   "sent": 18,
+   "end": 55.27
+  },
+  {
+   "text": "nuit-là, mais",
+   "t": 55.27,
+   "sent": 18,
+   "end": 55.8
+  },
+  {
+   "text": "il cesse",
+   "t": 55.8,
+   "sent": 18,
+   "end": 56.37
+  },
+  {
+   "text": "d’enfermer.",
+   "t": 56.37,
+   "sent": 18,
+   "end": 57.43
+  },
+  {
+   "text": "Onze mois",
+   "t": 57.43,
+   "sent": 19,
+   "end": 57.86
+  },
+  {
+   "text": "plus tard,",
+   "t": 57.86,
+   "sent": 19,
+   "end": 58.56
+  },
+  {
+   "text": "l’Allemagne est",
+   "t": 58.56,
+   "sent": 19,
+   "end": 59.09
+  },
+  {
+   "text": "réunifiée.",
+   "t": 59.09,
+   "sent": 19,
+   "end": 60.27
+  },
+  {
+   "text": "La conférence",
+   "t": 60.27,
+   "sent": 20,
+   "end": 60.84
+  },
+  {
+   "text": "de presse",
+   "t": 60.84,
+   "sent": 20,
+   "end": 61.17
+  },
+  {
+   "text": "a précipité",
+   "t": 61.17,
+   "sent": 20,
+   "end": 61.74
+  },
+  {
+   "text": "l’événement, mais",
+   "t": 61.74,
+   "sent": 20,
+   "end": 62.37
+  },
+  {
+   "text": "des mois",
+   "t": 62.37,
+   "sent": 20,
+   "end": 62.97
+  },
+  {
+   "text": "de mobilisation",
+   "t": 62.97,
+   "sent": 20,
+   "end": 63.77
+  },
+  {
+   "text": "l’avaient rendu",
+   "t": 63.77,
+   "sent": 20,
+   "end": 64.27
+  },
+  {
+   "text": "possible.",
+   "t": 64.27,
+   "sent": 20,
+   "end": 65.0
+  },
+  {
+   "text": "À ton",
+   "t": 65.0,
+   "sent": 21,
+   "end": 65.26
+  },
+  {
+   "text": "avis, qui",
+   "t": 65.26,
+   "sent": 21,
+   "end": 65.63
+  },
+  {
+   "text": "a fait",
+   "t": 65.63,
+   "sent": 21,
+   "end": 65.93
+  },
+  {
+   "text": "tomber le",
+   "t": 65.93,
+   "sent": 21,
+   "end": 66.4
+  },
+  {
+   "text": "mur :",
+   "t": 66.4,
+   "sent": 21,
+   "end": 66.9
+  },
+  {
+   "text": "les dirigeants,",
+   "t": 66.9,
+   "sent": 21,
+   "end": 67.91
+  },
+  {
+   "text": "ou les",
+   "t": 67.91,
+   "sent": 21,
+   "end": 68.23
+  },
+  {
+   "text": "citoyens ?",
+   "t": 68.23,
+   "sent": 21,
+   "end": 69.2
+  }
+ ],
+ "words": [
+  {
+   "w": "Ce",
+   "t": 0.0,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "papier",
+   "t": 0.115,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "va",
+   "t": 0.43,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "bouleverser",
+   "t": 0.542,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "une",
+   "t": 1.13,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "frontière.",
+   "t": 1.408,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "Berlin,",
+   "t": 2.0,
+   "chunk": 3,
+   "sent": 1
+  },
+  {
+   "w": "neuf",
+   "t": 2.533,
+   "chunk": 3,
+   "sent": 1
+  },
+  {
+   "w": "novembre",
+   "t": 3.0,
+   "chunk": 4,
+   "sent": 1
+  },
+  {
+   "w": "mille",
+   "t": 3.48,
+   "chunk": 4,
+   "sent": 1
+  },
+  {
+   "w": "neuf",
+   "t": 4.0,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "cent",
+   "t": 4.16,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "quatre-vingt-neuf.",
+   "t": 4.4,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "Depuis",
+   "t": 5.35,
+   "chunk": 7,
+   "sent": 2
+  },
+  {
+   "w": "vingt-huit",
+   "t": 5.642,
+   "chunk": 7,
+   "sent": 2
+  },
+  {
+   "w": "ans,",
+   "t": 6.08,
+   "chunk": 8,
+   "sent": 2
+  },
+  {
+   "w": "un",
+   "t": 6.32,
+   "chunk": 8,
+   "sent": 2
+  },
+  {
+   "w": "mur",
+   "t": 6.68,
+   "chunk": 9,
+   "sent": 2
+  },
+  {
+   "w": "sépare",
+   "t": 6.834,
+   "chunk": 9,
+   "sent": 2
+  },
+  {
+   "w": "la",
+   "t": 7.45,
+   "chunk": 10,
+   "sent": 2
+  },
+  {
+   "w": "ville.",
+   "t": 7.653,
+   "chunk": 10,
+   "sent": 2
+  },
+  {
+   "w": "Mais",
+   "t": 8.21,
+   "chunk": 11,
+   "sent": 3
+  },
+  {
+   "w": "à",
+   "t": 8.262,
+   "chunk": 11,
+   "sent": 3
+  },
+  {
+   "w": "l’automne,",
+   "t": 8.34,
+   "chunk": 12,
+   "sent": 3
+  },
+  {
+   "w": "le",
+   "t": 8.838,
+   "chunk": 12,
+   "sent": 3
+  },
+  {
+   "w": "régime",
+   "t": 9.17,
+   "chunk": 13,
+   "sent": 3
+  },
+  {
+   "w": "est-allemand",
+   "t": 9.458,
+   "chunk": 13,
+   "sent": 3
+  },
+  {
+   "w": "vacille.",
+   "t": 10.01,
+   "chunk": 14,
+   "sent": 3
+  },
+  {
+   "w": "Des",
+   "t": 10.89,
+   "chunk": 15,
+   "sent": 4
+  },
+  {
+   "w": "milliers",
+   "t": 11.05,
+   "chunk": 15,
+   "sent": 4
+  },
+  {
+   "w": "de",
+   "t": 11.49,
+   "chunk": 16,
+   "sent": 4
+  },
+  {
+   "w": "citoyens",
+   "t": 11.65,
+   "chunk": 16,
+   "sent": 4
+  },
+  {
+   "w": "manifestent",
+   "t": 12.09,
+   "chunk": 17,
+   "sent": 4
+  },
+  {
+   "w": "pour",
+   "t": 12.602,
+   "chunk": 17,
+   "sent": 4
+  },
+  {
+   "w": "la",
+   "t": 12.89,
+   "chunk": 18,
+   "sent": 4
+  },
+  {
+   "w": "liberté,",
+   "t": 13.084,
+   "chunk": 18,
+   "sent": 4
+  },
+  {
+   "w": "d’autres",
+   "t": 13.86,
+   "chunk": 19,
+   "sent": 4
+  },
+  {
+   "w": "quittent",
+   "t": 14.112,
+   "chunk": 19,
+   "sent": 4
+  },
+  {
+   "w": "le",
+   "t": 14.49,
+   "chunk": 20,
+   "sent": 4
+  },
+  {
+   "w": "pays.",
+   "t": 14.814,
+   "chunk": 20,
+   "sent": 4
+  },
+  {
+   "w": "Le",
+   "t": 15.3,
+   "chunk": 21,
+   "sent": 5
+  },
+  {
+   "w": "pouvoir",
+   "t": 15.468,
+   "chunk": 21,
+   "sent": 5
+  },
+  {
+   "w": "prépare",
+   "t": 15.93,
+   "chunk": 22,
+   "sent": 5
+  },
+  {
+   "w": "de",
+   "t": 16.17,
+   "chunk": 22,
+   "sent": 5
+  },
+  {
+   "w": "nouvelles",
+   "t": 16.33,
+   "chunk": 23,
+   "sent": 5
+  },
+  {
+   "w": "règles",
+   "t": 16.666,
+   "chunk": 23,
+   "sent": 5
+  },
+  {
+   "w": "de",
+   "t": 17.03,
+   "chunk": 24,
+   "sent": 5
+  },
+  {
+   "w": "voyage.",
+   "t": 17.238,
+   "chunk": 24,
+   "sent": 5
+  },
+  {
+   "w": "Elles",
+   "t": 17.81,
+   "chunk": 25,
+   "sent": 6
+  },
+  {
+   "w": "doivent",
+   "t": 17.97,
+   "chunk": 25,
+   "sent": 6
+  },
+  {
+   "w": "être",
+   "t": 18.21,
+   "chunk": 26,
+   "sent": 6
+  },
+  {
+   "w": "annoncées",
+   "t": 18.402,
+   "chunk": 26,
+   "sent": 6
+  },
+  {
+   "w": "le",
+   "t": 18.81,
+   "chunk": 27,
+   "sent": 6
+  },
+  {
+   "w": "lendemain.",
+   "t": 18.984,
+   "chunk": 27,
+   "sent": 6
+  },
+  {
+   "w": "À",
+   "t": 19.68,
+   "chunk": 28,
+   "sent": 7
+  },
+  {
+   "w": "dix-huit",
+   "t": 19.813,
+   "chunk": 28,
+   "sent": 7
+  },
+  {
+   "w": "heures",
+   "t": 20.18,
+   "chunk": 29,
+   "sent": 7
+  },
+  {
+   "w": "cinquante,",
+   "t": 20.458,
+   "chunk": 29,
+   "sent": 7
+  },
+  {
+   "w": "devant",
+   "t": 21.05,
+   "chunk": 30,
+   "sent": 7
+  },
+  {
+   "w": "les",
+   "t": 21.247,
+   "chunk": 30,
+   "sent": 7
+  },
+  {
+   "w": "journalistes,",
+   "t": 21.42,
+   "chunk": 31,
+   "sent": 7
+  },
+  {
+   "w": "Günter",
+   "t": 22.023,
+   "chunk": 31,
+   "sent": 7
+  },
+  {
+   "w": "Schabowski",
+   "t": 22.55,
+   "chunk": 32,
+   "sent": 7
+  },
+  {
+   "w": "lit",
+   "t": 23.132,
+   "chunk": 32,
+   "sent": 7
+  },
+  {
+   "w": "les",
+   "t": 23.52,
+   "chunk": 33,
+   "sent": 7
+  },
+  {
+   "w": "nouvelles",
+   "t": 23.606,
+   "chunk": 33,
+   "sent": 7
+  },
+  {
+   "w": "dispositions.",
+   "t": 23.95,
+   "chunk": 34,
+   "sent": 7
+  },
+  {
+   "w": "Un",
+   "t": 24.94,
+   "chunk": 35,
+   "sent": 8
+  },
+  {
+   "w": "journaliste",
+   "t": 25.031,
+   "chunk": 35,
+   "sent": 8
+  },
+  {
+   "w": "lui",
+   "t": 25.51,
+   "chunk": 36,
+   "sent": 8
+  },
+  {
+   "w": "demande",
+   "t": 25.602,
+   "chunk": 36,
+   "sent": 8
+  },
+  {
+   "w": "quand",
+   "t": 25.97,
+   "chunk": 37,
+   "sent": 8
+  },
+  {
+   "w": "elles",
+   "t": 26.069,
+   "chunk": 37,
+   "sent": 8
+  },
+  {
+   "w": "entrent",
+   "t": 26.34,
+   "chunk": 38,
+   "sent": 8
+  },
+  {
+   "w": "en",
+   "t": 26.569,
+   "chunk": 38,
+   "sent": 8
+  },
+  {
+   "w": "vigueur.",
+   "t": 26.77,
+   "chunk": 39,
+   "sent": 8
+  },
+  {
+   "w": "Sa",
+   "t": 27.43,
+   "chunk": 40,
+   "sent": 9
+  },
+  {
+   "w": "réponse,",
+   "t": 27.584,
+   "chunk": 40,
+   "sent": 9
+  },
+  {
+   "w": "traduite",
+   "t": 28.2,
+   "chunk": 41,
+   "sent": 9
+  },
+  {
+   "w": "de",
+   "t": 28.398,
+   "chunk": 41,
+   "sent": 9
+  },
+  {
+   "w": "l’allemand",
+   "t": 28.53,
+   "chunk": 42,
+   "sent": 9
+  },
+  {
+   "w": ":",
+   "t": 29.01,
+   "chunk": 42,
+   "sent": 9
+  },
+  {
+   "w": "immédiatement,",
+   "t": 29.33,
+   "chunk": 43,
+   "sent": 9
+  },
+  {
+   "w": "sans",
+   "t": 30.27,
+   "chunk": 44,
+   "sent": 9
+  },
+  {
+   "w": "délai.",
+   "t": 30.435,
+   "chunk": 44,
+   "sent": 9
+  },
+  {
+   "w": "Les",
+   "t": 30.89,
+   "chunk": 45,
+   "sent": 10
+  },
+  {
+   "w": "médias",
+   "t": 31.013,
+   "chunk": 45,
+   "sent": 10
+  },
+  {
+   "w": "relaient",
+   "t": 31.35,
+   "chunk": 46,
+   "sent": 10
+  },
+  {
+   "w": "la",
+   "t": 31.563,
+   "chunk": 46,
+   "sent": 10
+  },
+  {
+   "w": "nouvelle.",
+   "t": 31.75,
+   "chunk": 47,
+   "sent": 10
+  },
+  {
+   "w": "Devant",
+   "t": 32.48,
+   "chunk": 48,
+   "sent": 11
+  },
+  {
+   "w": "leur",
+   "t": 32.656,
+   "chunk": 48,
+   "sent": 11
+  },
+  {
+   "w": "télévision,",
+   "t": 32.81,
+   "chunk": 49,
+   "sent": 11
+  },
+  {
+   "w": "les",
+   "t": 33.303,
+   "chunk": 49,
+   "sent": 11
+  },
+  {
+   "w": "Berlinois",
+   "t": 33.58,
+   "chunk": 50,
+   "sent": 11
+  },
+  {
+   "w": "de",
+   "t": 33.958,
+   "chunk": 50,
+   "sent": 11
+  },
+  {
+   "w": "l’Est",
+   "t": 34.21,
+   "chunk": 51,
+   "sent": 11
+  },
+  {
+   "w": "comprennent",
+   "t": 34.32,
+   "chunk": 51,
+   "sent": 11
+  },
+  {
+   "w": "que",
+   "t": 34.76,
+   "chunk": 52,
+   "sent": 11
+  },
+  {
+   "w": "la",
+   "t": 34.832,
+   "chunk": 52,
+   "sent": 11
+  },
+  {
+   "w": "frontière",
+   "t": 34.94,
+   "chunk": 53,
+   "sent": 11
+  },
+  {
+   "w": "est",
+   "t": 35.324,
+   "chunk": 53,
+   "sent": 11
+  },
+  {
+   "w": "ouverte.",
+   "t": 35.58,
+   "chunk": 54,
+   "sent": 11
+  },
+  {
+   "w": "Ils",
+   "t": 36.53,
+   "chunk": 55,
+   "sent": 12
+  },
+  {
+   "w": "se",
+   "t": 36.638,
+   "chunk": 55,
+   "sent": 12
+  },
+  {
+   "w": "rendent",
+   "t": 36.8,
+   "chunk": 56,
+   "sent": 12
+  },
+  {
+   "w": "aux",
+   "t": 37.013,
+   "chunk": 56,
+   "sent": 12
+  },
+  {
+   "w": "points",
+   "t": 37.2,
+   "chunk": 57,
+   "sent": 12
+  },
+  {
+   "w": "de",
+   "t": 37.44,
+   "chunk": 57,
+   "sent": 12
+  },
+  {
+   "w": "passage.",
+   "t": 37.8,
+   "chunk": 58,
+   "sent": 12
+  },
+  {
+   "w": "Pourtant,",
+   "t": 38.47,
+   "chunk": 59,
+   "sent": 13
+  },
+  {
+   "w": "sur",
+   "t": 38.95,
+   "chunk": 59,
+   "sent": 13
+  },
+  {
+   "w": "place,",
+   "t": 39.37,
+   "chunk": 60,
+   "sent": 13
+  },
+  {
+   "w": "les",
+   "t": 39.743,
+   "chunk": 60,
+   "sent": 13
+  },
+  {
+   "w": "gardes",
+   "t": 40.07,
+   "chunk": 61,
+   "sent": 13
+  },
+  {
+   "w": "n’ont",
+   "t": 40.283,
+   "chunk": 61,
+   "sent": 13
+  },
+  {
+   "w": "pas",
+   "t": 40.47,
+   "chunk": 62,
+   "sent": 13
+  },
+  {
+   "w": "reçu",
+   "t": 40.603,
+   "chunk": 62,
+   "sent": 13
+  },
+  {
+   "w": "d’ordre",
+   "t": 40.97,
+   "chunk": 63,
+   "sent": 13
+  },
+  {
+   "w": "d’ouverture",
+   "t": 41.21,
+   "chunk": 63,
+   "sent": 13
+  },
+  {
+   "w": "générale.",
+   "t": 41.87,
+   "chunk": 64,
+   "sent": 13
+  },
+  {
+   "w": "L’attente",
+   "t": 42.45,
+   "chunk": 65,
+   "sent": 14
+  },
+  {
+   "w": "se",
+   "t": 42.732,
+   "chunk": 65,
+   "sent": 14
+  },
+  {
+   "w": "prolonge,",
+   "t": 42.92,
+   "chunk": 66,
+   "sent": 14
+  },
+  {
+   "w": "la",
+   "t": 43.28,
+   "chunk": 66,
+   "sent": 14
+  },
+  {
+   "w": "foule",
+   "t": 43.52,
+   "chunk": 67,
+   "sent": 14
+  },
+  {
+   "w": "grossit.",
+   "t": 44.096,
+   "chunk": 67,
+   "sent": 14
+  },
+  {
+   "w": "À",
+   "t": 44.96,
+   "chunk": 68,
+   "sent": 15
+  },
+  {
+   "w": "Bornholmer",
+   "t": 45.08,
+   "chunk": 68,
+   "sent": 15
+  },
+  {
+   "w": "Strasse,",
+   "t": 45.56,
+   "chunk": 69,
+   "sent": 15
+  },
+  {
+   "w": "vers",
+   "t": 46.077,
+   "chunk": 69,
+   "sent": 15
+  },
+  {
+   "w": "vingt-trois",
+   "t": 46.53,
+   "chunk": 70,
+   "sent": 15
+  },
+  {
+   "w": "heures",
+   "t": 46.714,
+   "chunk": 70,
+   "sent": 15
+  },
+  {
+   "w": "trente,",
+   "t": 46.99,
+   "chunk": 71,
+   "sent": 15
+  },
+  {
+   "w": "le",
+   "t": 47.417,
+   "chunk": 71,
+   "sent": 15
+  },
+  {
+   "w": "passage",
+   "t": 47.79,
+   "chunk": 72,
+   "sent": 15
+  },
+  {
+   "w": "est",
+   "t": 48.012,
+   "chunk": 72,
+   "sent": 15
+  },
+  {
+   "w": "finalement",
+   "t": 48.16,
+   "chunk": 73,
+   "sent": 15
+  },
+  {
+   "w": "ouvert.",
+   "t": 48.789,
+   "chunk": 73,
+   "sent": 15
+  },
+  {
+   "w": "Les",
+   "t": 49.34,
+   "chunk": 74,
+   "sent": 16
+  },
+  {
+   "w": "habitants",
+   "t": 49.426,
+   "chunk": 74,
+   "sent": 16
+  },
+  {
+   "w": "traversent,",
+   "t": 49.77,
+   "chunk": 75,
+   "sent": 16
+  },
+  {
+   "w": "se",
+   "t": 50.334,
+   "chunk": 75,
+   "sent": 16
+  },
+  {
+   "w": "retrouvent,",
+   "t": 50.71,
+   "chunk": 76,
+   "sent": 16
+  },
+  {
+   "w": "s’embrassent.",
+   "t": 51.44,
+   "chunk": 77,
+   "sent": 16
+  },
+  {
+   "w": "D’autres",
+   "t": 52.19,
+   "chunk": 78,
+   "sent": 17
+  },
+  {
+   "w": "points",
+   "t": 52.51,
+   "chunk": 78,
+   "sent": 17
+  },
+  {
+   "w": "de",
+   "t": 52.79,
+   "chunk": 79,
+   "sent": 17
+  },
+  {
+   "w": "passage",
+   "t": 52.898,
+   "chunk": 79,
+   "sent": 17
+  },
+  {
+   "w": "suivent.",
+   "t": 53.33,
+   "chunk": 80,
+   "sent": 17
+  },
+  {
+   "w": "Le",
+   "t": 54.07,
+   "chunk": 81,
+   "sent": 18
+  },
+  {
+   "w": "mur",
+   "t": 54.122,
+   "chunk": 81,
+   "sent": 18
+  },
+  {
+   "w": "n’est",
+   "t": 54.2,
+   "chunk": 82,
+   "sent": 18
+  },
+  {
+   "w": "pas",
+   "t": 54.336,
+   "chunk": 82,
+   "sent": 18
+  },
+  {
+   "w": "démoli",
+   "t": 54.54,
+   "chunk": 83,
+   "sent": 18
+  },
+  {
+   "w": "cette",
+   "t": 54.89,
+   "chunk": 83,
+   "sent": 18
+  },
+  {
+   "w": "nuit-là,",
+   "t": 55.27,
+   "chunk": 84,
+   "sent": 18
+  },
+  {
+   "w": "mais",
+   "t": 55.553,
+   "chunk": 84,
+   "sent": 18
+  },
+  {
+   "w": "il",
+   "t": 55.8,
+   "chunk": 85,
+   "sent": 18
+  },
+  {
+   "w": "cesse",
+   "t": 55.952,
+   "chunk": 85,
+   "sent": 18
+  },
+  {
+   "w": "d’enfermer.",
+   "t": 56.37,
+   "chunk": 86,
+   "sent": 18
+  },
+  {
+   "w": "Onze",
+   "t": 57.43,
+   "chunk": 87,
+   "sent": 19
+  },
+  {
+   "w": "mois",
+   "t": 57.659,
+   "chunk": 87,
+   "sent": 19
+  },
+  {
+   "w": "plus",
+   "t": 57.86,
+   "chunk": 88,
+   "sent": 19
+  },
+  {
+   "w": "tard,",
+   "t": 58.14,
+   "chunk": 88,
+   "sent": 19
+  },
+  {
+   "w": "l’Allemagne",
+   "t": 58.56,
+   "chunk": 89,
+   "sent": 19
+  },
+  {
+   "w": "est",
+   "t": 58.899,
+   "chunk": 89,
+   "sent": 19
+  },
+  {
+   "w": "réunifiée.",
+   "t": 59.09,
+   "chunk": 90,
+   "sent": 19
+  },
+  {
+   "w": "La",
+   "t": 60.27,
+   "chunk": 91,
+   "sent": 20
+  },
+  {
+   "w": "conférence",
+   "t": 60.361,
+   "chunk": 91,
+   "sent": 20
+  },
+  {
+   "w": "de",
+   "t": 60.84,
+   "chunk": 92,
+   "sent": 20
+  },
+  {
+   "w": "presse",
+   "t": 60.928,
+   "chunk": 92,
+   "sent": 20
+  },
+  {
+   "w": "a",
+   "t": 61.17,
+   "chunk": 93,
+   "sent": 20
+  },
+  {
+   "w": "précipité",
+   "t": 61.261,
+   "chunk": 93,
+   "sent": 20
+  },
+  {
+   "w": "l’événement,",
+   "t": 61.74,
+   "chunk": 94,
+   "sent": 20
+  },
+  {
+   "w": "mais",
+   "t": 62.143,
+   "chunk": 94,
+   "sent": 20
+  },
+  {
+   "w": "des",
+   "t": 62.37,
+   "chunk": 95,
+   "sent": 20
+  },
+  {
+   "w": "mois",
+   "t": 62.61,
+   "chunk": 95,
+   "sent": 20
+  },
+  {
+   "w": "de",
+   "t": 62.97,
+   "chunk": 96,
+   "sent": 20
+  },
+  {
+   "w": "mobilisation",
+   "t": 63.077,
+   "chunk": 96,
+   "sent": 20
+  },
+  {
+   "w": "l’avaient",
+   "t": 63.77,
+   "chunk": 97,
+   "sent": 20
+  },
+  {
+   "w": "rendu",
+   "t": 63.97,
+   "chunk": 97,
+   "sent": 20
+  },
+  {
+   "w": "possible.",
+   "t": 64.27,
+   "chunk": 98,
+   "sent": 20
+  },
+  {
+   "w": "À",
+   "t": 65.0,
+   "chunk": 99,
+   "sent": 21
+  },
+  {
+   "w": "ton",
+   "t": 65.104,
+   "chunk": 99,
+   "sent": 21
+  },
+  {
+   "w": "avis,",
+   "t": 65.26,
+   "chunk": 100,
+   "sent": 21
+  },
+  {
+   "w": "qui",
+   "t": 65.457,
+   "chunk": 100,
+   "sent": 21
+  },
+  {
+   "w": "a",
+   "t": 65.63,
+   "chunk": 101,
+   "sent": 21
+  },
+  {
+   "w": "fait",
+   "t": 65.75,
+   "chunk": 101,
+   "sent": 21
+  },
+  {
+   "w": "tomber",
+   "t": 65.93,
+   "chunk": 102,
+   "sent": 21
+  },
+  {
+   "w": "le",
+   "t": 66.181,
+   "chunk": 102,
+   "sent": 21
+  },
+  {
+   "w": "mur",
+   "t": 66.4,
+   "chunk": 103,
+   "sent": 21
+  },
+  {
+   "w": ":",
+   "t": 66.6,
+   "chunk": 103,
+   "sent": 21
+  },
+  {
+   "w": "les",
+   "t": 66.9,
+   "chunk": 104,
+   "sent": 21
+  },
+  {
+   "w": "dirigeants,",
+   "t": 67.102,
+   "chunk": 104,
+   "sent": 21
+  },
+  {
+   "w": "ou",
+   "t": 67.91,
+   "chunk": 105,
+   "sent": 21
+  },
+  {
+   "w": "les",
+   "t": 68.038,
+   "chunk": 105,
+   "sent": 21
+  },
+  {
+   "w": "citoyens",
+   "t": 68.23,
+   "chunk": 106,
+   "sent": 21
+  },
+  {
+   "w": "?",
+   "t": 68.747,
+   "chunk": 106,
+   "sent": 21
+  }
+ ],
+ "sentences": [
+  {
+   "i": 0,
+   "t": 0,
+   "text": "Ce papier va bouleverser une frontière."
+  },
+  {
+   "i": 1,
+   "t": 2.0,
+   "text": "Berlin, neuf novembre mille neuf cent quatre-vingt-neuf."
+  },
+  {
+   "i": 2,
+   "t": 5.35,
+   "text": "Depuis vingt-huit ans, un mur sépare la ville."
+  },
+  {
+   "i": 3,
+   "t": 8.21,
+   "text": "Mais à l’automne, le régime est-allemand vacille."
+  },
+  {
+   "i": 4,
+   "t": 10.89,
+   "text": "Des milliers de citoyens manifestent pour la liberté, d’autres quittent le pays."
+  },
+  {
+   "i": 5,
+   "t": 15.3,
+   "text": "Le pouvoir prépare de nouvelles règles de voyage."
+  },
+  {
+   "i": 6,
+   "t": 17.81,
+   "text": "Elles doivent être annoncées le lendemain."
+  },
+  {
+   "i": 7,
+   "t": 19.68,
+   "text": "À dix-huit heures cinquante, devant les journalistes, Günter Schabowski lit les nouvelles dispositions."
+  },
+  {
+   "i": 8,
+   "t": 24.94,
+   "text": "Un journaliste lui demande quand elles entrent en vigueur."
+  },
+  {
+   "i": 9,
+   "t": 27.43,
+   "text": "Sa réponse, traduite de l’allemand : immédiatement, sans délai."
+  },
+  {
+   "i": 10,
+   "t": 30.89,
+   "text": "Les médias relaient la nouvelle."
+  },
+  {
+   "i": 11,
+   "t": 32.48,
+   "text": "Devant leur télévision, les Berlinois de l’Est comprennent que la frontière est ouverte."
+  },
+  {
+   "i": 12,
+   "t": 36.53,
+   "text": "Ils se rendent aux points de passage."
+  },
+  {
+   "i": 13,
+   "t": 38.47,
+   "text": "Pourtant, sur place, les gardes n’ont pas reçu d’ordre d’ouverture générale."
+  },
+  {
+   "i": 14,
+   "t": 42.45,
+   "text": "L’attente se prolonge, la foule grossit."
+  },
+  {
+   "i": 15,
+   "t": 44.96,
+   "text": "À Bornholmer Strasse, vers vingt-trois heures trente, le passage est finalement ouvert."
+  },
+  {
+   "i": 16,
+   "t": 49.34,
+   "text": "Les habitants traversent, se retrouvent, s’embrassent."
+  },
+  {
+   "i": 17,
+   "t": 52.19,
+   "text": "D’autres points de passage suivent."
+  },
+  {
+   "i": 18,
+   "t": 54.07,
+   "text": "Le mur n’est pas démoli cette nuit-là, mais il cesse d’enfermer."
+  },
+  {
+   "i": 19,
+   "t": 57.43,
+   "text": "Onze mois plus tard, l’Allemagne est réunifiée."
+  },
+  {
+   "i": 20,
+   "t": 60.27,
+   "text": "La conférence de presse a précipité l’événement, mais des mois de mobilisation l’avaient rendu possible."
+  },
+  {
+   "i": 21,
+   "t": 65.0,
+   "text": "À ton avis, qui a fait tomber le mur : les dirigeants, ou les citoyens ?"
+  }
+ ]
+}

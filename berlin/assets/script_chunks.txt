@@ -1,0 +1,23 @@
+# segment@début (apparition dans l'original) ; "|" sépare les segments ; une ligne = une phrase
+Ce papier@0.00 | va bouleverser@0.43 | une frontière.@1.13
+Berlin, neuf@2.03 | novembre mille@3.03 | neuf cent@4.03 | quatre-vingt-neuf.@4.43
+Depuis vingt-huit@5.50 | ans, un@6.23 | mur sépare@6.83 | la ville.@7.60
+Mais à@8.37 | l’automne, le@8.50 | régime est-allemand@9.33 | vacille.@10.17
+Des milliers@11.00 | de citoyens@11.60 | manifestent pour@12.20 | la liberté,@13.00 | d’autres quittent@13.97 | le pays.@14.60
+Le pouvoir@15.27 | prépare de@15.90 | nouvelles règles@16.30 | de voyage.@17.00
+Elles doivent@17.90 | être annoncées@18.30 | le lendemain.@18.90
+À dix-huit@19.73 | heures cinquante,@20.23 | devant les@21.10 | journalistes, Günter@21.47 | Schabowski lit@22.60 | les nouvelles@23.57 | dispositions.@24.00
+Un journaliste@24.90 | lui demande@25.47 | quand elles@25.93 | entrent en@26.30 | vigueur.@26.73
+Sa réponse,@27.43 | traduite de@28.20 | l’allemand :@28.53 | immédiatement,@29.33 | sans délai.@30.27
+Les médias@31.07 | relaient la@31.53 | nouvelle.@31.93
+Devant leur@32.67 | télévision, les@33.00 | Berlinois de@33.77 | l’Est comprennent@34.40 | que la@34.95 | frontière est@35.13 | ouverte.@35.77
+Ils se@36.53 | rendent aux@36.80 | points de@37.20 | passage.@37.80
+Pourtant, sur@38.40 | place, les@39.30 | gardes n’ont@40.00 | pas reçu@40.40 | d’ordre d’ouverture@40.90 | générale.@41.80
+L’attente se@42.60 | prolonge, la@43.07 | foule grossit.@43.67
+À Bornholmer@45.00 | Strasse, vers@45.60 | vingt-trois heures@46.57 | trente, le@47.03 | passage est@47.83 | finalement ouvert.@48.20
+Les habitants@49.40 | traversent, se@49.83 | retrouvent,@50.77 | s’embrassent.@51.50
+D’autres points@52.33 | de passage@52.93 | suivent.@53.47
+Le mur@54.20 | n’est pas@54.33 | démoli cette@54.67 | nuit-là, mais@55.40 | il cesse@55.93 | d’enfermer.@56.50
+Onze mois@57.47 | plus tard,@57.90 | l’Allemagne est@58.60 | réunifiée.@59.13
+La conférence@60.20 | de presse@60.77 | a précipité@61.10 | l’événement, mais@61.67 | des mois@62.30 | de mobilisation@62.90 | l’avaient rendu@63.70 | possible.@64.20
+À ton@64.97 | avis, qui@65.23 | a fait@65.60 | tomber le@65.90 | mur :@66.37 | les dirigeants,@66.87 | ou les@67.88 | citoyens ?@68.20
