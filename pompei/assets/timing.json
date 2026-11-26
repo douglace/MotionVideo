@@ -1,0 +1,1947 @@
+{
+ "duration": 69.0,
+ "chunks": [
+  {
+   "text": "Des archéologues",
+   "t": 0,
+   "sent": 0,
+   "end": 0.7
+  },
+  {
+   "text": "dégagent une",
+   "t": 0.7,
+   "sent": 0,
+   "end": 1.2
+  },
+  {
+   "text": "ville ensevelie.",
+   "t": 1.2,
+   "sent": 0,
+   "end": 2.2
+  },
+  {
+   "text": "Dans la",
+   "t": 2.2,
+   "sent": 1,
+   "end": 2.46
+  },
+  {
+   "text": "cendre, ils",
+   "t": 2.46,
+   "sent": 1,
+   "end": 2.96
+  },
+  {
+   "text": "découvrent du",
+   "t": 2.96,
+   "sent": 1,
+   "end": 3.36
+  },
+  {
+   "text": "pain.",
+   "t": 3.36,
+   "sent": 1,
+   "end": 4.36
+  },
+  {
+   "text": "Pas une",
+   "t": 4.36,
+   "sent": 2,
+   "end": 4.76
+  },
+  {
+   "text": "sculpture.",
+   "t": 4.76,
+   "sent": 2,
+   "end": 5.67
+  },
+  {
+   "text": "Du vrai",
+   "t": 5.67,
+   "sent": 3,
+   "end": 6.17
+  },
+  {
+   "text": "pain romain,",
+   "t": 6.17,
+   "sent": 3,
+   "end": 7.04
+  },
+  {
+   "text": "carbonisé.",
+   "t": 7.04,
+   "sent": 3,
+   "end": 8.05
+  },
+  {
+   "text": "Retour en",
+   "t": 8.05,
+   "sent": 4,
+   "end": 8.45
+  },
+  {
+   "text": "l’an",
+   "t": 8.45,
+   "sent": 4,
+   "end": 8.72
+  },
+  {
+   "text": "soixante-dix-neuf.",
+   "t": 8.72,
+   "sent": 4,
+   "end": 10.12
+  },
+  {
+   "text": "Au pied",
+   "t": 10.25,
+   "sent": 5,
+   "end": 10.52
+  },
+  {
+   "text": "du Vésuve,",
+   "t": 10.52,
+   "sent": 5,
+   "end": 11.19
+  },
+  {
+   "text": "Pompéi est",
+   "t": 11.19,
+   "sent": 5,
+   "end": 11.72
+  },
+  {
+   "text": "une ville",
+   "t": 11.72,
+   "sent": 5,
+   "end": 11.99
+  },
+  {
+   "text": "commerçante.",
+   "t": 11.99,
+   "sent": 5,
+   "end": 13.08
+  },
+  {
+   "text": "On y",
+   "t": 13.08,
+   "sent": 6,
+   "end": 13.22
+  },
+  {
+   "text": "achète des",
+   "t": 13.22,
+   "sent": 6,
+   "end": 13.62
+  },
+  {
+   "text": "repas déjà",
+   "t": 13.62,
+   "sent": 6,
+   "end": 14.15
+  },
+  {
+   "text": "préparés.",
+   "t": 14.15,
+   "sent": 6,
+   "end": 14.99
+  },
+  {
+   "text": "On écrit",
+   "t": 14.99,
+   "sent": 7,
+   "end": 15.26
+  },
+  {
+   "text": "sur les",
+   "t": 15.26,
+   "sent": 7,
+   "end": 15.52
+  },
+  {
+   "text": "murs, on",
+   "t": 15.52,
+   "sent": 7,
+   "end": 16.19
+  },
+  {
+   "text": "travaille, on",
+   "t": 16.19,
+   "sent": 7,
+   "end": 17.12
+  },
+  {
+   "text": "fait des",
+   "t": 17.12,
+   "sent": 7,
+   "end": 17.49
+  },
+  {
+   "text": "affaires.",
+   "t": 17.49,
+   "sent": 7,
+   "end": 18.35
+  },
+  {
+   "text": "Puis le",
+   "t": 18.35,
+   "sent": 8,
+   "end": 18.75
+  },
+  {
+   "text": "volcan entre",
+   "t": 18.75,
+   "sent": 8,
+   "end": 19.62
+  },
+  {
+   "text": "en éruption.",
+   "t": 19.62,
+   "sent": 8,
+   "end": 20.55
+  },
+  {
+   "text": "Des pierres,",
+   "t": 20.55,
+   "sent": 9,
+   "end": 21.25
+  },
+  {
+   "text": "la cendre",
+   "t": 21.25,
+   "sent": 9,
+   "end": 22.02
+  },
+  {
+   "text": "s’accumulent sur",
+   "t": 22.02,
+   "sent": 9,
+   "end": 22.68
+  },
+  {
+   "text": "les bâtiments.",
+   "t": 22.68,
+   "sent": 9,
+   "end": 23.74
+  },
+  {
+   "text": "Une partie",
+   "t": 23.74,
+   "sent": 10,
+   "end": 24.17
+  },
+  {
+   "text": "des habitants",
+   "t": 24.17,
+   "sent": 10,
+   "end": 24.61
+  },
+  {
+   "text": "fuit.",
+   "t": 24.61,
+   "sent": 10,
+   "end": 25.25
+  },
+  {
+   "text": "D’autres restent",
+   "t": 25.25,
+   "sent": 11,
+   "end": 26.22
+  },
+  {
+   "text": "prisonniers de",
+   "t": 26.22,
+   "sent": 11,
+   "end": 26.79
+  },
+  {
+   "text": "la catastrophe.",
+   "t": 26.79,
+   "sent": 11,
+   "end": 28.39
+  },
+  {
+   "text": "La ville",
+   "t": 28.42,
+   "sent": 12,
+   "end": 28.69
+  },
+  {
+   "text": "disparaît sous",
+   "t": 28.69,
+   "sent": 12,
+   "end": 29.09
+  },
+  {
+   "text": "les dépôts",
+   "t": 29.09,
+   "sent": 12,
+   "end": 29.62
+  },
+  {
+   "text": "volcaniques.",
+   "t": 29.62,
+   "sent": 12,
+   "end": 30.39
+  },
+  {
+   "text": "Des siècles",
+   "t": 30.39,
+   "sent": 13,
+   "end": 30.93
+  },
+  {
+   "text": "passent.",
+   "t": 30.93,
+   "sent": 13,
+   "end": 31.82
+  },
+  {
+   "text": "En mille",
+   "t": 31.82,
+   "sent": 14,
+   "end": 32.39
+  },
+  {
+   "text": "sept cent",
+   "t": 32.39,
+   "sent": 14,
+   "end": 32.86
+  },
+  {
+   "text": "quarante-huit, les",
+   "t": 32.86,
+   "sent": 14,
+   "end": 33.76
+  },
+  {
+   "text": "fouilles commencent",
+   "t": 33.76,
+   "sent": 14,
+   "end": 34.82
+  },
+  {
+   "text": "sous le",
+   "t": 34.82,
+   "sent": 14,
+   "end": 35.01
+  },
+  {
+   "text": "règne de",
+   "t": 35.01,
+   "sent": 14,
+   "end": 35.32
+  },
+  {
+   "text": "Charles de",
+   "t": 35.32,
+   "sent": 14,
+   "end": 35.76
+  },
+  {
+   "text": "Bourbon.",
+   "t": 35.76,
+   "sent": 14,
+   "end": 36.53
+  },
+  {
+   "text": "Les ouvriers",
+   "t": 36.53,
+   "sent": 15,
+   "end": 36.96
+  },
+  {
+   "text": "dégagent des",
+   "t": 36.96,
+   "sent": 15,
+   "end": 37.83
+  },
+  {
+   "text": "rues, des",
+   "t": 37.83,
+   "sent": 15,
+   "end": 38.46
+  },
+  {
+   "text": "boutiques, des",
+   "t": 38.46,
+   "sent": 15,
+   "end": 39.43
+  },
+  {
+   "text": "murs peints.",
+   "t": 39.43,
+   "sent": 15,
+   "end": 40.53
+  },
+  {
+   "text": "Mais à",
+   "t": 40.53,
+   "sent": 16,
+   "end": 40.66
+  },
+  {
+   "text": "certains endroits,",
+   "t": 40.66,
+   "sent": 16,
+   "end": 41.46
+  },
+  {
+   "text": "ils trouvent",
+   "t": 41.46,
+   "sent": 16,
+   "end": 42.03
+  },
+  {
+   "text": "des cavités",
+   "t": 42.03,
+   "sent": 16,
+   "end": 42.56
+  },
+  {
+   "text": "étranges dans",
+   "t": 42.56,
+   "sent": 16,
+   "end": 43.09
+  },
+  {
+   "text": "la cendre",
+   "t": 43.09,
+   "sent": 16,
+   "end": 43.69
+  },
+  {
+   "text": "durcie.",
+   "t": 43.69,
+   "sent": 16,
+   "end": 44.53
+  },
+  {
+   "text": "En mille",
+   "t": 44.53,
+   "sent": 17,
+   "end": 44.8
+  },
+  {
+   "text": "huit cent",
+   "t": 44.8,
+   "sent": 17,
+   "end": 45.17
+  },
+  {
+   "text": "soixante-trois,",
+   "t": 45.17,
+   "sent": 17,
+   "end": 46.07
+  },
+  {
+   "text": "Giuseppe Fiorelli",
+   "t": 46.07,
+   "sent": 17,
+   "end": 47.13
+  },
+  {
+   "text": "utilise du",
+   "t": 47.13,
+   "sent": 17,
+   "end": 47.63
+  },
+  {
+   "text": "plâtre pour",
+   "t": 47.63,
+   "sent": 17,
+   "end": 47.97
+  },
+  {
+   "text": "remplir ces",
+   "t": 47.97,
+   "sent": 17,
+   "end": 48.53
+  },
+  {
+   "text": "empreintes.",
+   "t": 48.53,
+   "sent": 17,
+   "end": 49.63
+  },
+  {
+   "text": "Et les",
+   "t": 49.63,
+   "sent": 18,
+   "end": 49.89
+  },
+  {
+   "text": "formes de",
+   "t": 49.89,
+   "sent": 18,
+   "end": 50.33
+  },
+  {
+   "text": "personnes disparues",
+   "t": 50.33,
+   "sent": 18,
+   "end": 51.39
+  },
+  {
+   "text": "réapparaissent.",
+   "t": 51.39,
+   "sent": 18,
+   "end": 52.35
+  },
+  {
+   "text": "Ce ne sont pas",
+   "t": 52.35,
+   "sent": 19,
+   "end": 52.73
+  },
+  {
+   "text": "des statues",
+   "t": 52.73,
+   "sent": 19,
+   "end": 53.47
+  },
+  {
+   "text": "antiques :",
+   "t": 53.47,
+   "sent": 19,
+   "end": 54.03
+  },
+  {
+   "text": "ce sont",
+   "t": 54.03,
+   "sent": 19,
+   "end": 54.17
+  },
+  {
+   "text": "des moulages.",
+   "t": 54.17,
+   "sent": 19,
+   "end": 55.44
+  },
+  {
+   "text": "Pompéi révèle",
+   "t": 55.44,
+   "sent": 20,
+   "end": 55.97
+  },
+  {
+   "text": "alors bien",
+   "t": 55.97,
+   "sent": 20,
+   "end": 56.64
+  },
+  {
+   "text": "plus que",
+   "t": 56.64,
+   "sent": 20,
+   "end": 57.04
+  },
+  {
+   "text": "la puissance",
+   "t": 57.04,
+   "sent": 20,
+   "end": 57.71
+  },
+  {
+   "text": "de Rome.",
+   "t": 57.71,
+   "sent": 20,
+   "end": 58.71
+  },
+  {
+   "text": "Elle préserve",
+   "t": 58.71,
+   "sent": 21,
+   "end": 59.27
+  },
+  {
+   "text": "les traces",
+   "t": 59.27,
+   "sent": 21,
+   "end": 59.67
+  },
+  {
+   "text": "de vies",
+   "t": 59.67,
+   "sent": 21,
+   "end": 60.07
+  },
+  {
+   "text": "ordinaires, jusque",
+   "t": 60.07,
+   "sent": 21,
+   "end": 61.44
+  },
+  {
+   "text": "dans les",
+   "t": 61.44,
+   "sent": 21,
+   "end": 61.74
+  },
+  {
+   "text": "objets du",
+   "t": 61.74,
+   "sent": 21,
+   "end": 62.11
+  },
+  {
+   "text": "quotidien.",
+   "t": 62.11,
+   "sent": 21,
+   "end": 63.18
+  },
+  {
+   "text": "Imagine notre",
+   "t": 63.18,
+   "sent": 22,
+   "end": 63.58
+  },
+  {
+   "text": "propre ville",
+   "t": 63.58,
+   "sent": 22,
+   "end": 64.25
+  },
+  {
+   "text": "retrouvée dans",
+   "t": 64.25,
+   "sent": 22,
+   "end": 64.82
+  },
+  {
+   "text": "deux mille",
+   "t": 64.82,
+   "sent": 22,
+   "end": 65.08
+  },
+  {
+   "text": "ans.",
+   "t": 65.08,
+   "sent": 22,
+   "end": 65.92
+  },
+  {
+   "text": "Quel objet",
+   "t": 65.92,
+   "sent": 23,
+   "end": 66.59
+  },
+  {
+   "text": "raconterait le",
+   "t": 66.59,
+   "sent": 23,
+   "end": 67.09
+  },
+  {
+   "text": "mieux notre",
+   "t": 67.09,
+   "sent": 23,
+   "end": 67.49
+  },
+  {
+   "text": "époque ?",
+   "t": 67.49,
+   "sent": 23,
+   "end": 68.6
+  }
+ ],
+ "words": [
+  {
+   "w": "Des",
+   "t": 0,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "archéologues",
+   "t": 0.23,
+   "chunk": 0,
+   "sent": 0
+  },
+  {
+   "w": "dégagent",
+   "t": 0.7,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "une",
+   "t": 0.95,
+   "chunk": 1,
+   "sent": 0
+  },
+  {
+   "w": "ville",
+   "t": 1.2,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "ensevelie.",
+   "t": 1.4,
+   "chunk": 2,
+   "sent": 0
+  },
+  {
+   "w": "Dans",
+   "t": 2.2,
+   "chunk": 3,
+   "sent": 1
+  },
+  {
+   "w": "la",
+   "t": 2.33,
+   "chunk": 3,
+   "sent": 1
+  },
+  {
+   "w": "cendre,",
+   "t": 2.46,
+   "chunk": 4,
+   "sent": 1
+  },
+  {
+   "w": "ils",
+   "t": 2.73,
+   "chunk": 4,
+   "sent": 1
+  },
+  {
+   "w": "découvrent",
+   "t": 2.96,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "du",
+   "t": 3.23,
+   "chunk": 5,
+   "sent": 1
+  },
+  {
+   "w": "pain.",
+   "t": 3.36,
+   "chunk": 6,
+   "sent": 1
+  },
+  {
+   "w": "Pas",
+   "t": 4.36,
+   "chunk": 7,
+   "sent": 2
+  },
+  {
+   "w": "une",
+   "t": 4.56,
+   "chunk": 7,
+   "sent": 2
+  },
+  {
+   "w": "sculpture.",
+   "t": 4.76,
+   "chunk": 8,
+   "sent": 2
+  },
+  {
+   "w": "Du",
+   "t": 5.67,
+   "chunk": 9,
+   "sent": 3
+  },
+  {
+   "w": "vrai",
+   "t": 5.87,
+   "chunk": 9,
+   "sent": 3
+  },
+  {
+   "w": "pain",
+   "t": 6.17,
+   "chunk": 10,
+   "sent": 3
+  },
+  {
+   "w": "romain,",
+   "t": 6.42,
+   "chunk": 10,
+   "sent": 3
+  },
+  {
+   "w": "carbonisé.",
+   "t": 7.04,
+   "chunk": 11,
+   "sent": 3
+  },
+  {
+   "w": "Retour",
+   "t": 8.05,
+   "chunk": 12,
+   "sent": 4
+  },
+  {
+   "w": "en",
+   "t": 8.32,
+   "chunk": 12,
+   "sent": 4
+  },
+  {
+   "w": "l’an",
+   "t": 8.45,
+   "chunk": 13,
+   "sent": 4
+  },
+  {
+   "w": "soixante-dix-neuf.",
+   "t": 8.72,
+   "chunk": 14,
+   "sent": 4
+  },
+  {
+   "w": "Au",
+   "t": 10.25,
+   "chunk": 15,
+   "sent": 5
+  },
+  {
+   "w": "pied",
+   "t": 10.39,
+   "chunk": 15,
+   "sent": 5
+  },
+  {
+   "w": "du",
+   "t": 10.52,
+   "chunk": 16,
+   "sent": 5
+  },
+  {
+   "w": "Vésuve,",
+   "t": 10.65,
+   "chunk": 16,
+   "sent": 5
+  },
+  {
+   "w": "Pompéi",
+   "t": 11.19,
+   "chunk": 17,
+   "sent": 5
+  },
+  {
+   "w": "est",
+   "t": 11.45,
+   "chunk": 17,
+   "sent": 5
+  },
+  {
+   "w": "une",
+   "t": 11.72,
+   "chunk": 18,
+   "sent": 5
+  },
+  {
+   "w": "ville",
+   "t": 11.85,
+   "chunk": 18,
+   "sent": 5
+  },
+  {
+   "w": "commerçante.",
+   "t": 11.99,
+   "chunk": 19,
+   "sent": 5
+  },
+  {
+   "w": "On",
+   "t": 13.08,
+   "chunk": 20,
+   "sent": 6
+  },
+  {
+   "w": "y",
+   "t": 13.15,
+   "chunk": 20,
+   "sent": 6
+  },
+  {
+   "w": "achète",
+   "t": 13.22,
+   "chunk": 21,
+   "sent": 6
+  },
+  {
+   "w": "des",
+   "t": 13.45,
+   "chunk": 21,
+   "sent": 6
+  },
+  {
+   "w": "repas",
+   "t": 13.62,
+   "chunk": 22,
+   "sent": 6
+  },
+  {
+   "w": "déjà",
+   "t": 13.88,
+   "chunk": 22,
+   "sent": 6
+  },
+  {
+   "w": "préparés.",
+   "t": 14.15,
+   "chunk": 23,
+   "sent": 6
+  },
+  {
+   "w": "On",
+   "t": 14.99,
+   "chunk": 24,
+   "sent": 7
+  },
+  {
+   "w": "écrit",
+   "t": 15.12,
+   "chunk": 24,
+   "sent": 7
+  },
+  {
+   "w": "sur",
+   "t": 15.26,
+   "chunk": 25,
+   "sent": 7
+  },
+  {
+   "w": "les",
+   "t": 15.39,
+   "chunk": 25,
+   "sent": 7
+  },
+  {
+   "w": "murs,",
+   "t": 15.52,
+   "chunk": 26,
+   "sent": 7
+  },
+  {
+   "w": "on",
+   "t": 15.89,
+   "chunk": 26,
+   "sent": 7
+  },
+  {
+   "w": "travaille,",
+   "t": 16.19,
+   "chunk": 27,
+   "sent": 7
+  },
+  {
+   "w": "on",
+   "t": 16.69,
+   "chunk": 27,
+   "sent": 7
+  },
+  {
+   "w": "fait",
+   "t": 17.12,
+   "chunk": 28,
+   "sent": 7
+  },
+  {
+   "w": "des",
+   "t": 17.26,
+   "chunk": 28,
+   "sent": 7
+  },
+  {
+   "w": "affaires.",
+   "t": 17.49,
+   "chunk": 29,
+   "sent": 7
+  },
+  {
+   "w": "Puis",
+   "t": 18.35,
+   "chunk": 30,
+   "sent": 8
+  },
+  {
+   "w": "le",
+   "t": 18.55,
+   "chunk": 30,
+   "sent": 8
+  },
+  {
+   "w": "volcan",
+   "t": 18.75,
+   "chunk": 31,
+   "sent": 8
+  },
+  {
+   "w": "entre",
+   "t": 19.25,
+   "chunk": 31,
+   "sent": 8
+  },
+  {
+   "w": "en",
+   "t": 19.62,
+   "chunk": 32,
+   "sent": 8
+  },
+  {
+   "w": "éruption.",
+   "t": 19.88,
+   "chunk": 32,
+   "sent": 8
+  },
+  {
+   "w": "Des",
+   "t": 20.55,
+   "chunk": 33,
+   "sent": 9
+  },
+  {
+   "w": "pierres,",
+   "t": 20.72,
+   "chunk": 33,
+   "sent": 9
+  },
+  {
+   "w": "la",
+   "t": 21.25,
+   "chunk": 34,
+   "sent": 9
+  },
+  {
+   "w": "cendre",
+   "t": 21.38,
+   "chunk": 34,
+   "sent": 9
+  },
+  {
+   "w": "s’accumulent",
+   "t": 22.02,
+   "chunk": 35,
+   "sent": 9
+  },
+  {
+   "w": "sur",
+   "t": 22.45,
+   "chunk": 35,
+   "sent": 9
+  },
+  {
+   "w": "les",
+   "t": 22.68,
+   "chunk": 36,
+   "sent": 9
+  },
+  {
+   "w": "bâtiments.",
+   "t": 22.85,
+   "chunk": 36,
+   "sent": 9
+  },
+  {
+   "w": "Une",
+   "t": 23.74,
+   "chunk": 37,
+   "sent": 10
+  },
+  {
+   "w": "partie",
+   "t": 23.94,
+   "chunk": 37,
+   "sent": 10
+  },
+  {
+   "w": "des",
+   "t": 24.17,
+   "chunk": 38,
+   "sent": 10
+  },
+  {
+   "w": "habitants",
+   "t": 24.31,
+   "chunk": 38,
+   "sent": 10
+  },
+  {
+   "w": "fuit.",
+   "t": 24.61,
+   "chunk": 39,
+   "sent": 10
+  },
+  {
+   "w": "D’autres",
+   "t": 25.25,
+   "chunk": 40,
+   "sent": 11
+  },
+  {
+   "w": "restent",
+   "t": 25.57,
+   "chunk": 40,
+   "sent": 11
+  },
+  {
+   "w": "prisonniers",
+   "t": 26.22,
+   "chunk": 41,
+   "sent": 11
+  },
+  {
+   "w": "de",
+   "t": 26.62,
+   "chunk": 41,
+   "sent": 11
+  },
+  {
+   "w": "la",
+   "t": 26.79,
+   "chunk": 42,
+   "sent": 11
+  },
+  {
+   "w": "catastrophe.",
+   "t": 26.99,
+   "chunk": 42,
+   "sent": 11
+  },
+  {
+   "w": "La",
+   "t": 28.42,
+   "chunk": 43,
+   "sent": 12
+  },
+  {
+   "w": "ville",
+   "t": 28.57,
+   "chunk": 43,
+   "sent": 12
+  },
+  {
+   "w": "disparaît",
+   "t": 28.69,
+   "chunk": 44,
+   "sent": 12
+  },
+  {
+   "w": "sous",
+   "t": 29.02,
+   "chunk": 44,
+   "sent": 12
+  },
+  {
+   "w": "les",
+   "t": 29.09,
+   "chunk": 45,
+   "sent": 12
+  },
+  {
+   "w": "dépôts",
+   "t": 29.22,
+   "chunk": 45,
+   "sent": 12
+  },
+  {
+   "w": "volcaniques.",
+   "t": 29.62,
+   "chunk": 46,
+   "sent": 12
+  },
+  {
+   "w": "Des",
+   "t": 30.39,
+   "chunk": 47,
+   "sent": 13
+  },
+  {
+   "w": "siècles",
+   "t": 30.53,
+   "chunk": 47,
+   "sent": 13
+  },
+  {
+   "w": "passent.",
+   "t": 30.93,
+   "chunk": 48,
+   "sent": 13
+  },
+  {
+   "w": "En",
+   "t": 31.82,
+   "chunk": 49,
+   "sent": 14
+  },
+  {
+   "w": "mille",
+   "t": 32.12,
+   "chunk": 49,
+   "sent": 14
+  },
+  {
+   "w": "sept",
+   "t": 32.39,
+   "chunk": 50,
+   "sent": 14
+  },
+  {
+   "w": "cent",
+   "t": 32.62,
+   "chunk": 50,
+   "sent": 14
+  },
+  {
+   "w": "quarante-huit,",
+   "t": 32.86,
+   "chunk": 51,
+   "sent": 14
+  },
+  {
+   "w": "les",
+   "t": 33.49,
+   "chunk": 51,
+   "sent": 14
+  },
+  {
+   "w": "fouilles",
+   "t": 33.76,
+   "chunk": 52,
+   "sent": 14
+  },
+  {
+   "w": "commencent",
+   "t": 33.96,
+   "chunk": 52,
+   "sent": 14
+  },
+  {
+   "w": "sous",
+   "t": 34.82,
+   "chunk": 53,
+   "sent": 14
+  },
+  {
+   "w": "le",
+   "t": 34.91,
+   "chunk": 53,
+   "sent": 14
+  },
+  {
+   "w": "règne",
+   "t": 35.01,
+   "chunk": 54,
+   "sent": 14
+  },
+  {
+   "w": "de",
+   "t": 35.14,
+   "chunk": 54,
+   "sent": 14
+  },
+  {
+   "w": "Charles",
+   "t": 35.32,
+   "chunk": 55,
+   "sent": 14
+  },
+  {
+   "w": "de",
+   "t": 35.46,
+   "chunk": 55,
+   "sent": 14
+  },
+  {
+   "w": "Bourbon.",
+   "t": 35.76,
+   "chunk": 56,
+   "sent": 14
+  },
+  {
+   "w": "Les",
+   "t": 36.53,
+   "chunk": 57,
+   "sent": 15
+  },
+  {
+   "w": "ouvriers",
+   "t": 36.7,
+   "chunk": 57,
+   "sent": 15
+  },
+  {
+   "w": "dégagent",
+   "t": 36.96,
+   "chunk": 58,
+   "sent": 15
+  },
+  {
+   "w": "des",
+   "t": 37.43,
+   "chunk": 58,
+   "sent": 15
+  },
+  {
+   "w": "rues,",
+   "t": 37.83,
+   "chunk": 59,
+   "sent": 15
+  },
+  {
+   "w": "des",
+   "t": 38.03,
+   "chunk": 59,
+   "sent": 15
+  },
+  {
+   "w": "boutiques,",
+   "t": 38.46,
+   "chunk": 60,
+   "sent": 15
+  },
+  {
+   "w": "des",
+   "t": 38.73,
+   "chunk": 60,
+   "sent": 15
+  },
+  {
+   "w": "murs",
+   "t": 39.43,
+   "chunk": 61,
+   "sent": 15
+  },
+  {
+   "w": "peints.",
+   "t": 39.68,
+   "chunk": 61,
+   "sent": 15
+  },
+  {
+   "w": "Mais",
+   "t": 40.53,
+   "chunk": 62,
+   "sent": 16
+  },
+  {
+   "w": "à",
+   "t": 40.61,
+   "chunk": 62,
+   "sent": 16
+  },
+  {
+   "w": "certains",
+   "t": 40.66,
+   "chunk": 63,
+   "sent": 16
+  },
+  {
+   "w": "endroits,",
+   "t": 40.79,
+   "chunk": 63,
+   "sent": 16
+  },
+  {
+   "w": "ils",
+   "t": 41.46,
+   "chunk": 64,
+   "sent": 16
+  },
+  {
+   "w": "trouvent",
+   "t": 41.59,
+   "chunk": 64,
+   "sent": 16
+  },
+  {
+   "w": "des",
+   "t": 42.03,
+   "chunk": 65,
+   "sent": 16
+  },
+  {
+   "w": "cavités",
+   "t": 42.16,
+   "chunk": 65,
+   "sent": 16
+  },
+  {
+   "w": "étranges",
+   "t": 42.56,
+   "chunk": 66,
+   "sent": 16
+  },
+  {
+   "w": "dans",
+   "t": 42.96,
+   "chunk": 66,
+   "sent": 16
+  },
+  {
+   "w": "la",
+   "t": 43.09,
+   "chunk": 67,
+   "sent": 16
+  },
+  {
+   "w": "cendre",
+   "t": 43.23,
+   "chunk": 67,
+   "sent": 16
+  },
+  {
+   "w": "durcie.",
+   "t": 43.69,
+   "chunk": 68,
+   "sent": 16
+  },
+  {
+   "w": "En",
+   "t": 44.53,
+   "chunk": 69,
+   "sent": 17
+  },
+  {
+   "w": "mille",
+   "t": 44.67,
+   "chunk": 69,
+   "sent": 17
+  },
+  {
+   "w": "huit",
+   "t": 44.8,
+   "chunk": 70,
+   "sent": 17
+  },
+  {
+   "w": "cent",
+   "t": 45.0,
+   "chunk": 70,
+   "sent": 17
+  },
+  {
+   "w": "soixante-trois,",
+   "t": 45.17,
+   "chunk": 71,
+   "sent": 17
+  },
+  {
+   "w": "Giuseppe",
+   "t": 46.07,
+   "chunk": 72,
+   "sent": 17
+  },
+  {
+   "w": "Fiorelli",
+   "t": 46.6,
+   "chunk": 72,
+   "sent": 17
+  },
+  {
+   "w": "utilise",
+   "t": 47.13,
+   "chunk": 73,
+   "sent": 17
+  },
+  {
+   "w": "du",
+   "t": 47.45,
+   "chunk": 73,
+   "sent": 17
+  },
+  {
+   "w": "plâtre",
+   "t": 47.63,
+   "chunk": 74,
+   "sent": 17
+  },
+  {
+   "w": "pour",
+   "t": 47.85,
+   "chunk": 74,
+   "sent": 17
+  },
+  {
+   "w": "remplir",
+   "t": 47.97,
+   "chunk": 75,
+   "sent": 17
+  },
+  {
+   "w": "ces",
+   "t": 48.13,
+   "chunk": 75,
+   "sent": 17
+  },
+  {
+   "w": "empreintes.",
+   "t": 48.53,
+   "chunk": 76,
+   "sent": 17
+  },
+  {
+   "w": "Et",
+   "t": 49.63,
+   "chunk": 77,
+   "sent": 18
+  },
+  {
+   "w": "les",
+   "t": 49.76,
+   "chunk": 77,
+   "sent": 18
+  },
+  {
+   "w": "formes",
+   "t": 49.89,
+   "chunk": 78,
+   "sent": 18
+  },
+  {
+   "w": "de",
+   "t": 50.16,
+   "chunk": 78,
+   "sent": 18
+  },
+  {
+   "w": "personnes",
+   "t": 50.33,
+   "chunk": 79,
+   "sent": 18
+  },
+  {
+   "w": "disparues",
+   "t": 50.66,
+   "chunk": 79,
+   "sent": 18
+  },
+  {
+   "w": "réapparaissent.",
+   "t": 51.39,
+   "chunk": 80,
+   "sent": 18
+  },
+  {
+   "w": "Ce",
+   "t": 52.35,
+   "chunk": 81,
+   "sent": 19
+  },
+  {
+   "w": "ne",
+   "t": 52.42,
+   "chunk": 81,
+   "sent": 19
+  },
+  {
+   "w": "sont",
+   "t": 52.53,
+   "chunk": 81,
+   "sent": 19
+  },
+  {
+   "w": "pas",
+   "t": 52.65,
+   "chunk": 81,
+   "sent": 19
+  },
+  {
+   "w": "des",
+   "t": 52.73,
+   "chunk": 82,
+   "sent": 19
+  },
+  {
+   "w": "statues",
+   "t": 52.87,
+   "chunk": 82,
+   "sent": 19
+  },
+  {
+   "w": "antiques :",
+   "t": 53.47,
+   "chunk": 83,
+   "sent": 19
+  },
+  {
+   "w": "ce",
+   "t": 54.03,
+   "chunk": 84,
+   "sent": 19
+  },
+  {
+   "w": "sont",
+   "t": 54.1,
+   "chunk": 84,
+   "sent": 19
+  },
+  {
+   "w": "des",
+   "t": 54.17,
+   "chunk": 85,
+   "sent": 19
+  },
+  {
+   "w": "moulages.",
+   "t": 54.3,
+   "chunk": 85,
+   "sent": 19
+  },
+  {
+   "w": "Pompéi",
+   "t": 55.44,
+   "chunk": 86,
+   "sent": 20
+  },
+  {
+   "w": "révèle",
+   "t": 55.71,
+   "chunk": 86,
+   "sent": 20
+  },
+  {
+   "w": "alors",
+   "t": 55.97,
+   "chunk": 87,
+   "sent": 20
+  },
+  {
+   "w": "bien",
+   "t": 56.24,
+   "chunk": 87,
+   "sent": 20
+  },
+  {
+   "w": "plus",
+   "t": 56.64,
+   "chunk": 88,
+   "sent": 20
+  },
+  {
+   "w": "que",
+   "t": 56.77,
+   "chunk": 88,
+   "sent": 20
+  },
+  {
+   "w": "la",
+   "t": 57.04,
+   "chunk": 89,
+   "sent": 20
+  },
+  {
+   "w": "puissance",
+   "t": 57.17,
+   "chunk": 89,
+   "sent": 20
+  },
+  {
+   "w": "de",
+   "t": 57.71,
+   "chunk": 90,
+   "sent": 20
+  },
+  {
+   "w": "Rome.",
+   "t": 57.84,
+   "chunk": 90,
+   "sent": 20
+  },
+  {
+   "w": "Elle",
+   "t": 58.71,
+   "chunk": 91,
+   "sent": 21
+  },
+  {
+   "w": "préserve",
+   "t": 58.84,
+   "chunk": 91,
+   "sent": 21
+  },
+  {
+   "w": "les",
+   "t": 59.27,
+   "chunk": 92,
+   "sent": 21
+  },
+  {
+   "w": "traces",
+   "t": 59.41,
+   "chunk": 92,
+   "sent": 21
+  },
+  {
+   "w": "de",
+   "t": 59.67,
+   "chunk": 93,
+   "sent": 21
+  },
+  {
+   "w": "vies",
+   "t": 59.81,
+   "chunk": 93,
+   "sent": 21
+  },
+  {
+   "w": "ordinaires,",
+   "t": 60.07,
+   "chunk": 94,
+   "sent": 21
+  },
+  {
+   "w": "jusque",
+   "t": 60.87,
+   "chunk": 94,
+   "sent": 21
+  },
+  {
+   "w": "dans",
+   "t": 61.44,
+   "chunk": 95,
+   "sent": 21
+  },
+  {
+   "w": "les",
+   "t": 61.59,
+   "chunk": 95,
+   "sent": 21
+  },
+  {
+   "w": "objets",
+   "t": 61.74,
+   "chunk": 96,
+   "sent": 21
+  },
+  {
+   "w": "du",
+   "t": 61.99,
+   "chunk": 96,
+   "sent": 21
+  },
+  {
+   "w": "quotidien.",
+   "t": 62.11,
+   "chunk": 97,
+   "sent": 21
+  },
+  {
+   "w": "Imagine",
+   "t": 63.18,
+   "chunk": 98,
+   "sent": 22
+  },
+  {
+   "w": "notre",
+   "t": 63.32,
+   "chunk": 98,
+   "sent": 22
+  },
+  {
+   "w": "propre",
+   "t": 63.58,
+   "chunk": 99,
+   "sent": 22
+  },
+  {
+   "w": "ville",
+   "t": 63.85,
+   "chunk": 99,
+   "sent": 22
+  },
+  {
+   "w": "retrouvée",
+   "t": 64.25,
+   "chunk": 100,
+   "sent": 22
+  },
+  {
+   "w": "dans",
+   "t": 64.58,
+   "chunk": 100,
+   "sent": 22
+  },
+  {
+   "w": "deux",
+   "t": 64.82,
+   "chunk": 101,
+   "sent": 22
+  },
+  {
+   "w": "mille",
+   "t": 64.95,
+   "chunk": 101,
+   "sent": 22
+  },
+  {
+   "w": "ans.",
+   "t": 65.08,
+   "chunk": 102,
+   "sent": 22
+  },
+  {
+   "w": "Quel",
+   "t": 65.92,
+   "chunk": 103,
+   "sent": 23
+  },
+  {
+   "w": "objet",
+   "t": 66.05,
+   "chunk": 103,
+   "sent": 23
+  },
+  {
+   "w": "raconterait",
+   "t": 66.59,
+   "chunk": 104,
+   "sent": 23
+  },
+  {
+   "w": "le",
+   "t": 66.92,
+   "chunk": 104,
+   "sent": 23
+  },
+  {
+   "w": "mieux",
+   "t": 67.09,
+   "chunk": 105,
+   "sent": 23
+  },
+  {
+   "w": "notre",
+   "t": 67.32,
+   "chunk": 105,
+   "sent": 23
+  },
+  {
+   "w": "époque ?",
+   "t": 67.49,
+   "chunk": 106,
+   "sent": 23
+  }
+ ],
+ "sentences": [
+  {
+   "i": 0,
+   "t": 0,
+   "text": "Des archéologues dégagent une ville ensevelie."
+  },
+  {
+   "i": 1,
+   "t": 2.2,
+   "text": "Dans la cendre, ils découvrent du pain."
+  },
+  {
+   "i": 2,
+   "t": 4.36,
+   "text": "Pas une sculpture."
+  },
+  {
+   "i": 3,
+   "t": 5.67,
+   "text": "Du vrai pain romain, carbonisé."
+  },
+  {
+   "i": 4,
+   "t": 8.05,
+   "text": "Retour en l’an soixante-dix-neuf."
+  },
+  {
+   "i": 5,
+   "t": 10.25,
+   "text": "Au pied du Vésuve, Pompéi est une ville commerçante."
+  },
+  {
+   "i": 6,
+   "t": 13.08,
+   "text": "On y achète des repas déjà préparés."
+  },
+  {
+   "i": 7,
+   "t": 14.99,
+   "text": "On écrit sur les murs, on travaille, on fait des affaires."
+  },
+  {
+   "i": 8,
+   "t": 18.35,
+   "text": "Puis le volcan entre en éruption."
+  },
+  {
+   "i": 9,
+   "t": 20.55,
+   "text": "Des pierres, la cendre s’accumulent sur les bâtiments."
+  },
+  {
+   "i": 10,
+   "t": 23.74,
+   "text": "Une partie des habitants fuit."
+  },
+  {
+   "i": 11,
+   "t": 25.25,
+   "text": "D’autres restent prisonniers de la catastrophe."
+  },
+  {
+   "i": 12,
+   "t": 28.42,
+   "text": "La ville disparaît sous les dépôts volcaniques."
+  },
+  {
+   "i": 13,
+   "t": 30.39,
+   "text": "Des siècles passent."
+  },
+  {
+   "i": 14,
+   "t": 31.82,
+   "text": "En mille sept cent quarante-huit, les fouilles commencent sous le règne de Charles de Bourbon."
+  },
+  {
+   "i": 15,
+   "t": 36.53,
+   "text": "Les ouvriers dégagent des rues, des boutiques, des murs peints."
+  },
+  {
+   "i": 16,
+   "t": 40.53,
+   "text": "Mais à certains endroits, ils trouvent des cavités étranges dans la cendre durcie."
+  },
+  {
+   "i": 17,
+   "t": 44.53,
+   "text": "En mille huit cent soixante-trois, Giuseppe Fiorelli utilise du plâtre pour remplir ces empreintes."
+  },
+  {
+   "i": 18,
+   "t": 49.63,
+   "text": "Et les formes de personnes disparues réapparaissent."
+  },
+  {
+   "i": 19,
+   "t": 52.35,
+   "text": "Ce ne sont pas des statues antiques : ce sont des moulages."
+  },
+  {
+   "i": 20,
+   "t": 55.44,
+   "text": "Pompéi révèle alors bien plus que la puissance de Rome."
+  },
+  {
+   "i": 21,
+   "t": 58.71,
+   "text": "Elle préserve les traces de vies ordinaires, jusque dans les objets du quotidien."
+  },
+  {
+   "i": 22,
+   "t": 63.18,
+   "text": "Imagine notre propre ville retrouvée dans deux mille ans."
+  },
+  {
+   "i": 23,
+   "t": 65.92,
+   "text": "Quel objet raconterait le mieux notre époque ?"
+  }
+ ]
+}

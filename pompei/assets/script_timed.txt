@@ -1,0 +1,25 @@
+# un mot = "mot@temps" (moment où le mot passe en or dans l'original) ; "|" sépare les segments ; une ligne = une phrase
+Des@0.00 archéologues@0.23 | dégagent@0.70 une@0.95 | ville@1.20 ensevelie.@1.40
+Dans@2.47 la@2.60 | cendre,@2.73 ils@3.00 | découvrent@3.23 du@3.50 | pain.@3.63
+Pas@4.40 une@4.60 | sculpture.@4.80
+Du@5.70 vrai@5.90 | pain@6.20 romain,@6.45 | carbonisé.@7.07
+Retour@8.30 en@8.57 | l’an@8.70 | soixante-dix-neuf.@8.97
+Au@10.43 pied@10.57 | du@10.70 Vésuve,@10.83 | Pompéi@11.37 est@11.63 | une@11.90 ville@12.03 | commerçante.@12.17
+On@13.23 y@13.30 | achète@13.37 des@13.60 | repas@13.77 déjà@14.03 | préparés.@14.30
+On@15.10 écrit@15.23 | sur@15.37 les@15.50 | murs,@15.63 on@16.00 | travaille,@16.30 on@16.80 | fait@17.23 des@17.37 | affaires.@17.60
+Puis@18.30 le@18.50 | volcan@18.70 entre@19.20 | en@19.57 éruption.@19.83
+Des@20.70 pierres,@20.87 | la@21.40 cendre@21.53 | s’accumulent@22.17 sur@22.60 | les@22.83 bâtiments.@23.00
+Une@23.90 partie@24.10 | des@24.33 habitants@24.47 | fuit.@24.77
+D’autres@25.63 restent@25.95 | prisonniers@26.60 de@27.00 | la@27.17 catastrophe.@27.37
+La@28.40 ville@28.55 | disparaît@28.67 sous@29.00 | les@29.07 dépôts@29.20 | volcaniques.@29.60
+Des@30.53 siècles@30.67 | passent.@31.07
+En@31.73 mille@32.03 | sept@32.30 cent@32.53 | quarante-huit,@32.77 les@33.40 | fouilles@33.67 commencent@33.87 | sous@34.73 le@34.82 | règne@34.92 de@35.05 | Charles@35.23 de@35.37 | Bourbon.@35.67
+Les@36.70 ouvriers@36.87 | dégagent@37.13 des@37.60 | rues,@38.00 des@38.20 | boutiques,@38.63 des@38.90 | murs@39.60 peints.@39.85
+Mais@40.77 à@40.85 | certains@40.90 endroits,@41.03 | ils@41.70 trouvent@41.83 | des@42.27 cavités@42.40 | étranges@42.80 dans@43.20 | la@43.33 cendre@43.47 | durcie.@43.93
+En@44.83 mille@44.97 | huit@45.10 cent@45.30 | soixante-trois,@45.47 | Giuseppe@46.37 Fiorelli@46.90 | utilise@47.43 du@47.75 | plâtre@47.93 pour@48.15 | remplir@48.27 ces@48.43 | empreintes.@48.83
+Et@49.77 les@49.90 | formes@50.03 de@50.30 | personnes@50.47 disparues@50.80 | réapparaissent.@51.53
+Ce@52.35 ne@52.42 sont@52.53 pas@52.65 | des@52.73 statues@52.87 | antiques :@53.47 | ce@54.03 sont@54.10 | des@54.17 moulages.@54.30
+Pompéi@55.60 révèle@55.87 | alors@56.13 bien@56.40 | plus@56.80 que@56.93 | la@57.20 puissance@57.33 | de@57.87 Rome.@58.00
+Elle@58.67 préserve@58.80 | les@59.23 traces@59.37 | de@59.63 vies@59.77 | ordinaires,@60.03 jusque@60.83 | dans@61.40 les@61.55 | objets@61.70 du@61.95 | quotidien.@62.07
+Imagine@63.13 notre@63.27 | propre@63.53 ville@63.80 | retrouvée@64.20 dans@64.53 | deux@64.77 mille@64.90 | ans.@65.03
+Quel@65.70 objet@65.83 | raconterait@66.37 le@66.70 | mieux@66.87 notre@67.10 | époque ?@67.27
